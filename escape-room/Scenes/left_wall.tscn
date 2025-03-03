@@ -19,6 +19,7 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_fxllj")
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 695.0
 offset_top = 637.0
 offset_right = 3703.0
