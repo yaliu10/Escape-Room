@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://lmgvxbx75jx2"]
 
-[ext_resource type="Script" path="res://right_wall.gd" id="1_pwk68"]
+[ext_resource type="Script" path="res://Scripts/right_wall.gd" id="1_pwk68"]
 [ext_resource type="Texture2D" uid="uid://dm7fqcwymr2lp" path="res://art/placeholder right wall.PNG" id="1_wix7h"]
 [ext_resource type="Texture2D" uid="uid://pnpi4rjo80q4" path="res://art/placeholder arrow.PNG" id="3_cxqnp"]
 
@@ -19,6 +19,7 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_wix7h")
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 695.0
 offset_top = 637.0
 offset_right = 3703.0
