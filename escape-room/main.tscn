@@ -19,6 +19,7 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_ffnu7")
 
 [node name="Up Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 523.0
 offset_top = 5.0
 offset_right = 3531.0
@@ -28,6 +29,7 @@ icon = ExtResource("3_kbrve")
 flat = true
 
 [node name="Right Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 1030.0
 offset_top = 238.0
 offset_right = 4038.0
@@ -38,6 +40,7 @@ icon = ExtResource("3_kbrve")
 flat = true
 
 [node name="Left Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 171.0
 offset_top = 408.0
 offset_right = 3179.0
