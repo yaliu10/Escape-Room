@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://btr6dxprks18h"]
 
-[ext_resource type="Texture2D" uid="uid://dui4i7blhdwa1" path="res://art/IMG_2641.PNG" id="1_5046a"]
-[ext_resource type="Script" path="res://wall_1.gd" id="1_n8fpu"]
-[ext_resource type="Texture2D" uid="uid://pnpi4rjo80q4" path="res://art/placeholder arrow.PNG" id="2_7gtmm"]
+[ext_resource type="Script" path="res://Scripts/wall_1.gd" id="1_7eeak"]
+[ext_resource type="Texture2D" uid="uid://dui4i7blhdwa1" path="res://art/IMG_2641.PNG" id="2_iw4cl"]
+[ext_resource type="Texture2D" uid="uid://pnpi4rjo80q4" path="res://art/placeholder arrow.PNG" id="3_4q5t3"]
 
 [node name="Wall 1" type="Control"]
 layout_mode = 3
@@ -11,21 +11,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_n8fpu")
+script = ExtResource("1_7eeak")
 
 [node name="Img2641" type="Sprite2D" parent="."]
 position = Vector2(602, 323)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_5046a")
+texture = ExtResource("2_iw4cl")
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 695.0
 offset_top = 637.0
 offset_right = 3703.0
 offset_bottom = 2761.0
 rotation = 3.12593
 scale = Vector2(0.0715281, 0.0715281)
-icon = ExtResource("2_7gtmm")
+icon = ExtResource("3_4q5t3")
 flat = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
