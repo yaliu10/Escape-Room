@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2s2as4a4dcra"]
+[gd_scene load_steps=3 format=3 uid="uid://d2s2as4a4dcra"]
 
-[ext_resource type="Theme" uid="uid://bcx3gapifxrc1" path="res://main_theme.tres" id="1_uuaaa"]
+[ext_resource type="Theme" uid="uid://bcx3gapifxrc1" path="res://Resources/main_theme.tres" id="1_uuaaa"]
+[ext_resource type="Script" path="res://Scripts/dialogue.gd" id="2_y2llw"]
 
 [node name="Dialogue" type="Control"]
 layout_mode = 3
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_uuaaa")
+script = ExtResource("2_y2llw")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
