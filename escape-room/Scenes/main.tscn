@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bombr13ma3q8o"]
+[gd_scene load_steps=4 format=3 uid="uid://bombr13ma3q8o"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_uc6yk"]
 [ext_resource type="Texture2D" uid="uid://dtgphwhgvi6iy" path="res://art/IMG_2640.PNG" id="2_g73d6"]
 [ext_resource type="Texture2D" uid="uid://pnpi4rjo80q4" path="res://art/placeholder arrow.PNG" id="3_j2lnq"]
-[ext_resource type="PackedScene" uid="uid://d2s2as4a4dcra" path="res://Scenes/dialogue.tscn" id="4_rbcvt"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -51,9 +50,16 @@ scale = Vector2(0.0560984, 0.0535125)
 icon = ExtResource("3_j2lnq")
 flat = true
 
-[node name="Dialogue" parent="." instance=ExtResource("4_rbcvt")]
-layout_mode = 1
+[node name="text object" type="Button" parent="."]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 488.0
+offset_right = 3668.0
+offset_bottom = 2612.0
+scale = Vector2(-0.0309632, 0.0273233)
+icon = ExtResource("3_j2lnq")
 
 [connection signal="pressed" from="Up Button" to="." method="_on_up_button_pressed"]
 [connection signal="pressed" from="Right Button" to="." method="_on_right_button_pressed"]
 [connection signal="pressed" from="Left Button" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="text object" to="." method="_on_text_object_pressed"]
