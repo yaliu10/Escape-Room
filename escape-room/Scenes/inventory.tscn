@@ -1,0 +1,186 @@
+[gd_scene load_steps=20 format=3 uid="uid://b7mxxhrj8pl00"]
+
+[ext_resource type="Texture2D" uid="uid://b2fq71vy1yeif" path="res://art/Placeholder_Inventory.PNG" id="1_tahtk"]
+[ext_resource type="Script" path="res://Scripts/inventory_container.gd" id="2_kk5xd"]
+[ext_resource type="Texture2D" uid="uid://pnpi4rjo80q4" path="res://art/placeholder arrow.PNG" id="2_o86dy"]
+[ext_resource type="Texture2D" uid="uid://cyamkeioip6ar" path="res://icon.svg" id="2_pmp0m"]
+[ext_resource type="Texture2D" uid="uid://ew0gwaw3yovb" path="res://art/ph-closed case.PNG" id="5_56d53"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epmdh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_43s1v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q7wwi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rcma7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1j01j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pue8v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rbd4n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wjejq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vwkb1"]
+
+[sub_resource type="Theme" id="Theme_557w2"]
+HScrollBar/styles/grabber = SubResource("StyleBoxEmpty_1j01j")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_pue8v")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_rbd4n")
+HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_wjejq")
+HScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_vwkb1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hu3cs"]
+texture = ExtResource("2_pmp0m")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g5pob"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1m85l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ytlcc"]
+texture = ExtResource("5_56d53")
+
+[node name="Inventory" type="Node2D"]
+
+[node name="Inventory Container" type="TextureRect" parent="."]
+offset_right = 2500.0
+offset_bottom = 3500.0
+scale = Vector2(0.339934, 0.339934)
+texture = ExtResource("1_tahtk")
+script = ExtResource("2_kk5xd")
+
+[node name="LeftArrowButton" type="Button" parent="Inventory Container"]
+layout_mode = 0
+offset_left = 501.234
+offset_top = 1205.5
+offset_right = 3509.23
+offset_bottom = 3329.5
+rotation = -1.57833
+scale = Vector2(0.103133, 0.103133)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epmdh")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_43s1v")
+icon = ExtResource("2_o86dy")
+flat = true
+
+[node name="RightArrowButton" type="Button" parent="Inventory Container"]
+layout_mode = 0
+offset_left = 2093.76
+offset_top = 888.263
+offset_right = 5101.76
+offset_bottom = 3012.26
+rotation = -1.57833
+scale = Vector2(-0.103, -0.103)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q7wwi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rcma7")
+icon = ExtResource("2_o86dy")
+flat = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Inventory Container"]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 933.0
+offset_right = 1884.0
+offset_bottom = 1148.0
+theme = SubResource("Theme_557w2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Inventory Container/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 61
+
+[node name="Slot" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hu3cs")
+
+[node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot"]
+layout_mode = 0
+offset_left = 0.265849
+offset_top = -13.0131
+offset_right = 2500.27
+offset_bottom = 3486.99
+scale = Vector2(0.0776705, 0.114093)
+texture = ExtResource("1_tahtk")
+
+[node name="Slot2" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hu3cs")
+
+[node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot2"]
+layout_mode = 0
+offset_left = 0.265849
+offset_top = -13.0131
+offset_right = 2500.27
+offset_bottom = 3486.99
+scale = Vector2(0.0776705, 0.114093)
+
+[node name="Slot3" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hu3cs")
+
+[node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot3"]
+layout_mode = 0
+offset_left = 0.265849
+offset_top = -13.0131
+offset_right = 2500.27
+offset_bottom = 3486.99
+scale = Vector2(0.0776705, 0.114093)
+
+[node name="Slot4" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hu3cs")
+
+[node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot4"]
+layout_mode = 0
+offset_left = 0.265849
+offset_top = -13.0131
+offset_right = 2500.27
+offset_bottom = 3486.99
+scale = Vector2(0.0776705, 0.114093)
+
+[node name="Slot5" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hu3cs")
+
+[node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot5"]
+layout_mode = 0
+offset_left = 0.265849
+offset_top = -13.0131
+offset_right = 2500.27
+offset_bottom = 3486.99
+scale = Vector2(0.0776705, 0.114093)
+texture = ExtResource("1_tahtk")
+
+[node name="Slot6" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hu3cs")
+
+[node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot6"]
+layout_mode = 0
+offset_left = 0.265849
+offset_top = -13.0131
+offset_right = 2500.27
+offset_bottom = 3486.99
+scale = Vector2(0.0776705, 0.114093)
+texture = ExtResource("1_tahtk")
+
+[node name="Briefcase Button" type="Button" parent="."]
+offset_left = -12.0
+offset_top = 248.0
+offset_right = 296.0
+offset_bottom = 456.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_g5pob")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1m85l")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ytlcc")
+toggle_mode = true
+icon = ExtResource("5_56d53")
+flat = true
+
+[connection signal="pressed" from="Inventory Container/LeftArrowButton" to="Inventory Container" method="_on_left_arrow_button_pressed"]
+[connection signal="pressed" from="Inventory Container/RightArrowButton" to="Inventory Container" method="_on_right_arrow_button_pressed"]
+[connection signal="pressed" from="Briefcase Button" to="Inventory Container" method="_on_briefcase_button_pressed"]
