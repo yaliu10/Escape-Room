@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/pause_screen.gd" id="1_imha3"]
 
-[node name="PauseScreen" type="Control"]
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="PauseScreen" type="Control" parent="."]
 process_mode = 3
 visible = false
 layout_mode = 3
@@ -13,7 +15,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_imha3")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="PauseScreen"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.297706, 0.297706, 0.297706, 1)
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="GridContainer" type="GridContainer" parent="PauseScreen"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,20 +39,20 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/v_separation = 10
 
-[node name="Label" type="Label" parent="GridContainer"]
+[node name="Label" type="Label" parent="PauseScreen/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Paused"
 
-[node name="ResumeButton" type="Button" parent="GridContainer"]
+[node name="ResumeButton" type="Button" parent="PauseScreen/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Resume"
 
-[node name="QuitButton" type="Button" parent="GridContainer"]
+[node name="QuitButton" type="Button" parent="PauseScreen/GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Quit"
 
-[connection signal="pressed" from="GridContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
-[connection signal="pressed" from="GridContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="PauseScreen/GridContainer/ResumeButton" to="PauseScreen" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseScreen/GridContainer/QuitButton" to="PauseScreen" method="_on_quit_button_pressed"]
