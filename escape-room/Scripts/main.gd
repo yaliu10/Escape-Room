@@ -20,5 +20,11 @@ func _on_text_object_pressed() -> void:
 
 
 func _on_pause_icon_pressed() -> void:
-	var game = preload ("res://Scenes/pause_screen.tscn").instantiate()
-	get_tree().get_root().add_child(game)
+	print("Pause button clicked!")  # Check if this appears in the Output
+	var pause_screen = preload("res://Scenes/pause_screen.tscn").instantiate()
+	if pause_screen:
+		print("Pause scene loaded successfully!")  # Check if this appears
+		get_tree().get_root().add_child(pause_screen)
+		get_tree().paused = true  # Pause the game
+	else:
+		print("Error: Failed to load pause screen!")  # Check if this appears
