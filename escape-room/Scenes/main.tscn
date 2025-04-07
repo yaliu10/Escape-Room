@@ -76,4 +76,4 @@ icon = ExtResource("5_jynig")
 [connection signal="pressed" from="Right Button" to="." method="_on_right_button_pressed"]
 [connection signal="pressed" from="Left Button" to="." method="_on_left_button_pressed"]
 [connection signal="pressed" from="text object" to="." method="_on_text_object_pressed"]
-[connection signal="pressed" from="PauseIcon" to="." method="_on_pause_icon_pressed"]
+[connection signal="pressed" from="PauseIcon" to="CanvasLayer/PauseScreen" method="_on_pause_icon_pressed"]
