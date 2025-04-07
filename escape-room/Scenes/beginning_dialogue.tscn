@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://ediwgk0vxp4r"]
+
+[ext_resource type="Theme" uid="uid://bcx3gapifxrc1" path="res://Resources/main_theme.tres" id="1_llw0e"]
+[ext_resource type="Script" path="res://Scripts/beginning_dialogue.gd" id="2_y6chh"]
+
+[node name="BeginningDialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_llw0e")
+script = ExtResource("2_y6chh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.718
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 316.0
+offset_top = 22.7359
+offset_right = -259.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_llw0e")
+text = "Lalala"
+fit_content = true
+
+[node name="NextButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -255.0
+offset_top = -89.0
+offset_right = -137.0
+offset_bottom = -11.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("1_llw0e")
+text = "Next"
