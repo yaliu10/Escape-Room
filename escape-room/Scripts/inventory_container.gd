@@ -1,6 +1,7 @@
 extends TextureRect
 
 @onready var scroll_container: ScrollContainer = $ScrollContainer
+@onready var briefcase_button: Button = %"Briefcase Button"
 
 func _on_left_arrow_button_pressed() -> void:
 	var value = scroll_container.scroll_horizontal

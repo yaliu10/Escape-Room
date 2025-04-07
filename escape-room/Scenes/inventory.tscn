@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://b7mxxhrj8pl00"]
+[gd_scene load_steps=19 format=3 uid="uid://b7mxxhrj8pl00"]
 
-[ext_resource type="Texture2D" uid="uid://b2fq71vy1yeif" path="res://art/Placeholder_Inventory.PNG" id="1_tahtk"]
+[ext_resource type="Texture2D" uid="uid://dovkon66dlvku" path="res://art/ph-inventory.PNG" id="1_u22ku"]
 [ext_resource type="Script" path="res://Scripts/inventory_container.gd" id="2_kk5xd"]
 [ext_resource type="Texture2D" uid="uid://pnpi4rjo80q4" path="res://art/placeholder arrow.PNG" id="2_o86dy"]
 [ext_resource type="Texture2D" uid="uid://cyamkeioip6ar" path="res://icon.svg" id="2_pmp0m"]
-[ext_resource type="Texture2D" uid="uid://ew0gwaw3yovb" path="res://art/ph-closed case.PNG" id="5_56d53"]
+[ext_resource type="Script" path="res://Scenes/briefcase_button.gd" id="5_dnto8"]
+[ext_resource type="Texture2D" uid="uid://d08gcrc25l3md" path="res://art/ph-item.PNG" id="5_f06vl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epmdh"]
 
@@ -31,33 +32,32 @@ HScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_rbd4n")
 HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_wjejq")
 HScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_vwkb1")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hu3cs"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0iu7h"]
 texture = ExtResource("2_pmp0m")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g5pob"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1m85l"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ytlcc"]
-texture = ExtResource("5_56d53")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p5oqv"]
 
 [node name="Inventory" type="Node2D"]
 
 [node name="Inventory Container" type="TextureRect" parent="."]
-offset_right = 2500.0
-offset_bottom = 3500.0
-scale = Vector2(0.339934, 0.339934)
-texture = ExtResource("1_tahtk")
+visible = false
+offset_left = 293.0
+offset_top = 151.0
+offset_right = 1935.0
+offset_bottom = 2450.0
+rotation = 0.00111101
+scale = Vector2(0.269905, 0.146018)
+texture = ExtResource("1_u22ku")
 script = ExtResource("2_kk5xd")
 
 [node name="LeftArrowButton" type="Button" parent="Inventory Container"]
 layout_mode = 0
-offset_left = 501.234
-offset_top = 1205.5
-offset_right = 3509.23
-offset_bottom = 3329.5
+offset_left = -39.6995
+offset_top = 1494.1
+offset_right = 3414.3
+offset_bottom = 3618.1
 rotation = -1.57833
-scale = Vector2(0.103133, 0.103133)
+scale = Vector2(0.2553, 0.145079)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_epmdh")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_43s1v")
 icon = ExtResource("2_o86dy")
@@ -65,12 +65,12 @@ flat = true
 
 [node name="RightArrowButton" type="Button" parent="Inventory Container"]
 layout_mode = 0
-offset_left = 2093.76
-offset_top = 888.263
-offset_right = 5101.76
-offset_bottom = 3012.26
+offset_left = 1720.31
+offset_top = 753.711
+offset_right = 4728.31
+offset_bottom = 2877.71
 rotation = -1.57833
-scale = Vector2(-0.103, -0.103)
+scale = Vector2(-0.230461, -0.155547)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_q7wwi")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_rcma7")
 icon = ExtResource("2_o86dy")
@@ -78,10 +78,11 @@ flat = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Inventory Container"]
 layout_mode = 0
-offset_left = 704.0
-offset_top = 933.0
-offset_right = 1884.0
-offset_bottom = 1148.0
+offset_left = 233.897
+offset_top = 800.794
+offset_right = 1472.9
+offset_bottom = 1026.79
+scale = Vector2(0.966396, 2.6564)
 theme = SubResource("Theme_557w2")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Inventory Container/ScrollContainer"]
@@ -89,97 +90,99 @@ layout_mode = 2
 theme_override_constants/separation = 61
 
 [node name="Slot" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_hu3cs")
+theme_override_styles/panel = SubResource("StyleBoxTexture_0iu7h")
 
 [node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot"]
 layout_mode = 0
-offset_left = 0.265849
-offset_top = -13.0131
-offset_right = 2500.27
-offset_bottom = 3486.99
-scale = Vector2(0.0776705, 0.114093)
-texture = ExtResource("1_tahtk")
+offset_left = -99.9693
+offset_top = -175.237
+offset_right = 200.031
+offset_bottom = 24.7632
+scale = Vector2(3.71132, 2.85709)
+texture = ExtResource("5_f06vl")
 
 [node name="Slot2" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_hu3cs")
+theme_override_styles/panel = SubResource("StyleBoxTexture_0iu7h")
 
 [node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot2"]
 layout_mode = 0
-offset_left = 0.265849
-offset_top = -13.0131
-offset_right = 2500.27
-offset_bottom = 3486.99
-scale = Vector2(0.0776705, 0.114093)
+offset_left = -99.9693
+offset_top = -175.237
+offset_right = 200.031
+offset_bottom = 24.7632
+scale = Vector2(3.71132, 2.85709)
+texture = ExtResource("5_f06vl")
 
 [node name="Slot3" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_hu3cs")
+theme_override_styles/panel = SubResource("StyleBoxTexture_0iu7h")
 
 [node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot3"]
 layout_mode = 0
-offset_left = 0.265849
-offset_top = -13.0131
-offset_right = 2500.27
-offset_bottom = 3486.99
-scale = Vector2(0.0776705, 0.114093)
+offset_left = -99.9693
+offset_top = -175.237
+offset_right = 200.031
+offset_bottom = 24.7632
+scale = Vector2(3.71132, 2.85709)
+texture = ExtResource("5_f06vl")
 
 [node name="Slot4" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_hu3cs")
+theme_override_styles/panel = SubResource("StyleBoxTexture_0iu7h")
 
 [node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot4"]
 layout_mode = 0
-offset_left = 0.265849
-offset_top = -13.0131
-offset_right = 2500.27
-offset_bottom = 3486.99
-scale = Vector2(0.0776705, 0.114093)
+offset_left = -99.9693
+offset_top = -175.237
+offset_right = 200.031
+offset_bottom = 24.7632
+scale = Vector2(3.71132, 2.85709)
+texture = ExtResource("5_f06vl")
 
 [node name="Slot5" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_hu3cs")
+theme_override_styles/panel = SubResource("StyleBoxTexture_0iu7h")
 
 [node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot5"]
 layout_mode = 0
-offset_left = 0.265849
-offset_top = -13.0131
-offset_right = 2500.27
-offset_bottom = 3486.99
-scale = Vector2(0.0776705, 0.114093)
-texture = ExtResource("1_tahtk")
+offset_left = -99.9693
+offset_top = -175.237
+offset_right = 200.031
+offset_bottom = 24.7632
+scale = Vector2(3.71132, 2.85709)
+texture = ExtResource("5_f06vl")
 
 [node name="Slot6" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_hu3cs")
+theme_override_styles/panel = SubResource("StyleBoxTexture_0iu7h")
 
 [node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot6"]
 layout_mode = 0
-offset_left = 0.265849
-offset_top = -13.0131
-offset_right = 2500.27
-offset_bottom = 3486.99
-scale = Vector2(0.0776705, 0.114093)
-texture = ExtResource("1_tahtk")
+offset_left = -99.9693
+offset_top = -175.237
+offset_right = 200.031
+offset_bottom = 24.7632
+scale = Vector2(3.71132, 2.85709)
+texture = ExtResource("5_f06vl")
 
 [node name="Briefcase Button" type="Button" parent="."]
-offset_left = -12.0
-offset_top = 248.0
-offset_right = 296.0
-offset_bottom = 456.0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_g5pob")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_1m85l")
-theme_override_styles/normal = SubResource("StyleBoxTexture_ytlcc")
+unique_name_in_owner = true
+offset_left = -27.0
+offset_top = 235.0
+offset_right = 281.0
+offset_bottom = 443.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p5oqv")
 toggle_mode = true
-icon = ExtResource("5_56d53")
 flat = true
+script = ExtResource("5_dnto8")
 
 [connection signal="pressed" from="Inventory Container/LeftArrowButton" to="Inventory Container" method="_on_left_arrow_button_pressed"]
 [connection signal="pressed" from="Inventory Container/RightArrowButton" to="Inventory Container" method="_on_right_arrow_button_pressed"]
