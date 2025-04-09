@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b7mxxhrj8pl00"]
+[gd_scene load_steps=20 format=3 uid="uid://b7mxxhrj8pl00"]
 
 [ext_resource type="Texture2D" uid="uid://dovkon66dlvku" path="res://art/ph-inventory.PNG" id="1_u22ku"]
 [ext_resource type="Script" path="res://Scripts/inventory_container.gd" id="2_kk5xd"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cyamkeioip6ar" path="res://icon.svg" id="2_pmp0m"]
 [ext_resource type="Script" path="res://Scenes/briefcase_button.gd" id="5_dnto8"]
 [ext_resource type="Texture2D" uid="uid://d08gcrc25l3md" path="res://art/ph-item.PNG" id="5_f06vl"]
+[ext_resource type="Script" path="res://Scenes/slot.gd" id="5_kipm4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epmdh"]
 
@@ -40,7 +41,6 @@ texture = ExtResource("2_pmp0m")
 [node name="Inventory" type="Node2D"]
 
 [node name="Inventory Container" type="TextureRect" parent="."]
-visible = false
 offset_left = 293.0
 offset_top = 151.0
 offset_right = 1935.0
@@ -93,6 +93,7 @@ theme_override_constants/separation = 61
 custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0iu7h")
+script = ExtResource("5_kipm4")
 
 [node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot"]
 layout_mode = 0
