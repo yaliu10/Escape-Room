@@ -13,20 +13,44 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_crjaa")
 
-[node name="PlaceholderLeftWall" type="Sprite2D" parent="."]
-position = Vector2(602, 323)
-scale = Vector2(0.3, 0.3)
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_fxllj")
+expand_mode = 1
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 695.0
-offset_top = 637.0
-offset_right = 3703.0
-offset_bottom = 2761.0
-rotation = 3.12593
-scale = Vector2(0.0715281, 0.0715281)
-icon = ExtResource("3_alxna")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.461806
+anchor_top = 0.532407
+anchor_right = 0.572049
+anchor_bottom = 0.669753
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
 flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.481481
+anchor_top = -0.0309279
+anchor_right = 1.40741
+anchor_bottom = 1.57732
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_alxna")
+expand_mode = 1
+flip_v = true
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

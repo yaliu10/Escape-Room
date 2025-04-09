@@ -13,20 +13,37 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pwk68")
 
-[node name="PlaceholderRightWall" type="Sprite2D" parent="."]
-position = Vector2(602, 323)
-scale = Vector2(0.3, 0.3)
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_wix7h")
+expand_mode = 1
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 695.0
-offset_top = 637.0
-offset_right = 3703.0
-offset_bottom = 2761.0
-rotation = 3.12593
-scale = Vector2(0.0715281, 0.0715281)
-icon = ExtResource("3_cxqnp")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.638021
+anchor_top = 0.67284
+anchor_right = 0.814236
+anchor_bottom = 0.87963
 flat = true
+
+[node name="TextureRect" type="TextureRect" parent="Button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.24631
+anchor_top = -0.850746
+anchor_right = -0.246305
+anchor_bottom = 0.149254
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_cxqnp")
+expand_mode = 2
+flip_v = true
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
