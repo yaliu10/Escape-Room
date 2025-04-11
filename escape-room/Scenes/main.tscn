@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bombr13ma3q8o"]
+[gd_scene load_steps=7 format=3 uid="uid://bombr13ma3q8o"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_uc6yk"]
 [ext_resource type="Texture2D" uid="uid://dtgphwhgvi6iy" path="res://art/IMG_2640.PNG" id="2_g73d6"]
 [ext_resource type="Texture2D" uid="uid://pnpi4rjo80q4" path="res://art/placeholder arrow.PNG" id="3_j2lnq"]
 [ext_resource type="PackedScene" uid="uid://dju1hvapdgqbs" path="res://Scenes/pause_screen.tscn" id="4_kx0le"]
 [ext_resource type="Texture2D" uid="uid://cyamkeioip6ar" path="res://icon.svg" id="5_jynig"]
+[ext_resource type="PackedScene" uid="uid://dgl55br125c8m" path="res://Scenes/art_info.tscn" id="6_l6sqw"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -24,6 +25,15 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_g73d6")
 expand_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("4_kx0le")]
+unique_name_in_owner = true
+
+[node name="ArtInfo" parent="." instance=ExtResource("6_l6sqw")]
+layout_mode = 1
+anchors_preset = -1
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
@@ -101,7 +111,7 @@ grow_vertical = 2
 texture = ExtResource("3_j2lnq")
 expand_mode = 1
 
-[node name="text object" type="Button" parent="."]
+[node name="text object" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 660.0
 offset_top = 488.0
@@ -110,27 +120,22 @@ offset_bottom = 2612.0
 scale = Vector2(-0.0309632, 0.0273233)
 icon = ExtResource("3_j2lnq")
 
-[node name="TextureRect" type="TextureRect" parent="text object"]
+[node name="TextureRect" type="TextureRect" parent="Control/text object"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("4_kx0le")]
-unique_name_in_owner = true
-
 [node name="PauseIcon" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -68.0
-offset_top = -68.0
-offset_right = 68.0
-offset_bottom = 68.0
+anchors_preset = -1
+anchor_left = 0.448
+anchor_top = 0.469
+anchor_right = 0.566
+anchor_bottom = 0.679
+offset_left = -0.0960083
+offset_top = 0.0879822
+offset_right = -0.0320435
+offset_bottom = 0.00799561
 grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("5_jynig")
@@ -138,5 +143,5 @@ icon = ExtResource("5_jynig")
 [connection signal="pressed" from="Control/Left Button" to="." method="_on_up_button_pressed"]
 [connection signal="pressed" from="Control/Right Button" to="." method="_on_up_button_pressed"]
 [connection signal="pressed" from="Control/Up Button" to="." method="_on_up_button_pressed"]
-[connection signal="pressed" from="text object" to="." method="_on_text_object_pressed"]
+[connection signal="pressed" from="Control/text object" to="." method="_on_text_object_pressed"]
 [connection signal="pressed" from="PauseIcon" to="CanvasLayer/PauseScreen" method="_on_pause_icon_pressed"]
