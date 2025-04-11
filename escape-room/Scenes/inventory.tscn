@@ -4,9 +4,9 @@
 [ext_resource type="Script" path="res://Scripts/inventory_container.gd" id="2_kk5xd"]
 [ext_resource type="Texture2D" uid="uid://pnpi4rjo80q4" path="res://art/placeholder arrow.PNG" id="2_o86dy"]
 [ext_resource type="Texture2D" uid="uid://cyamkeioip6ar" path="res://icon.svg" id="2_pmp0m"]
-[ext_resource type="Script" path="res://Scenes/briefcase_button.gd" id="5_dnto8"]
+[ext_resource type="Script" path="res://briefcase_button.gd" id="5_dnto8"]
 [ext_resource type="Texture2D" uid="uid://d08gcrc25l3md" path="res://art/ph-item.PNG" id="5_f06vl"]
-[ext_resource type="Script" path="res://Scenes/slot.gd" id="5_kipm4"]
+[ext_resource type="Script" path="res://Scripts/slot.gd" id="5_kipm4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epmdh"]
 
@@ -108,6 +108,7 @@ texture = ExtResource("5_f06vl")
 custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0iu7h")
+script = ExtResource("5_kipm4")
 
 [node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot2"]
 layout_mode = 0
@@ -122,6 +123,7 @@ texture = ExtResource("5_f06vl")
 custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0iu7h")
+script = ExtResource("5_kipm4")
 
 [node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot3"]
 layout_mode = 0
@@ -136,6 +138,7 @@ texture = ExtResource("5_f06vl")
 custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0iu7h")
+script = ExtResource("5_kipm4")
 
 [node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot4"]
 layout_mode = 0
@@ -150,6 +153,7 @@ texture = ExtResource("5_f06vl")
 custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0iu7h")
+script = ExtResource("5_kipm4")
 
 [node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot5"]
 layout_mode = 0
@@ -164,6 +168,7 @@ texture = ExtResource("5_f06vl")
 custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_0iu7h")
+script = ExtResource("5_kipm4")
 
 [node name="Item" type="TextureRect" parent="Inventory Container/ScrollContainer/HBoxContainer/Slot6"]
 layout_mode = 0
@@ -173,6 +178,14 @@ offset_right = 200.031
 offset_bottom = 24.7632
 scale = Vector2(3.71132, 2.85709)
 texture = ExtResource("5_f06vl")
+
+[node name="MovableItem" type="Node2D" parent="Inventory Container"]
+position = Vector2(233.897, 800.794)
+scale = Vector2(0.966396, 2.6564)
+
+[node name="TextureRect" type="TextureRect" parent="Inventory Container/MovableItem"]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Briefcase Button" type="Button" parent="."]
 unique_name_in_owner = true
