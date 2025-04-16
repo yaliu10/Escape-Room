@@ -35,7 +35,6 @@ metadata/_edit_use_anchors_ = true
 unique_name_in_owner = true
 position = Vector2i(435, 166)
 size = Vector2i(300, 300)
-visible = true
 theme_override_styles/panel = SubResource("StyleBoxFlat_04mq2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/ItemPopup"]
@@ -47,6 +46,7 @@ offset_bottom = 290.0
 [node name="Name" type="Label" parent="UI/ItemPopup/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.0605303, 0.0605303, 0.0605303, 1)
 theme_override_font_sizes/font_size = 40
 text = "Name"
 
@@ -57,5 +57,6 @@ layout_mode = 2
 unique_name_in_owner = true
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.0605303, 0.0605303, 0.0605303, 1)
 theme_override_font_sizes/font_size = 30
 text = "Description"
