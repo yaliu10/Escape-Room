@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bombr13ma3q8o"]
+[gd_scene load_steps=6 format=3 uid="uid://bombr13ma3q8o"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_uc6yk"]
 [ext_resource type="Texture2D" uid="uid://dtgphwhgvi6iy" path="res://art/IMG_2640.PNG" id="2_g73d6"]
 [ext_resource type="Texture2D" uid="uid://pnpi4rjo80q4" path="res://art/placeholder arrow.PNG" id="3_j2lnq"]
 [ext_resource type="PackedScene" uid="uid://dju1hvapdgqbs" path="res://Scenes/pause_screen.tscn" id="4_kx0le"]
 [ext_resource type="Texture2D" uid="uid://cyamkeioip6ar" path="res://icon.svg" id="5_jynig"]
-[ext_resource type="PackedScene" uid="uid://dgl55br125c8m" path="res://Scenes/art_info.tscn" id="6_l6sqw"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -30,10 +29,6 @@ expand_mode = 1
 
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("4_kx0le")]
 unique_name_in_owner = true
-
-[node name="ArtInfo" parent="." instance=ExtResource("6_l6sqw")]
-layout_mode = 1
-anchors_preset = -1
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
