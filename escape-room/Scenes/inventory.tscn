@@ -102,7 +102,6 @@ offset_top = -175.237
 offset_right = 200.031
 offset_bottom = 24.7632
 scale = Vector2(3.71132, 2.85709)
-texture = ExtResource("5_f06vl")
 
 [node name="Slot2" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
 custom_minimum_size = Vector2(300, 200)
@@ -117,7 +116,6 @@ offset_top = -175.237
 offset_right = 200.031
 offset_bottom = 24.7632
 scale = Vector2(3.71132, 2.85709)
-texture = ExtResource("5_f06vl")
 
 [node name="Slot3" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
 custom_minimum_size = Vector2(300, 200)
@@ -162,7 +160,6 @@ offset_top = -175.237
 offset_right = 200.031
 offset_bottom = 24.7632
 scale = Vector2(3.71132, 2.85709)
-texture = ExtResource("5_f06vl")
 
 [node name="Slot6" type="Panel" parent="Inventory Container/ScrollContainer/HBoxContainer"]
 custom_minimum_size = Vector2(300, 200)
@@ -177,15 +174,17 @@ offset_top = -175.237
 offset_right = 200.031
 offset_bottom = 24.7632
 scale = Vector2(3.71132, 2.85709)
-texture = ExtResource("5_f06vl")
 
 [node name="MovableItem" type="Node2D" parent="Inventory Container"]
 position = Vector2(233.897, 800.794)
 scale = Vector2(0.966396, 2.6564)
 
 [node name="TextureRect" type="TextureRect" parent="Inventory Container/MovableItem"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -53.8655
+offset_top = -115.975
+offset_right = 907.134
+offset_bottom = 351.025
+texture = ExtResource("5_f06vl")
 
 [node name="Briefcase Button" type="Button" parent="."]
 unique_name_in_owner = true

@@ -1,9 +1,9 @@
 extends Panel
 
-@onReady var item : TextureRect : $Item
+@onready var item : TextureRect = $Item
 
 func pick_from_slot():
-	item.set.texture(null)
+	item.set_texture(null)
 	
-func put_into_slot():
-	item.set.texture(new_texture)
+func put_into_slot(new_texture):
+	item.set_texture(new_texture)
