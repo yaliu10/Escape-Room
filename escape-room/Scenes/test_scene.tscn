@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjbleu53pmsee"]
+[gd_scene load_steps=3 format=3 uid="uid://bjbleu53pmsee"]
 
 [ext_resource type="PackedScene" uid="uid://bqtk5jusks3x1" path="res://Scenes/slot.tscn" id="1_tjkqk"]
+[ext_resource type="Resource" uid="uid://daytw3tdjnxgx" path="res://Resources/Art1.tres" id="2_x7cor"]
 
 [node name="TestScene" type="Node2D"]
 
@@ -25,6 +26,7 @@ layout_mode = 2
 
 [node name="Slot2" parent="UI/ActionBar" instance=ExtResource("1_tjkqk")]
 layout_mode = 2
+item = ExtResource("2_x7cor")
 
 [node name="Slot3" parent="UI/ActionBar" instance=ExtResource("1_tjkqk")]
 layout_mode = 2
@@ -37,6 +39,7 @@ layout_mode = 2
 
 [node name="Slot6" parent="UI/ActionBar" instance=ExtResource("1_tjkqk")]
 layout_mode = 2
+item = ExtResource("2_x7cor")
 
 [node name="Slot7" parent="UI/ActionBar" instance=ExtResource("1_tjkqk")]
 layout_mode = 2
