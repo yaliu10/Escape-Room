@@ -17,7 +17,7 @@ func ItemPopup(slot: Rect2i, item: Item):
 	%ItemPopup.popup(Rect2i(slot.position + correction, %ItemPopup.size))
 
 
-func HideItemPopup(slot, item):
+func HideItemPopup(slot, Item):
 	%ItemPopup.hide()
 
 

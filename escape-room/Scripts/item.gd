@@ -4,10 +4,10 @@ class_name Item
 
 @export_category("Information")
 @export var name: String
-@export var description: String
-#@export var level: int
+@export var rarity: String
+@export var level: int
 @export var texture: Texture2D
 
-#@export_category("Attribute Bonus")
-#@export var attribute_type: String
-#@export var attribute_value: int
+@export_category("Attribute Bonus")
+@export var attribute_type: String
+@export var attribute_value: int

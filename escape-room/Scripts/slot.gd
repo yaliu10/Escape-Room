@@ -14,4 +14,4 @@ func _on_mouse_entered() -> void:
 
 
 func _on_mouse_exited() -> void:
-	ItemInfo.HideItemPopup(null, null)
+	ItemInfo.HideItemPopup(Rect2i(Vector2i(global_position), Vector2i(size)), item)

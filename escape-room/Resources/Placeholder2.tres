@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bgig8opp80co0"]
+
+[ext_resource type="Script" path="res://Scripts/item.gd" id="1_f4kho"]
+[ext_resource type="Texture2D" uid="uid://cyamkeioip6ar" path="res://icon.svg" id="2_js07j"]
+
+[resource]
+script = ExtResource("1_f4kho")
+name = "2"
+rarity = "Rare"
+level = 1
+texture = ExtResource("2_js07j")
+attribute_type = "Strength"
+attribute_value = 2
