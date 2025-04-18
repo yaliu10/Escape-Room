@@ -27,7 +27,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_n0bkr")
-metadata/_edit_use_anchors_ = true
 
 [node name="UI" type="CanvasLayer" parent="."]
 

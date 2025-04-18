@@ -14,7 +14,7 @@ func ItemPopup(slot: Rect2i, item: Item):
 	else:
 		correction = Vector2i(%ItemPopup.size.x + padding, 0)
 	
-	%ItemPopup.popup(Rect2i(slot.position + correction, %ItemPopup.size))
+	%ItemPopup.popup(Rect2i( slot.position + correction, %ItemPopup.size ))
 
 
 func HideItemPopup(slot, Item):
