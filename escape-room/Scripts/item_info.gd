@@ -23,4 +23,6 @@ func HideItemPopup(slot, Item):
 
 func set_value(item: Item):
 	%Name.text = item.name
-	%Information.text = item.description
+	%Level.text = str(item.level)
+	%Rarity.text = item.attribute_type
+	%AttributeValue.text = str(item.attribute_value)

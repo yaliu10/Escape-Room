@@ -9,5 +9,5 @@ name = "Placeholder"
 rarity = "Rare"
 level = 2
 texture = ExtResource("2_b1wyo")
-attribute_type = "Heal"
+attribute_type = "Strength"
 attribute_value = 2

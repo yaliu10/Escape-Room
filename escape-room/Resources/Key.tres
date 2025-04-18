@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_f4kho")
-name = "2"
+name = "Key"
 rarity = "Rare"
 level = 1
 texture = ExtResource("2_h6rrw")
