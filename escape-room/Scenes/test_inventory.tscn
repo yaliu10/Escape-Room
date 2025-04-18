@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3wixu7c5mwjv"]
+
+[ext_resource type="Texture2D" uid="uid://buixlxfg5dmxr" path="res://art/Key1.png" id="1_mjb3o"]
+[ext_resource type="Script" path="res://test_inventory.gd" id="2_vmedc"]
+
+[node name="TestInventory" type="TextureRect"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_mjb3o")
+expand_mode = 1
+script = ExtResource("2_vmedc")
+
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Panel2" type="Panel" parent="."]
+show_behind_parent = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 119.0
+offset_right = 219.0
+offset_bottom = 100.0
+mouse_filter = 2
+
+[node name="Panel3" type="Panel" parent="."]
+show_behind_parent = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 237.0
+offset_right = 337.0
+offset_bottom = 100.0
+mouse_filter = 2

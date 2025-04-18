@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://lmgvxbx75jx2"]
+[gd_scene load_steps=6 format=3 uid="uid://lmgvxbx75jx2"]
 
 [ext_resource type="Script" path="res://Scripts/right_wall.gd" id="1_pwk68"]
 [ext_resource type="Texture2D" uid="uid://dm7fqcwymr2lp" path="res://art/placeholder right wall.PNG" id="1_wix7h"]
 [ext_resource type="Texture2D" uid="uid://pnpi4rjo80q4" path="res://art/placeholder arrow.PNG" id="3_cxqnp"]
+[ext_resource type="PackedScene" uid="uid://b3wixu7c5mwjv" path="res://Scenes/test_inventory.tscn" id="4_5t67b"]
+[ext_resource type="Texture2D" uid="uid://buixlxfg5dmxr" path="res://art/Key1.png" id="5_2thtb"]
 
 [node name="Right Wall" type="Control"]
 layout_mode = 3
@@ -13,10 +15,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pwk68")
 
-[node name="PlaceholderRightWall" type="Sprite2D" parent="."]
-position = Vector2(602, 323)
-scale = Vector2(0.3, 0.3)
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_wix7h")
+expand_mode = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -29,4 +36,24 @@ scale = Vector2(0.0715281, 0.0715281)
 icon = ExtResource("3_cxqnp")
 flat = true
 
+[node name="TestInventory" parent="." instance=ExtResource("4_5t67b")]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 528.0
+offset_right = 250.0
+offset_bottom = 628.0
+texture = null
+
+[node name="Item" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 67.0
+offset_top = 43.0
+offset_right = 843.0
+offset_bottom = 819.0
+scale = Vector2(0.118831, 0.118831)
+icon = ExtResource("5_2thtb")
+flat = true
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Item" to="TestInventory" method="_on_item_pressed"]
