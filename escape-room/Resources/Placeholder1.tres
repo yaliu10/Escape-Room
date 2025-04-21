@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_koahy")
 name = "Placeholder"
-rarity = "Rare"
+rarity = "Epic"
 level = 2
 texture = ExtResource("2_b1wyo")
 attribute_type = "Strength"
