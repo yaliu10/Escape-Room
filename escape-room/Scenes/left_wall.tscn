@@ -42,10 +42,10 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureRect" type="TextureRect" parent="Button"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.481481
-anchor_top = -0.0309279
-anchor_right = 1.40741
-anchor_bottom = 1.57732
+anchor_left = -0.414818
+anchor_top = 2.17526
+anchor_right = 1.17037
+anchor_bottom = 3.3402
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_alxna")

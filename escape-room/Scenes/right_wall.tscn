@@ -35,10 +35,10 @@ flat = true
 [node name="TextureRect" type="TextureRect" parent="Button"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -1.24631
-anchor_top = -0.850746
-anchor_right = -0.246305
-anchor_bottom = 0.149254
+anchor_left = -1.21675
+anchor_top = 0.746267
+anchor_right = -0.216747
+anchor_bottom = 1.74627
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_cxqnp")

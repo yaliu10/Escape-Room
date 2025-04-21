@@ -49,10 +49,10 @@ flat = true
 [node name="TextureRect" type="TextureRect" parent="Control/Left Button"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 305.267
-anchor_top = 1128.24
-anchor_right = 811.017
-anchor_bottom = 1471.62
+anchor_left = -35.6516
+anchor_top = 1083.86
+anchor_right = 470.098
+anchor_bottom = 1427.24
 rotation = -1.5708
 texture = ExtResource("3_j2lnq")
 expand_mode = 1
@@ -69,10 +69,10 @@ flat = true
 [node name="TextureRect" type="TextureRect" parent="Control/Right Button"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 2277.25
-anchor_top = 647.045
-anchor_right = 2783.0
-anchor_bottom = 990.42
+anchor_left = 2584.74
+anchor_top = 579.304
+anchor_right = 3090.49
+anchor_bottom = 922.679
 rotation = 1.5708
 texture = ExtResource("3_j2lnq")
 expand_mode = 1
@@ -101,6 +101,10 @@ anchor_left = 1069.55
 anchor_top = 18.6872
 anchor_right = 1575.3
 anchor_bottom = 362.062
+offset_left = -83.1465
+offset_top = -529.82
+offset_right = -83.1465
+offset_bottom = -529.82
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_j2lnq")
@@ -135,8 +139,8 @@ grow_horizontal = 2
 grow_vertical = 2
 icon = ExtResource("5_jynig")
 
-[connection signal="pressed" from="Control/Left Button" to="." method="_on_up_button_pressed"]
-[connection signal="pressed" from="Control/Right Button" to="." method="_on_up_button_pressed"]
+[connection signal="pressed" from="Control/Left Button" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="Control/Right Button" to="." method="_on_right_button_pressed"]
 [connection signal="pressed" from="Control/Up Button" to="." method="_on_up_button_pressed"]
 [connection signal="pressed" from="Control/text object" to="." method="_on_text_object_pressed"]
 [connection signal="pressed" from="PauseIcon" to="CanvasLayer/PauseScreen" method="_on_pause_icon_pressed"]

@@ -14,8 +14,8 @@ grow_vertical = 2
 script = ExtResource("1_7eeak")
 
 [node name="Img2641" type="Sprite2D" parent="."]
-position = Vector2(602, 323)
-scale = Vector2(0.3, 0.3)
+position = Vector2(576, 324)
+scale = Vector2(0.384, 0.306238)
 texture = ExtResource("2_iw4cl")
 
 [node name="Button" type="Button" parent="."]
