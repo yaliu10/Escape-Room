@@ -10,7 +10,7 @@ func _on_mouse_entered() -> void:
 	if item == null:
 		return
 
-	ItemInfo.ItemPopup(Rect2i(Vector2i(global_position), Vector2i(size)), null)
+	ItemInfo.ItemPopup(Rect2i(Vector2i(global_position), Vector2i(size)), item)
 
 
 func _on_mouse_exited() -> void:
