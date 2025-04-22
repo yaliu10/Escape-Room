@@ -1,8 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://lmgvxbx75jx2"]
+[gd_scene load_steps=15 format=3 uid="uid://lmgvxbx75jx2"]
 
 [ext_resource type="Script" path="res://Scripts/right_wall.gd" id="1_pwk68"]
 [ext_resource type="Texture2D" uid="uid://dm7fqcwymr2lp" path="res://art/placeholder right wall.PNG" id="1_wix7h"]
 [ext_resource type="Texture2D" uid="uid://pnpi4rjo80q4" path="res://art/placeholder arrow.PNG" id="3_cxqnp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mbfk7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6ogav"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fu017"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iyr4h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47wed"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ulv1v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u1vfv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7g3os"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7a5ht"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xsjub"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6bfhj"]
 
 [node name="Right Wall" type="Control"]
 layout_mode = 3
@@ -30,6 +52,17 @@ anchor_left = 0.638021
 anchor_top = 0.67284
 anchor_right = 0.814236
 anchor_bottom = 0.87963
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mbfk7")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_6ogav")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fu017")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_iyr4h")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_47wed")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ulv1v")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_u1vfv")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_7g3os")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7a5ht")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xsjub")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6bfhj")
 flat = true
 
 [node name="TextureRect" type="TextureRect" parent="Button"]
