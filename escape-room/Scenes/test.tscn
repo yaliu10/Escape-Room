@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://be0msyr0ym16c"]
+
+[ext_resource type="PackedScene" uid="uid://dwocvjcjwwgu0" path="res://Scenes/texture_rect.tscn" id="1_1ey42"]
+[ext_resource type="Texture2D" uid="uid://c4p05nt1durp4" path="res://art/Key1.png" id="2_0d35y"]
+
+[node name="Test" type="Node2D"]
+
+[node name="TextureRect" parent="." instance=ExtResource("1_1ey42")]
+offset_left = 256.0
+offset_top = 256.0
+offset_right = 384.0
+offset_bottom = 384.0
+texture = ExtResource("2_0d35y")
+
+[node name="TextureRect2" parent="." instance=ExtResource("1_1ey42")]
+offset_left = 448.0
+offset_top = 256.0
+offset_right = 576.0
+offset_bottom = 384.0
+
+[node name="TextureRect3" parent="." instance=ExtResource("1_1ey42")]
+offset_left = 640.0
+offset_top = 256.0
+offset_right = 768.0
+offset_bottom = 384.0
+
+[node name="TextureRect4" parent="." instance=ExtResource("1_1ey42")]
+offset_left = 64.0
+offset_top = 256.0
+offset_right = 192.0
+offset_bottom = 384.0
