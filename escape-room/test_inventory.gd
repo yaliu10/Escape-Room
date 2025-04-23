@@ -1,13 +1,7 @@
 extends TextureRect
 
-@onready var item: Button = %Item
-var preview_texture
-var key: Texture2D
-
-func _on_item_pressed() -> void:
-	key = item.get_button_icon()
-
 func _get_drag_data(at_position: Vector2) -> Variant:
+	var preview_texture = TextureRect.new()
 	
 	preview_texture.texture = texture
 	preview_texture.expand_mode = 1

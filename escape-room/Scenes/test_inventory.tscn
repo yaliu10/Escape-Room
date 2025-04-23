@@ -18,21 +18,3 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
-
-[node name="Panel2" type="Panel" parent="."]
-show_behind_parent = true
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 0
-offset_left = 119.0
-offset_right = 219.0
-offset_bottom = 100.0
-mouse_filter = 2
-
-[node name="Panel3" type="Panel" parent="."]
-show_behind_parent = true
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 0
-offset_left = 237.0
-offset_right = 337.0
-offset_bottom = 100.0
-mouse_filter = 2

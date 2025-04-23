@@ -36,14 +36,6 @@ scale = Vector2(0.0715281, 0.0715281)
 icon = ExtResource("3_cxqnp")
 flat = true
 
-[node name="TestInventory" parent="." instance=ExtResource("4_5t67b")]
-layout_mode = 0
-offset_left = 150.0
-offset_top = 528.0
-offset_right = 250.0
-offset_bottom = 628.0
-texture = null
-
 [node name="Item" type="Button" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
@@ -55,5 +47,27 @@ scale = Vector2(0.118831, 0.118831)
 icon = ExtResource("5_2thtb")
 flat = true
 
+[node name="TestInventory" parent="." instance=ExtResource("4_5t67b")]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 483.0
+offset_right = 242.0
+offset_bottom = 583.0
+
+[node name="TestInventory2" parent="." instance=ExtResource("4_5t67b")]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 483.0
+offset_right = 386.0
+offset_bottom = 583.0
+texture = null
+
+[node name="TestInventory3" parent="." instance=ExtResource("4_5t67b")]
+layout_mode = 0
+offset_left = 890.0
+offset_top = 155.0
+offset_right = 990.0
+offset_bottom = 255.0
+texture = null
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Item" to="TestInventory" method="_on_item_pressed"]
