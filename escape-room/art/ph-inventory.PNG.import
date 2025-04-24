@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxj53y76djx75"
-path="res://.godot/imported/ph-slot.PNG-eb2fc6f2c7844a10789c7d8e2299d58d.ctex"
+uid="uid://ddkd84pfftyuq"
+path="res://.godot/imported/ph-inventory.PNG-63835c7e343766337b08fd32e563bccd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/ph-slot.PNG"
-dest_files=["res://.godot/imported/ph-slot.PNG-eb2fc6f2c7844a10789c7d8e2299d58d.ctex"]
+source_file="res://art/ph-inventory.PNG"
+dest_files=["res://.godot/imported/ph-inventory.PNG-63835c7e343766337b08fd32e563bccd.ctex"]
 
 [params]
 
