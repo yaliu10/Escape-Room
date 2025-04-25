@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dinp41728o3mx"]
+
+[ext_resource type="Script" path="res://Scripts/item.gd" id="1_koahy"]
+[ext_resource type="Texture2D" uid="uid://cyamkeioip6ar" path="res://icon.svg" id="2_b1wyo"]
+
+[resource]
+script = ExtResource("1_koahy")
+name = "Placeholder"
+rarity = "Epic"
+level = 2
+texture = ExtResource("2_b1wyo")
+attribute_type = "Strength"
+attribute_value = 2

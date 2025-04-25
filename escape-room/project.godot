@@ -15,6 +15,14 @@ run/main_scene="res://Scenes/start_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ItemInfo="*res://Scenes/item_info.tscn"
+
+[display]
+
+window/stretch/mode="canvas_items"
+
 [input]
 
 pause={
