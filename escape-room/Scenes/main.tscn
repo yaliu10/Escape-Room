@@ -1,10 +1,32 @@
-[gd_scene load_steps=6 format=3 uid="uid://bombr13ma3q8o"]
+[gd_scene load_steps=17 format=3 uid="uid://bombr13ma3q8o"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_uc6yk"]
 [ext_resource type="Texture2D" uid="uid://dtgphwhgvi6iy" path="res://art/IMG_2640.PNG" id="2_g73d6"]
 [ext_resource type="Texture2D" uid="uid://pnpi4rjo80q4" path="res://art/placeholder arrow.PNG" id="3_j2lnq"]
 [ext_resource type="PackedScene" uid="uid://dju1hvapdgqbs" path="res://Scenes/pause_screen.tscn" id="4_kx0le"]
 [ext_resource type="Texture2D" uid="uid://cyamkeioip6ar" path="res://icon.svg" id="5_jynig"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_40ugu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3xf03"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2c025"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6pmci"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_inah0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l7oi6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_luwjk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_leb3e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8p5ea"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pdkhs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogirb"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -41,18 +63,21 @@ grow_vertical = 2
 [node name="Left Button" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-offset_right = 8.0
-offset_bottom = 8.0
+offset_top = 256.0
+offset_right = 2995.0
+offset_bottom = 3844.0
 scale = Vector2(0.0560984, 0.0535125)
 flat = true
 
 [node name="TextureRect" type="TextureRect" parent="Control/Left Button"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -35.6516
-anchor_top = 1083.86
-anchor_right = 470.098
-anchor_bottom = 1427.24
+anchor_top = 0.075
+anchor_right = 0.944
+anchor_bottom = 1.087
+offset_top = 3629.76
+offset_right = 803.526
+offset_bottom = 2824.94
 rotation = -1.5708
 texture = ExtResource("3_j2lnq")
 expand_mode = 1
@@ -61,18 +86,23 @@ metadata/_edit_use_anchors_ = true
 [node name="Right Button" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 1018.0
+offset_top = 284.0
+offset_right = 3104.0
+offset_bottom = 2975.0
 scale = Vector2(0.0560984, 0.0535125)
 flat = true
 
 [node name="TextureRect" type="TextureRect" parent="Control/Right Button"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 2584.74
-anchor_top = 579.304
-anchor_right = 3090.49
-anchor_bottom = 922.679
+anchor_top = -0.176
+anchor_right = 1.068
+anchor_bottom = 1.189
+offset_left = 2228.23
+offset_top = -124.375
+offset_right = 3797.38
+offset_bottom = -1443.59
 rotation = 1.5708
 texture = ExtResource("3_j2lnq")
 expand_mode = 1
@@ -85,30 +115,42 @@ anchor_left = -0.003
 anchor_top = -0.006
 anchor_right = -0.003
 anchor_bottom = -0.006
-offset_left = 0.12
-offset_top = 0.24
-offset_right = 8.12
-offset_bottom = 8.24
+offset_left = 530.456
+offset_top = -0.112
+offset_right = 2740.46
+offset_bottom = 2316.89
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.0560984, 0.0535125)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_40ugu")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_3xf03")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2c025")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6pmci")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_inah0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_l7oi6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_luwjk")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_leb3e")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8p5ea")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_pdkhs")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ogirb")
 flat = true
 
 [node name="TextureRect" type="TextureRect" parent="Control/Up Button"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 1069.55
-anchor_top = 18.6872
-anchor_right = 1575.3
-anchor_bottom = 362.062
-offset_left = -83.1465
-offset_top = -529.82
-offset_right = -83.1465
-offset_bottom = -529.82
+anchor_left = -0.252218
+anchor_top = -0.048
+anchor_right = 1.272
+anchor_bottom = 0.997619
+offset_left = 1.25598
+offset_top = 0.0928802
+offset_right = 0.852783
+offset_bottom = -0.163086
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_j2lnq")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="text object" type="Button" parent="Control"]
 layout_mode = 0
