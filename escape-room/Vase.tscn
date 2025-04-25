@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsjcxcsf5emjc"]
+
+[ext_resource type="Texture2D" uid="uid://dr0hdk6hw20ho" path="res://art/chinese_oriental_vase.png" id="1_y0j4x"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_top = -8.0
+offset_right = 200.0
+offset_bottom = 300.0
+texture = ExtResource("1_y0j4x")
+expand_mode = 1
