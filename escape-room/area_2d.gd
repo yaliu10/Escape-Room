@@ -1,11 +1,11 @@
 extends Area2D
 class_name TestItem
 
-const DRAGGING_SPEED = 50
+const DRAGGING_SPEED = 120
 
 var initial_position = Vector2.ZERO
 var initial_scale = Vector2.ZERO
-var is_dragging = true
+var is_dragging = false
 var texture: Texture
 
 signal dropped
@@ -41,3 +41,12 @@ func play_spawn_animation():
 func play_self_destruct_animation():
 	await get_tree().create_tween().tween_property(self, "scale", Vector2(0.0,0.0), 0.1) \
 		.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD).finished
+
+
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event.is_action_pressed("click"):
+		is_dragging = true
+
+func _input(event):
+	if event.is_action_released("click") and is_dragging:
+		is_dragging = false
