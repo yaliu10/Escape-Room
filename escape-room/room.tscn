@@ -1,0 +1,132 @@
+[gd_scene load_steps=14 format=3 uid="uid://cfy243i0kd1cb"]
+
+[ext_resource type="Script" path="res://room.gd" id="1_px8ol"]
+[ext_resource type="Texture2D" uid="uid://dtxuwn72v6iui" path="res://art/main room.PNG" id="2_husx8"]
+[ext_resource type="Texture2D" uid="uid://is5n476fgekw" path="res://art/arrow.PNG" id="3_bma02"]
+[ext_resource type="Texture2D" uid="uid://b0ntdu2glqfxn" path="res://art/left wall.PNG" id="4_of1yb"]
+[ext_resource type="Texture2D" uid="uid://o3xsmuyt5k5g" path="res://art/return.PNG" id="5_xourl"]
+[ext_resource type="Texture2D" uid="uid://b6h25a8ai2hog" path="res://art/right Wall.PNG" id="6_nnuvc"]
+[ext_resource type="Texture2D" uid="uid://cncut3a30jwir" path="res://art/front wall.PNG" id="7_nxmvr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ddivy"]
+radius = 28.1603
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s6bbm"]
+radius = 27.4591
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5fiil"]
+radius = 27.1662
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lu6b0"]
+radius = 33.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uxcqm"]
+radius = 35.1381
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w43hp"]
+radius = 36.7886
+
+[node name="Room" type="Node2D"]
+script = ExtResource("1_px8ol")
+
+[node name="Main Background" type="TextureRect" parent="."]
+offset_top = 1.0
+offset_right = 1148.0
+offset_bottom = 651.0
+texture = ExtResource("2_husx8")
+expand_mode = 1
+
+[node name="Left Arrow" type="Sprite2D" parent="."]
+position = Vector2(71, 323)
+texture = ExtResource("3_bma02")
+
+[node name="Left Arrow Area" type="Area2D" parent="Left Arrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Arrow/Left Arrow Area"]
+position = Vector2(-5, 1)
+shape = SubResource("CircleShape2D_ddivy")
+
+[node name="Right Arrow" type="Sprite2D" parent="."]
+position = Vector2(1076, 323)
+texture = ExtResource("3_bma02")
+flip_h = true
+
+[node name="Right Arrow Area" type="Area2D" parent="Right Arrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Arrow/Right Arrow Area"]
+shape = SubResource("CircleShape2D_s6bbm")
+
+[node name="Front Arrow" type="Sprite2D" parent="."]
+position = Vector2(550, 62)
+rotation = 1.55992
+texture = ExtResource("3_bma02")
+
+[node name="Front Arrow Area" type="Area2D" parent="Front Arrow"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Front Arrow/Front Arrow Area"]
+shape = SubResource("CircleShape2D_5fiil")
+
+[node name="Left Wall" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(1.12402, 1.08333)
+texture = ExtResource("4_of1yb")
+centered = false
+
+[node name="Left Wall Return" type="Sprite2D" parent="Left Wall"]
+position = Vector2(983.076, 42.4615)
+scale = Vector2(0.889661, 0.923077)
+texture = ExtResource("5_xourl")
+
+[node name="Left Return Area" type="Area2D" parent="Left Wall/Left Wall Return"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Wall/Left Wall Return/Left Return Area"]
+shape = SubResource("CircleShape2D_lu6b0")
+
+[node name="Right Wall" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(1.12012, 1.085)
+texture = ExtResource("6_nnuvc")
+centered = false
+
+[node name="Right Wall Return" type="Sprite2D" parent="Right Wall"]
+position = Vector2(975.791, 41.4747)
+texture = ExtResource("5_xourl")
+
+[node name="Right Return Area" type="Area2D" parent="Right Wall/Right Wall Return"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Wall/Right Wall Return/Right Return Area"]
+shape = SubResource("CircleShape2D_uxcqm")
+
+[node name="Front Wall" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(1.12012, 1.085)
+texture = ExtResource("7_nxmvr")
+centered = false
+
+[node name="Front Wall Return" type="Sprite2D" parent="Front Wall"]
+position = Vector2(977.495, 39.6313)
+texture = ExtResource("5_xourl")
+
+[node name="Front Return Area" type="Area2D" parent="Front Wall/Front Wall Return"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Front Wall/Front Wall Return/Front Return Area"]
+shape = SubResource("CircleShape2D_w43hp")
+
+[connection signal="input_event" from="Left Arrow/Left Arrow Area" to="." method="_on_left_arrow_area_input_event"]
+[connection signal="mouse_entered" from="Left Arrow/Left Arrow Area" to="." method="change_cursor"]
+[connection signal="mouse_exited" from="Left Arrow/Left Arrow Area" to="." method="change_cursor_back"]
+[connection signal="input_event" from="Right Arrow/Right Arrow Area" to="." method="_on_right_arrow_area_input_event"]
+[connection signal="mouse_entered" from="Right Arrow/Right Arrow Area" to="." method="change_cursor"]
+[connection signal="mouse_exited" from="Right Arrow/Right Arrow Area" to="." method="change_cursor_back"]
+[connection signal="input_event" from="Front Arrow/Front Arrow Area" to="." method="_on_front_arrow_area_input_event"]
+[connection signal="mouse_entered" from="Front Arrow/Front Arrow Area" to="." method="change_cursor"]
+[connection signal="mouse_exited" from="Front Arrow/Front Arrow Area" to="." method="change_cursor_back"]
+[connection signal="input_event" from="Left Wall/Left Wall Return/Left Return Area" to="." method="_on_left_return_area_input_event"]
+[connection signal="mouse_entered" from="Left Wall/Left Wall Return/Left Return Area" to="." method="change_cursor"]
+[connection signal="mouse_exited" from="Left Wall/Left Wall Return/Left Return Area" to="." method="change_cursor_back"]
+[connection signal="input_event" from="Right Wall/Right Wall Return/Right Return Area" to="." method="_on_right_return_area_input_event"]
+[connection signal="mouse_entered" from="Right Wall/Right Wall Return/Right Return Area" to="." method="change_cursor"]
+[connection signal="mouse_exited" from="Right Wall/Right Wall Return/Right Return Area" to="." method="change_cursor_back"]
+[connection signal="input_event" from="Front Wall/Front Wall Return/Front Return Area" to="." method="_on_front_return_area_input_event"]
+[connection signal="mouse_entered" from="Front Wall/Front Wall Return/Front Return Area" to="." method="change_cursor"]
+[connection signal="mouse_exited" from="Front Wall/Front Wall Return/Front Return Area" to="." method="change_cursor_back"]
