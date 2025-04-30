@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cfy243i0kd1cb"]
+[gd_scene load_steps=35 format=3 uid="uid://cfy243i0kd1cb"]
 
 [ext_resource type="Script" path="res://room.gd" id="1_px8ol"]
 [ext_resource type="Texture2D" uid="uid://dtxuwn72v6iui" path="res://art/main room.PNG" id="2_husx8"]
@@ -15,6 +15,8 @@
 [ext_resource type="Script" path="res://Scripts/item.gd" id="12_6j7kt"]
 [ext_resource type="Texture2D" uid="uid://bwsn7jxnip1o3" path="res://art/ph-opened case.PNG" id="14_84as2"]
 [ext_resource type="Texture2D" uid="uid://ds552hk8olw1w" path="res://art/ph-closed case.PNG" id="14_eq741"]
+[ext_resource type="Texture2D" uid="uid://bipyf48vqp6tf" path="res://art/Key1.png" id="14_jiipc"]
+[ext_resource type="Texture2D" uid="uid://cem2teg3xlspa" path="res://art/ph-slot.PNG" id="17_1rh5j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ms4q"]
 size = Vector2(83, 83)
@@ -58,8 +60,14 @@ radius = 29.872
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xxifp"]
 size = Vector2(117.479, 118.986)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_gvepb"]
+radius = 355.822
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fnjla"]
 size = Vector2(149.171, 134.454)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ym46d"]
+size = Vector2(55, 48)
 
 [node name="Room" type="Node2D"]
 script = ExtResource("1_px8ol")
@@ -178,6 +186,7 @@ shape = SubResource("CircleShape2D_5fiil")
 
 [node name="Left Wall" type="Sprite2D" parent="."]
 visible = false
+z_index = 1
 scale = Vector2(1.12402, 1.08333)
 texture = ExtResource("4_of1yb")
 centered = false
@@ -205,6 +214,7 @@ shape = SubResource("RectangleShape2D_kii1n")
 
 [node name="Right Wall" type="Sprite2D" parent="."]
 visible = false
+z_index = 1
 scale = Vector2(1.12012, 1.085)
 texture = ExtResource("6_nnuvc")
 centered = false
@@ -228,11 +238,11 @@ centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right Wall/Right Painting/Right Painting Area"]
 position = Vector2(505.539, 298.522)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_rvwke")
 
 [node name="Front Wall" type="Sprite2D" parent="."]
 visible = false
+z_index = 1
 scale = Vector2(1.12012, 1.085)
 texture = ExtResource("7_nxmvr")
 centered = false
@@ -256,11 +266,11 @@ centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Front Wall/Front Painting/Front Painting Area"]
 position = Vector2(508.092, 297.852)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ka71n")
 
 [node name="In Left Painting" type="Sprite2D" parent="."]
 visible = false
+z_index = 1
 scale = Vector2(1.13086, 1.085)
 texture = ExtResource("6_x17j6")
 centered = false
@@ -276,6 +286,7 @@ shape = SubResource("CircleShape2D_6cqyu")
 
 [node name="In Right Painting" type="Sprite2D" parent="."]
 visible = false
+z_index = 1
 scale = Vector2(1.125, 1.08833)
 texture = ExtResource("8_6qmun")
 centered = false
@@ -291,6 +302,7 @@ shape = SubResource("CircleShape2D_dt2k6")
 
 [node name="In Front Painting" type="Sprite2D" parent="."]
 visible = false
+z_index = 1
 scale = Vector2(1.12402, 1.08833)
 texture = ExtResource("10_0cw3k")
 centered = false
@@ -314,30 +326,55 @@ script = ExtResource("12_6j7kt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TestItem/TestArea"]
 position = Vector2(0.876719, -0.901407)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xxifp")
 
 [node name="Timer" type="Timer" parent="TestItem"]
 wait_time = 0.2
 one_shot = true
 
-[node name="TestInteract2" type="Sprite2D" parent="."]
+[node name="Key" type="Sprite2D" parent="."]
+visible = false
+z_index = 2
+position = Vector2(766, 206)
+scale = Vector2(0.123698, 0.11849)
+texture = ExtResource("14_jiipc")
+script = ExtResource("12_6j7kt")
+item_id = 2
+
+[node name="Key Area" type="Area2D" parent="Key" groups=["item"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key/Key Area"]
+shape = SubResource("CircleShape2D_gvepb")
+
+[node name="Timer" type="Timer" parent="Key"]
+
+[node name="Closed" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(799, 220)
 scale = Vector2(0.57, 0.58)
 texture = ExtResource("14_eq741")
 
-[node name="TestInteract" type="Sprite2D" parent="."]
+[node name="Open" type="Sprite2D" parent="."]
 position = Vector2(793, 206)
 scale = Vector2(0.603333, 0.595)
 texture = ExtResource("14_84as2")
 
-[node name="Test Interact Area" type="Area2D" parent="TestInteract"]
+[node name="Test Interact Area" type="Area2D" parent="Open"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestInteract/Test Interact Area"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Open/Test Interact Area"]
 position = Vector2(-44.7516, 1.68069)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_fnjla")
+
+[node name="Slot" type="Sprite2D" parent="."]
+position = Vector2(402, 164)
+texture = ExtResource("17_1rh5j")
+
+[node name="Slot Area" type="Area2D" parent="Slot"]
+position = Vector2(-82, -5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot/Slot Area"]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ym46d")
 
 [connection signal="area_entered" from="Slot1/Slot1 Area" to="." method="_on_slot_1_area_area_entered"]
 [connection signal="area_entered" from="Slot2/Slot2 Area" to="." method="_on_slot_2_area_area_entered"]
@@ -382,4 +419,7 @@ shape = SubResource("RectangleShape2D_fnjla")
 [connection signal="mouse_exited" from="In Front Painting/Front Painting Return/Front Painting Return Area" to="." method="change_cursor_back_in_painting"]
 [connection signal="input_event" from="TestItem/TestArea" to="TestItem" method="_on_test_area_input_event"]
 [connection signal="timeout" from="TestItem/Timer" to="TestItem" method="_on_timer_timeout"]
-[connection signal="area_entered" from="TestInteract/Test Interact Area" to="." method="_on_test_interact_area_area_entered"]
+[connection signal="input_event" from="Key/Key Area" to="Key" method="_on_test_area_input_event"]
+[connection signal="timeout" from="Key/Timer" to="Key" method="_on_timer_timeout"]
+[connection signal="area_entered" from="Open/Test Interact Area" to="." method="_on_test_interact_area_area_entered"]
+[connection signal="area_entered" from="Slot/Slot Area" to="." method="_on_slot_area_area_entered"]
