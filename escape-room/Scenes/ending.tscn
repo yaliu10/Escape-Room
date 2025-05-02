@@ -1,10 +1,13 @@
-[gd_scene load_steps=18 format=3 uid="uid://dbnr8kaimrxi4"]
+[gd_scene load_steps=41 format=3 uid="uid://dbnr8kaimrxi4"]
 
 [ext_resource type="Script" path="res://Scripts/ending.gd" id="1_rny7r"]
 [ext_resource type="Texture2D" uid="uid://dtgphwhgvi6iy" path="res://art/IMG_2640.PNG" id="1_wn7ke"]
 [ext_resource type="Texture2D" uid="uid://cqmgsufbhylge" path="res://art/arrow.PNG" id="2_8htpb"]
 [ext_resource type="Texture2D" uid="uid://dodxkgqtjqnux" path="res://art/placeholder left wall.PNG" id="4_lku07"]
 [ext_resource type="Texture2D" uid="uid://dm7fqcwymr2lp" path="res://art/placeholder right wall.PNG" id="5_8br66"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2us7j"]
+size = Vector2(1148, 647)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8k5t7"]
 
@@ -31,6 +34,50 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kcyoi"]
 size = Vector2(1154, 644)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d8sif"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7m3f0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pbaqr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_34jp0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sw40h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8843e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jgdt3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_240ss"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6gprx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j7yvr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yarex"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5wfnv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bw3jp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vsdan"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1hbmr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0om7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pp8h4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dh8io"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ls4q3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q45mf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qx0lm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0u81"]
+
 [node name="Ending" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -50,7 +97,14 @@ grow_vertical = 2
 texture = ExtResource("1_wn7ke")
 expand_mode = 1
 
-[node name="RightButton" type="Button" parent="."]
+[node name="Area2D" type="Area2D" parent="TextureRect"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D"]
+visible = false
+position = Vector2(576, 323.5)
+shape = SubResource("RectangleShape2D_2us7j")
+
+[node name="ForwardButton" type="Button" parent="TextureRect"]
 layout_mode = 0
 offset_left = 523.0
 offset_top = 31.0
@@ -69,16 +123,15 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xubls")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_pvtvr")
 flat = true
 
-[node name="TextureRect" type="TextureRect" parent="RightButton"]
+[node name="TextureRect" type="TextureRect" parent="TextureRect/ForwardButton"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0526316
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -7.0
-offset_top = 97.0
-offset_right = 1.99999
-offset_bottom = 96.0
+anchor_right = 1.221
+anchor_bottom = 1.082
+offset_left = -2.0
+offset_top = 106.0
+offset_right = -9.99501
+offset_bottom = 117.964
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -1.5708
@@ -97,11 +150,47 @@ grow_vertical = 2
 texture = ExtResource("4_lku07")
 expand_mode = 1
 
-[node name="Area2D" type="Area2D" parent="Placeholder"]
+[node name="2ndArea2D" type="Area2D" parent="Placeholder"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Placeholder/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Placeholder/2ndArea2D"]
+visible = false
 position = Vector2(577, 324)
 shape = SubResource("RectangleShape2D_kcyoi")
+
+[node name="2ndButton" type="Button" parent="Placeholder"]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 31.0
+offset_right = 618.0
+offset_bottom = 129.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d8sif")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_7m3f0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pbaqr")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_34jp0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_sw40h")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_8843e")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jgdt3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_240ss")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6gprx")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_j7yvr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yarex")
+flat = true
+
+[node name="TextureRect2" type="TextureRect" parent="Placeholder/2ndButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.221
+anchor_bottom = 1.082
+offset_left = -2.0
+offset_top = 106.0
+offset_right = -9.99501
+offset_bottom = 117.964
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+texture = ExtResource("2_8htpb")
+expand_mode = 1
+flip_h = true
 
 [node name="Placeholder2" type="TextureRect" parent="."]
 visible = false
@@ -114,12 +203,51 @@ grow_vertical = 2
 texture = ExtResource("5_8br66")
 expand_mode = 1
 
-[node name="Area2D" type="Area2D" parent="Placeholder2"]
+[node name="3rdArea2D" type="Area2D" parent="Placeholder2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Placeholder2/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Placeholder2/3rdArea2D"]
+visible = false
 position = Vector2(577, 324)
 shape = SubResource("RectangleShape2D_kcyoi")
 
-[connection signal="pressed" from="RightButton" to="." method="_on_right_button_pressed"]
-[connection signal="input_event" from="Placeholder/Area2D" to="." method="_on_area_2d_input_event"]
-[connection signal="input_event" from="Placeholder2/Area2D" to="." method="_on_area_2d_input_event"]
+[node name="3rdButton" type="Button" parent="Placeholder2"]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 31.0
+offset_right = 618.0
+offset_bottom = 129.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5wfnv")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_bw3jp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vsdan")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_1hbmr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_t0om7")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_pp8h4")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_dh8io")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ls4q3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_q45mf")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_qx0lm")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m0u81")
+flat = true
+
+[node name="TextureRect3" type="TextureRect" parent="Placeholder2/3rdButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.221
+anchor_bottom = 1.082
+offset_left = 1.0
+offset_top = 107.0
+offset_right = -6.99501
+offset_bottom = 118.964
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+texture = ExtResource("2_8htpb")
+expand_mode = 1
+flip_h = true
+
+[connection signal="input_event" from="TextureRect/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="pressed" from="TextureRect/ForwardButton" to="." method="_on_forward_button_pressed"]
+[connection signal="input_event" from="Placeholder/2ndArea2D" to="." method="_on_nd_area_2d_input_event"]
+[connection signal="pressed" from="Placeholder/2ndButton" to="." method="_on_nd_button_pressed"]
+[connection signal="input_event" from="Placeholder2/3rdArea2D" to="." method="_on_rd_area_2d_input_event"]
+[connection signal="pressed" from="Placeholder2/3rdButton" to="." method="_on_rd_button_pressed"]
