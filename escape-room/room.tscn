@@ -15,9 +15,9 @@
 [ext_resource type="Script" path="res://Scripts/item.gd" id="12_6j7kt"]
 [ext_resource type="Texture2D" uid="uid://bpxq4eq2ofdtj" path="res://art/IMG_2857.PNG" id="13_kk5r4"]
 [ext_resource type="Texture2D" uid="uid://ks7jr0qw0w5j" path="res://art/IMG_2858.PNG" id="13_nqj54"]
-[ext_resource type="Texture2D" uid="uid://bwsn7jxnip1o3" path="res://art/ph-opened case.PNG" id="14_84as2"]
-[ext_resource type="Texture2D" uid="uid://ds552hk8olw1w" path="res://art/ph-closed case.PNG" id="14_eq741"]
-[ext_resource type="Texture2D" uid="uid://cem2teg3xlspa" path="res://art/ph-slot.PNG" id="17_1rh5j"]
+[ext_resource type="Texture2D" uid="uid://dxwpnls8cv6ed" path="res://art/IMG_2862.PNG" id="15_kdw0l"]
+[ext_resource type="Texture2D" uid="uid://ce4f4wrwh13xj" path="res://art/IMG_2861.PNG" id="16_22rhc"]
+[ext_resource type="Texture2D" uid="uid://b7eimlxrbmt72" path="res://art/Hollyhock.png" id="17_k5f7d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ms4q"]
 size = Vector2(83, 83)
@@ -59,8 +59,15 @@ radius = 28.357
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ap62"]
 size = Vector2(180.667, 176.037)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c4gaq"]
+radius = 27.3974
+height = 61.6441
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_dt2k6"]
 radius = 29.6795
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qh44s"]
+radius = 57.1957
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mgyjd"]
 radius = 34.6233
@@ -68,12 +75,6 @@ height = 89.1814
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_18k77"]
 radius = 29.872
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnjla"]
-size = Vector2(149.171, 134.454)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ym46d"]
-size = Vector2(55, 48)
 
 [node name="Room" type="Node2D"]
 script = ExtResource("1_px8ol")
@@ -288,7 +289,6 @@ centered = false
 
 [node name="Filled Bucket" type="Sprite2D" parent="In Left Painting"]
 visible = false
-z_index = 2
 position = Vector2(326.3, 300.461)
 scale = Vector2(1.13352, 1.37258)
 texture = ExtResource("13_kk5r4")
@@ -301,6 +301,8 @@ item_id = 2
 shape = SubResource("CapsuleShape2D_i2xs8")
 
 [node name="Timer" type="Timer" parent="In Left Painting/Filled Bucket"]
+wait_time = 0.2
+one_shot = true
 
 [node name="Left Painting Return" type="Sprite2D" parent="In Left Painting"]
 position = Vector2(961.216, 43.318)
@@ -325,6 +327,23 @@ scale = Vector2(1.125, 1.08833)
 texture = ExtResource("9_q6k2w")
 centered = false
 
+[node name="Closed Flower" type="Sprite2D" parent="In Right Painting"]
+position = Vector2(141.333, 376.724)
+scale = Vector2(1.29778, 1.52527)
+texture = ExtResource("15_kdw0l")
+
+[node name="Closed Flower Area" type="Area2D" parent="In Right Painting/Closed Flower"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="In Right Painting/Closed Flower/Closed Flower Area"]
+position = Vector2(1.90735e-05, -10.8434)
+shape = SubResource("CapsuleShape2D_c4gaq")
+
+[node name="Open Flower" type="Sprite2D" parent="In Right Painting"]
+visible = false
+position = Vector2(141.333, 376.724)
+scale = Vector2(1.29778, 1.52527)
+texture = ExtResource("16_22rhc")
+
 [node name="Right Painting Return" type="Sprite2D" parent="In Right Painting"]
 position = Vector2(968, 41.3476)
 texture = ExtResource("5_xourl")
@@ -333,6 +352,25 @@ texture = ExtResource("5_xourl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="In Right Painting/Right Painting Return/Right Painting Return Area"]
 shape = SubResource("CircleShape2D_dt2k6")
+
+[node name="Weapon Key" type="Sprite2D" parent="In Right Painting"]
+visible = false
+position = Vector2(152.889, 337.214)
+rotation = 0.68382
+scale = Vector2(0.482841, 0.482841)
+texture = ExtResource("17_k5f7d")
+script = ExtResource("12_6j7kt")
+item_id = 3
+
+[node name="Weapon Key Area" type="Area2D" parent="In Right Painting/Weapon Key" groups=["item"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="In Right Painting/Weapon Key/Weapon Key Area"]
+position = Vector2(0.146685, -17.3041)
+shape = SubResource("CircleShape2D_qh44s")
+
+[node name="Timer" type="Timer" parent="In Right Painting/Weapon Key"]
+wait_time = 0.2
+one_shot = true
 
 [node name="In Front Painting" type="Sprite2D" parent="."]
 visible = false
@@ -365,34 +403,6 @@ texture = ExtResource("5_xourl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="In Front Painting/Front Painting Return/Front Painting Return Area"]
 shape = SubResource("CircleShape2D_18k77")
-
-[node name="Closed" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(799, 220)
-scale = Vector2(0.57, 0.58)
-texture = ExtResource("14_eq741")
-
-[node name="Open" type="Sprite2D" parent="."]
-position = Vector2(793, 206)
-scale = Vector2(0.603333, 0.595)
-texture = ExtResource("14_84as2")
-
-[node name="Test Interact Area" type="Area2D" parent="Open"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Open/Test Interact Area"]
-position = Vector2(-44.7516, 1.68069)
-shape = SubResource("RectangleShape2D_fnjla")
-
-[node name="Slot" type="Sprite2D" parent="."]
-position = Vector2(402, 164)
-texture = ExtResource("17_1rh5j")
-
-[node name="Slot Area" type="Area2D" parent="Slot"]
-position = Vector2(-82, -5)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot/Slot Area"]
-position = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_ym46d")
 
 [connection signal="area_entered" from="Slot1/Slot1 Area" to="." method="_on_slot_1_area_area_entered"]
 [connection signal="area_entered" from="Slot2/Slot2 Area" to="." method="_on_slot_2_area_area_entered"]
@@ -432,13 +442,14 @@ shape = SubResource("RectangleShape2D_ym46d")
 [connection signal="mouse_entered" from="In Left Painting/Left Painting Return/Left Painting Return Area" to="." method="change_cursor_in_painting"]
 [connection signal="mouse_exited" from="In Left Painting/Left Painting Return/Left Painting Return Area" to="." method="change_cursor_back_in_painting"]
 [connection signal="area_entered" from="In Left Painting/River Area" to="." method="_on_river_area_area_entered"]
+[connection signal="area_entered" from="In Right Painting/Closed Flower/Closed Flower Area" to="." method="_on_closed_flower_area_area_entered"]
 [connection signal="input_event" from="In Right Painting/Right Painting Return/Right Painting Return Area" to="." method="_on_right_painting_return_area_input_event"]
 [connection signal="mouse_entered" from="In Right Painting/Right Painting Return/Right Painting Return Area" to="." method="change_cursor_in_painting"]
 [connection signal="mouse_exited" from="In Right Painting/Right Painting Return/Right Painting Return Area" to="." method="change_cursor_back_in_painting"]
+[connection signal="input_event" from="In Right Painting/Weapon Key/Weapon Key Area" to="In Right Painting/Weapon Key" method="_on_empty_bucket_area_input_event"]
+[connection signal="timeout" from="In Right Painting/Weapon Key/Timer" to="In Right Painting/Weapon Key" method="_on_timer_timeout"]
 [connection signal="input_event" from="In Front Painting/Empty Bucket/Empty Bucket Area" to="In Front Painting/Empty Bucket" method="_on_empty_bucket_area_input_event"]
 [connection signal="timeout" from="In Front Painting/Empty Bucket/Timer" to="In Front Painting/Empty Bucket" method="_on_timer_timeout"]
 [connection signal="input_event" from="In Front Painting/Front Painting Return/Front Painting Return Area" to="." method="_on_front_painting_return_area_input_event"]
 [connection signal="mouse_entered" from="In Front Painting/Front Painting Return/Front Painting Return Area" to="." method="change_cursor_in_painting"]
 [connection signal="mouse_exited" from="In Front Painting/Front Painting Return/Front Painting Return Area" to="." method="change_cursor_back_in_painting"]
-[connection signal="area_entered" from="Open/Test Interact Area" to="." method="_on_test_interact_area_area_entered"]
-[connection signal="area_entered" from="Slot/Slot Area" to="." method="_on_slot_area_area_entered"]

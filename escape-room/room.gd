@@ -220,23 +220,24 @@ func _on_test_interact_area_area_entered(area: Area2D) -> void: #keep for exampl
 			area.get_parent().queue_free()
 			Input.set_custom_mouse_cursor(cursor)
 
-func _on_slot_area_area_entered(area: Area2D) -> void:
-	if area.is_in_group("item"):
-		if area.get_parent().item_id == 2:
-			$Open.visible = false
-			$Closed.visible = true
-			$Key.visible = true
-			#testitem_used = true
-			
-			empty_slot(area.get_parent().drop_location_id)
-			area.get_parent().queue_free()
-			Input.set_custom_mouse_cursor(cursor)
+
 
 
 func _on_river_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
 			if area.get_parent().item_id == 1:
 				$"In Left Painting/Filled Bucket".visible = true
+				
+				empty_slot(area.get_parent().drop_location_id)
+				area.get_parent().queue_free()
+				Input.set_custom_mouse_cursor(cursor)
+
+func _on_closed_flower_area_area_entered(area: Area2D) -> void:
+	if area.is_in_group("item"):
+			if area.get_parent().item_id == 2:
+				$"In Right Painting/Open Flower".visible = true
+				$"In Right Painting/Closed Flower".queue_free()
+				$"In Right Painting/Weapon Key".visible = true
 				
 				empty_slot(area.get_parent().drop_location_id)
 				area.get_parent().queue_free()
