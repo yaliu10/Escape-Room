@@ -26,18 +26,19 @@ func _physics_process(delta: float) -> void:
 					timer_off = false
 			global_position = lerp(global_position, drop_location, 20 * delta)
 
-func _on_test_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if !picked_up and !dragging:
-			global_position = get_parent().choose_slot(self)
-			z_index = 10
-			picked_up = true
-		else:
-			if event.pressed:
-				dragging = true
-			else:
-				dragging = false
-
 func _on_timer_timeout() -> void:
 	dropped = true
 	timer_off = true
+
+func _on_empty_bucket_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if !picked_up and !dragging:
+			global_position = get_parent().get_parent().choose_slot(self)
+			z_index = 10
+			picked_up = true
+			reparent($"../..")
+		else:
+			if event.pressed:
+				dragging = true
+			else: 
+				dragging = false

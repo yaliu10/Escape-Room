@@ -208,7 +208,7 @@ func _on_slot_5_area_area_entered(area: Area2D) -> void:
 
 #need to hide visibility of objects when switching rooms
 #error comes from item group
-func _on_test_interact_area_area_entered(area: Area2D) -> void:
+func _on_test_interact_area_area_entered(area: Area2D) -> void: #keep for example but delete later
 	if area.is_in_group("item"):
 		if area.get_parent().item_id == 1:
 			$Open.visible = false
@@ -231,3 +231,13 @@ func _on_slot_area_area_entered(area: Area2D) -> void:
 			empty_slot(area.get_parent().drop_location_id)
 			area.get_parent().queue_free()
 			Input.set_custom_mouse_cursor(cursor)
+
+
+func _on_river_area_area_entered(area: Area2D) -> void:
+	if area.is_in_group("item"):
+			if area.get_parent().item_id == 1:
+				$"In Left Painting/Filled Bucket".visible = true
+				
+				empty_slot(area.get_parent().drop_location_id)
+				area.get_parent().queue_free()
+				Input.set_custom_mouse_cursor(cursor)
