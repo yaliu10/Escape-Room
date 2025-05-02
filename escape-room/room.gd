@@ -232,6 +232,7 @@ func _on_river_area_area_entered(area: Area2D) -> void:
 				area.get_parent().queue_free()
 				Input.set_custom_mouse_cursor(cursor)
 
+
 func _on_closed_flower_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
 			if area.get_parent().item_id == 2:
@@ -242,3 +243,10 @@ func _on_closed_flower_area_area_entered(area: Area2D) -> void:
 				empty_slot(area.get_parent().drop_location_id)
 				area.get_parent().queue_free()
 				Input.set_custom_mouse_cursor(cursor)
+
+
+func _on_closed_trap_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+			$"In Left Painting/Open Trap".visible = true
+			$"In Left Painting/Closed Trap".queue_free()
+			$"In Left Painting/River Key". visible = true
