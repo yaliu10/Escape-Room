@@ -220,8 +220,6 @@ func _on_test_interact_area_area_entered(area: Area2D) -> void: #keep for exampl
 			Input.set_custom_mouse_cursor(cursor)
 
 
-
-
 func _on_river_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
 			if area.get_parent().item_id == 1:
@@ -256,3 +254,14 @@ func _on_closed_toolbox_area_input_event(viewport: Node, event: InputEvent, shap
 		$"In Right Painting/Open Toolbox".visible = true
 		$"In Right Painting/Closed Toolbox".queue_free()
 		$"In Right Painting/Chisel".visible = true
+
+
+func _on_brick_area_area_entered(area: Area2D) -> void:
+	if area.is_in_group("item"):
+			if area.get_parent().item_id == 5:
+				$"In Front Painting/Well Key".visible = true
+				$"In Front Painting/Brick".queue_free()
+				
+				empty_slot(area.get_parent().drop_location_id)
+				area.get_parent().queue_free()
+				Input.set_custom_mouse_cursor(cursor)

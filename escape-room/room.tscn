@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cfy243i0kd1cb"]
+[gd_scene load_steps=51 format=3 uid="uid://cfy243i0kd1cb"]
 
 [ext_resource type="Script" path="res://room.gd" id="1_px8ol"]
 [ext_resource type="Texture2D" uid="uid://dtxuwn72v6iui" path="res://art/main room.PNG" id="2_husx8"]
@@ -24,6 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://mwlxqxw02hyy" path="res://art/chisel.PNG" id="21_56284"]
 [ext_resource type="Texture2D" uid="uid://ds552hk8olw1w" path="res://art/ph-closed case.PNG" id="22_grjj2"]
 [ext_resource type="Texture2D" uid="uid://bwsn7jxnip1o3" path="res://art/ph-opened case.PNG" id="23_58ajg"]
+[ext_resource type="Texture2D" uid="uid://lfk6lm2ogsnb" path="res://art/IMG_2856.PNG" id="25_xljdd"]
+[ext_resource type="Texture2D" uid="uid://b08qdw4sxt8o" path="res://art/Rose.png" id="26_ur4sx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ms4q"]
 size = Vector2(83, 83)
@@ -93,6 +95,12 @@ height = 89.1814
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_18k77"]
 radius = 29.872
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxxnn"]
+size = Vector2(51.1799, 30.5172)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p31ks"]
+radius = 56.289
 
 [node name="Room" type="Node2D"]
 script = ExtResource("1_px8ol")
@@ -374,6 +382,7 @@ wait_time = 0.2
 one_shot = true
 
 [node name="In Right Painting" type="Sprite2D" parent="."]
+visible = false
 z_index = 1
 scale = Vector2(1.125, 1.08833)
 texture = ExtResource("9_q6k2w")
@@ -431,6 +440,7 @@ position = Vector2(832.889, 420.828)
 scale = Vector2(0.203674, 0.203674)
 texture = ExtResource("21_56284")
 script = ExtResource("12_6j7kt")
+item_id = 5
 
 [node name="Chisel Area" type="Area2D" parent="In Right Painting/Chisel" groups=["item"]]
 
@@ -491,6 +501,36 @@ texture = ExtResource("5_xourl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="In Front Painting/Front Painting Return/Front Painting Return Area"]
 shape = SubResource("CircleShape2D_18k77")
 
+[node name="Brick" type="Sprite2D" parent="In Front Painting"]
+position = Vector2(314.832, 254.05)
+rotation = -0.239559
+scale = Vector2(1.55236, 1.33774)
+texture = ExtResource("25_xljdd")
+
+[node name="Brick area" type="Area2D" parent="In Front Painting/Brick"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="In Front Painting/Brick/Brick area"]
+position = Vector2(1.66675, 0.833128)
+shape = SubResource("RectangleShape2D_uxxnn")
+
+[node name="Well Key" type="Sprite2D" parent="In Front Painting"]
+visible = false
+position = Vector2(319.389, 253.6)
+rotation = 0.68382
+scale = Vector2(0.482841, 0.482841)
+texture = ExtResource("26_ur4sx")
+script = ExtResource("12_6j7kt")
+item_id = 6
+
+[node name="Well Key Area" type="Area2D" parent="In Front Painting/Well Key" groups=["item"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="In Front Painting/Well Key/Well Key Area"]
+shape = SubResource("CircleShape2D_p31ks")
+
+[node name="Timer" type="Timer" parent="In Front Painting/Well Key"]
+wait_time = 0.2
+one_shot = true
+
 [connection signal="area_entered" from="Slot1/Slot1 Area" to="." method="_on_slot_1_area_area_entered"]
 [connection signal="area_entered" from="Slot2/Slot2 Area" to="." method="_on_slot_2_area_area_entered"]
 [connection signal="area_entered" from="Slot3/Slot3 Area" to="." method="_on_slot_3_area_area_entered"]
@@ -546,3 +586,6 @@ shape = SubResource("CircleShape2D_18k77")
 [connection signal="input_event" from="In Front Painting/Front Painting Return/Front Painting Return Area" to="." method="_on_front_painting_return_area_input_event"]
 [connection signal="mouse_entered" from="In Front Painting/Front Painting Return/Front Painting Return Area" to="." method="change_cursor_in_painting"]
 [connection signal="mouse_exited" from="In Front Painting/Front Painting Return/Front Painting Return Area" to="." method="change_cursor_back_in_painting"]
+[connection signal="area_entered" from="In Front Painting/Brick/Brick area" to="." method="_on_brick_area_area_entered"]
+[connection signal="input_event" from="In Front Painting/Well Key/Well Key Area" to="In Front Painting/Well Key" method="_on_empty_bucket_area_input_event"]
+[connection signal="timeout" from="In Front Painting/Well Key/Timer" to="In Front Painting/Well Key" method="_on_timer_timeout"]
