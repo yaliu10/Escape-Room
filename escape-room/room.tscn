@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://cfy243i0kd1cb"]
+[gd_scene load_steps=47 format=3 uid="uid://cfy243i0kd1cb"]
 
 [ext_resource type="Script" path="res://room.gd" id="1_px8ol"]
 [ext_resource type="Texture2D" uid="uid://dtxuwn72v6iui" path="res://art/main room.PNG" id="2_husx8"]
@@ -21,6 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://dklo3a56i6ypn" path="res://art/IMG_2859.PNG" id="16_fw5fg"]
 [ext_resource type="Texture2D" uid="uid://b7eimlxrbmt72" path="res://art/Hollyhock.png" id="17_k5f7d"]
 [ext_resource type="Texture2D" uid="uid://qgndunpgl4lh" path="res://art/Forget me not.png" id="17_txuyg"]
+[ext_resource type="Texture2D" uid="uid://mwlxqxw02hyy" path="res://art/chisel.PNG" id="21_56284"]
+[ext_resource type="Texture2D" uid="uid://ds552hk8olw1w" path="res://art/ph-closed case.PNG" id="22_grjj2"]
+[ext_resource type="Texture2D" uid="uid://bwsn7jxnip1o3" path="res://art/ph-opened case.PNG" id="23_58ajg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ms4q"]
 size = Vector2(83, 83)
@@ -77,6 +80,12 @@ radius = 29.6795
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qh44s"]
 radius = 57.1957
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4bt67"]
+radius = 152.816
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k04cf"]
+size = Vector2(110.256, 59.3362)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mgyjd"]
 radius = 34.6233
@@ -290,6 +299,7 @@ position = Vector2(508.092, 297.852)
 shape = SubResource("RectangleShape2D_ka71n")
 
 [node name="In Left Painting" type="Sprite2D" parent="."]
+visible = false
 z_index = 1
 scale = Vector2(1.13086, 1.085)
 texture = ExtResource("6_x17j6")
@@ -364,7 +374,6 @@ wait_time = 0.2
 one_shot = true
 
 [node name="In Right Painting" type="Sprite2D" parent="."]
-visible = false
 z_index = 1
 scale = Vector2(1.125, 1.08833)
 texture = ExtResource("9_q6k2w")
@@ -414,6 +423,41 @@ shape = SubResource("CircleShape2D_qh44s")
 [node name="Timer" type="Timer" parent="In Right Painting/Weapon Key"]
 wait_time = 0.2
 one_shot = true
+
+[node name="Chisel" type="Sprite2D" parent="In Right Painting"]
+visible = false
+z_index = 1
+position = Vector2(832.889, 420.828)
+scale = Vector2(0.203674, 0.203674)
+texture = ExtResource("21_56284")
+script = ExtResource("12_6j7kt")
+
+[node name="Chisel Area" type="Area2D" parent="In Right Painting/Chisel" groups=["item"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="In Right Painting/Chisel/Chisel Area"]
+shape = SubResource("CircleShape2D_4bt67")
+
+[node name="Timer" type="Timer" parent="In Right Painting/Chisel"]
+wait_time = 0.2
+one_shot = true
+
+[node name="Closed Toolbox" type="Sprite2D" parent="In Right Painting"]
+position = Vector2(877.333, 438.286)
+scale = Vector2(0.937393, 0.997705)
+texture = ExtResource("22_grjj2")
+
+[node name="Closed Toolbox Area" type="Area2D" parent="In Right Painting/Closed Toolbox"]
+position = Vector2(-43.6199, -22.1029)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="In Right Painting/Closed Toolbox/Closed Toolbox Area"]
+position = Vector2(-2.97418, -1.11859)
+shape = SubResource("RectangleShape2D_k04cf")
+
+[node name="Open Toolbox" type="Sprite2D" parent="In Right Painting"]
+visible = false
+position = Vector2(877.333, 380.399)
+scale = Vector2(0.947778, 0.991962)
+texture = ExtResource("23_58ajg")
 
 [node name="In Front Painting" type="Sprite2D" parent="."]
 visible = false
@@ -494,6 +538,9 @@ shape = SubResource("CircleShape2D_18k77")
 [connection signal="mouse_exited" from="In Right Painting/Right Painting Return/Right Painting Return Area" to="." method="change_cursor_back_in_painting"]
 [connection signal="input_event" from="In Right Painting/Weapon Key/Weapon Key Area" to="In Right Painting/Weapon Key" method="_on_empty_bucket_area_input_event"]
 [connection signal="timeout" from="In Right Painting/Weapon Key/Timer" to="In Right Painting/Weapon Key" method="_on_timer_timeout"]
+[connection signal="input_event" from="In Right Painting/Chisel/Chisel Area" to="In Right Painting/Chisel" method="_on_empty_bucket_area_input_event"]
+[connection signal="timeout" from="In Right Painting/Chisel/Timer" to="In Right Painting/Chisel" method="_on_timer_timeout"]
+[connection signal="input_event" from="In Right Painting/Closed Toolbox/Closed Toolbox Area" to="." method="_on_closed_toolbox_area_input_event"]
 [connection signal="input_event" from="In Front Painting/Empty Bucket/Empty Bucket Area" to="In Front Painting/Empty Bucket" method="_on_empty_bucket_area_input_event"]
 [connection signal="timeout" from="In Front Painting/Empty Bucket/Timer" to="In Front Painting/Empty Bucket" method="_on_timer_timeout"]
 [connection signal="input_event" from="In Front Painting/Front Painting Return/Front Painting Return Area" to="." method="_on_front_painting_return_area_input_event"]

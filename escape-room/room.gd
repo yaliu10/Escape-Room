@@ -207,7 +207,6 @@ func _on_slot_5_area_area_entered(area: Area2D) -> void:
 
 
 #need to hide visibility of objects when switching rooms
-#error comes from item group
 func _on_test_interact_area_area_entered(area: Area2D) -> void: #keep for example but delete later
 	if area.is_in_group("item"):
 		if area.get_parent().item_id == 1:
@@ -247,6 +246,13 @@ func _on_closed_flower_area_area_entered(area: Area2D) -> void:
 
 func _on_closed_trap_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-			$"In Left Painting/Open Trap".visible = true
-			$"In Left Painting/Closed Trap".queue_free()
-			$"In Left Painting/River Key". visible = true
+		$"In Left Painting/Open Trap".visible = true
+		$"In Left Painting/Closed Trap".queue_free()
+		$"In Left Painting/River Key". visible = true
+
+
+func _on_closed_toolbox_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		$"In Right Painting/Open Toolbox".visible = true
+		$"In Right Painting/Closed Toolbox".queue_free()
+		$"In Right Painting/Chisel".visible = true
