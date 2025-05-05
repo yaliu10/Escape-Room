@@ -337,7 +337,6 @@ texture = ExtResource("8_ocwvg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left Wall/Entrance/Entrance Area"]
 position = Vector2(-0.672836, -15.1006)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_jn2m4")
 
 [node name="Right Wall" type="Sprite2D" parent="."]
