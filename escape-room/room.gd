@@ -9,7 +9,6 @@ var slot_3_filled = false
 var slot_4_filled = false
 var slot_5_filled = false
 
-
 #right now the same variable is being used to check every wall, 
 #so there may be a bug where the return buttons are overlapping
 #var left_wall_selected = false
@@ -18,6 +17,7 @@ var slot_5_filled = false
 
 var wall_selected = false
 var painting_selected = false
+var flower_room_selected = false
 
 #connect to areas of any interactable objects
 func change_cursor():
@@ -107,12 +107,14 @@ func set_drop_location(item):
 func _on_left_return_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		$"Left Wall".visible = false
+		$"Flower Room".visible = false # flower room's return button is connected to here
 		wall_selected = false
 func _on_left_arrow_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !wall_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"Left Wall".visible = true
 			wall_selected = true
+			flower_room_selected = false
 
 
 #right wall selection
@@ -144,11 +146,15 @@ func _on_left_painting_return_area_input_event(viewport: Node, event: InputEvent
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Left Painting".visible = false
 			painting_selected = false
+			flower_room_selected = false
 func _on_left_painting_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !painting_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Left Painting".visible = true
 			painting_selected = true
+	if painting_selected == true:
+		flower_room_selected = true
+
 
 
 #right painting slection
@@ -232,14 +238,14 @@ func _on_river_area_area_entered(area: Area2D) -> void:
 
 func _on_closed_flower_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
-			if area.get_parent().item_id == 2:
-				$"In Right Painting/Open Flower".visible = true
-				$"In Right Painting/Closed Flower".queue_free()
-				$"In Right Painting/Weapon Key".visible = true
-				
-				empty_slot(area.get_parent().drop_location_id)
-				area.get_parent().queue_free()
-				Input.set_custom_mouse_cursor(cursor)
+		if area.get_parent().item_id == 2:
+			$"In Right Painting/Open Flower".visible = true
+			$"In Right Painting/Closed Flower".queue_free()
+			$"In Right Painting/Weapon Key".visible = true
+			
+			empty_slot(area.get_parent().drop_location_id)
+			area.get_parent().queue_free()
+			Input.set_custom_mouse_cursor(cursor)
 
 
 func _on_closed_trap_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
@@ -258,9 +264,40 @@ func _on_closed_toolbox_area_input_event(viewport: Node, event: InputEvent, shap
 
 func _on_brick_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
-			if area.get_parent().item_id == 5:
-				$"In Front Painting/Well Key".visible = true
-				$"In Front Painting/Brick".queue_free()
+		if area.get_parent().item_id == 5:
+			$"In Front Painting/Brick".queue_free()
+			$"In Front Painting/Well Key".visible = true
+			
+			empty_slot(area.get_parent().drop_location_id)
+			area.get_parent().queue_free()
+			Input.set_custom_mouse_cursor(cursor)
+
+
+func _on_entrance_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if !flower_room_selected:
+		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+			$"Flower Room".visible = true
+			flower_room_selected = true
+
+func _on_rose_area_area_entered(area: Area2D) -> void:
+	if area.is_in_group("item"):
+			if area.get_parent().item_id == 6:
+				
+				empty_slot(area.get_parent().drop_location_id)
+				area.get_parent().queue_free()
+				Input.set_custom_mouse_cursor(cursor)
+
+func _on_magnolia_area_area_entered(area: Area2D) -> void:
+	if area.is_in_group("item"):
+			if area.get_parent().item_id == 3:
+				
+				empty_slot(area.get_parent().drop_location_id)
+				area.get_parent().queue_free()
+				Input.set_custom_mouse_cursor(cursor)
+
+func _on_forget_area_area_entered(area: Area2D) -> void:
+	if area.is_in_group("item"):
+			if area.get_parent().item_id == 4:
 				
 				empty_slot(area.get_parent().drop_location_id)
 				area.get_parent().queue_free()
