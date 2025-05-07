@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bipyf48vqp6tf"
-path="res://.godot/imported/Key1.png-2941308f598a72d79055300da3713ff9.ctex"
+uid="uid://cem2teg3xlspa"
+path="res://.godot/imported/ph-slot.PNG-6bea145924d634b0704380374c53d3c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Key1.png"
-dest_files=["res://.godot/imported/Key1.png-2941308f598a72d79055300da3713ff9.ctex"]
+source_file="res://art/ph-slot.PNG"
+dest_files=["res://.godot/imported/ph-slot.PNG-6bea145924d634b0704380374c53d3c6.ctex"]
 
 [params]
 
