@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlk3f1ngou6qj"]
+
+[ext_resource type="Texture2D" uid="uid://cyamkeioip6ar" path="res://icon.svg" id="2_7anbu"]
+[ext_resource type="Script" path="res://Scripts/score.gd" id="2_g4ajh"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 19.85
+anchor_bottom = 9.975
+theme_override_font_sizes/font_size = 40
+script = ExtResource("2_g4ajh")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 19.85
+anchor_bottom = 9.975
+offset_left = 24.0
+offset_right = 24.0
+theme_override_font_sizes/font_size = 40
+text = "/8"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+offset_left = 404.0
+offset_top = 191.0
+offset_right = 675.0
+offset_bottom = 343.0
+icon = ExtResource("2_7anbu")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 392.0
+offset_right = 237.0
+offset_bottom = 521.0
+
+[node name="Button3" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Button4" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Button5" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Button6" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Button7" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="Button" to="Score" method="_on_button_pressed"]
