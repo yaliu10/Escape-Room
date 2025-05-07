@@ -1,36 +1,38 @@
-[gd_scene load_steps=61 format=3 uid="uid://cfy243i0kd1cb"]
+[gd_scene load_steps=63 format=3 uid="uid://cfy243i0kd1cb"]
 
-[ext_resource type="Script" path="res://room.gd" id="1_px8ol"]
-[ext_resource type="Texture2D" uid="uid://cedv7qv502mae" path="res://room art/IMG_2881.PNG" id="2_jm4r0"]
-[ext_resource type="Texture2D" uid="uid://coljdj07q3k73" path="res://art/IMG_2833.PNG" id="3_aue2j"]
-[ext_resource type="Texture2D" uid="uid://is5n476fgekw" path="res://art/arrow.PNG" id="3_bma02"]
-[ext_resource type="Texture2D" uid="uid://gnls6tl7sj5n" path="res://room art/IMG_2885.PNG" id="5_5870f"]
-[ext_resource type="Texture2D" uid="uid://o3xsmuyt5k5g" path="res://art/return.PNG" id="5_xourl"]
-[ext_resource type="Texture2D" uid="uid://drofonil8t46s" path="res://art/painting 1.PNG" id="6_x17j6"]
-[ext_resource type="Texture2D" uid="uid://cpnjyi65ef1vx" path="res://art/pedestal.PNG" id="7_3apwh"]
-[ext_resource type="Texture2D" uid="uid://dvrip7p7nnf3p" path="res://art/roses.png" id="8_eqhil"]
-[ext_resource type="Texture2D" uid="uid://b53bg2lus4gyy" path="res://art/IMG_2865.PNG" id="9_q6k2w"]
-[ext_resource type="Texture2D" uid="uid://coldwawqhss2v" path="res://art/magnolia_in_vase.png" id="9_urks6"]
-[ext_resource type="Texture2D" uid="uid://c11g87krbneh6" path="res://art/forget_me_not.png" id="10_5hx6m"]
-[ext_resource type="Texture2D" uid="uid://cx0josiqod7f8" path="res://art/IMG_2864.PNG" id="11_1avih"]
-[ext_resource type="Texture2D" uid="uid://c3daujsb8slwb" path="res://room art/IMG_2884.PNG" id="11_kfci7"]
-[ext_resource type="Script" path="res://Scripts/item.gd" id="12_6j7kt"]
-[ext_resource type="Texture2D" uid="uid://bpxq4eq2ofdtj" path="res://art/IMG_2857.PNG" id="13_kk5r4"]
-[ext_resource type="Texture2D" uid="uid://bsy3t00omi5r0" path="res://room art/IMG_2887.PNG" id="13_minuk"]
-[ext_resource type="Texture2D" uid="uid://ks7jr0qw0w5j" path="res://art/IMG_2858.PNG" id="13_nqj54"]
-[ext_resource type="Texture2D" uid="uid://bgpsrw5g0d62q" path="res://room art/IMG_2883.PNG" id="14_sgx0v"]
-[ext_resource type="Texture2D" uid="uid://cjj0w5nq385m1" path="res://art/IMG_2860.PNG" id="15_bv533"]
-[ext_resource type="Texture2D" uid="uid://dxwpnls8cv6ed" path="res://art/IMG_2862.PNG" id="15_kdw0l"]
-[ext_resource type="Texture2D" uid="uid://v636sor56xk4" path="res://room art/IMG_2882.PNG" id="16_3b2s1"]
-[ext_resource type="Texture2D" uid="uid://ce4f4wrwh13xj" path="res://art/IMG_2861.PNG" id="16_22rhc"]
-[ext_resource type="Texture2D" uid="uid://dklo3a56i6ypn" path="res://art/IMG_2859.PNG" id="16_fw5fg"]
-[ext_resource type="Texture2D" uid="uid://b7eimlxrbmt72" path="res://art/Hollyhock.png" id="17_k5f7d"]
-[ext_resource type="Texture2D" uid="uid://qgndunpgl4lh" path="res://art/Forget me not.png" id="17_txuyg"]
-[ext_resource type="Texture2D" uid="uid://ds552hk8olw1w" path="res://art/ph-closed case.PNG" id="22_grjj2"]
-[ext_resource type="Texture2D" uid="uid://bwsn7jxnip1o3" path="res://art/ph-opened case.PNG" id="23_58ajg"]
-[ext_resource type="Texture2D" uid="uid://dth0ppj03on7q" path="res://art/IMG_0218.PNG" id="25_dfims"]
-[ext_resource type="Texture2D" uid="uid://lfk6lm2ogsnb" path="res://art/IMG_2856.PNG" id="25_xljdd"]
-[ext_resource type="Texture2D" uid="uid://b08qdw4sxt8o" path="res://art/Rose.png" id="26_ur4sx"]
+[ext_resource type="Script" path="res://Scripts/room.gd" id="1_kyjej"]
+[ext_resource type="Texture2D" uid="uid://cedv7qv502mae" path="res://room art/IMG_2881.PNG" id="2_crx0i"]
+[ext_resource type="Texture2D" uid="uid://coljdj07q3k73" path="res://art/IMG_2833.PNG" id="3_bimkd"]
+[ext_resource type="Texture2D" uid="uid://is5n476fgekw" path="res://art/arrow.PNG" id="4_mvkcb"]
+[ext_resource type="Texture2D" uid="uid://gnls6tl7sj5n" path="res://room art/IMG_2885.PNG" id="5_fi5kq"]
+[ext_resource type="Texture2D" uid="uid://o3xsmuyt5k5g" path="res://art/return.PNG" id="6_wgjgj"]
+[ext_resource type="Texture2D" uid="uid://cpnjyi65ef1vx" path="res://art/pedestal.PNG" id="7_kpyn2"]
+[ext_resource type="Texture2D" uid="uid://dvrip7p7nnf3p" path="res://art/roses.png" id="8_wec8v"]
+[ext_resource type="Texture2D" uid="uid://coldwawqhss2v" path="res://art/magnolia_in_vase.png" id="9_7uqkh"]
+[ext_resource type="Texture2D" uid="uid://c11g87krbneh6" path="res://art/forget_me_not.png" id="10_m0qhe"]
+[ext_resource type="Texture2D" uid="uid://c3daujsb8slwb" path="res://room art/IMG_2884.PNG" id="11_aucpo"]
+[ext_resource type="Texture2D" uid="uid://drofonil8t46s" path="res://art/painting 1.PNG" id="12_wxyb4"]
+[ext_resource type="Texture2D" uid="uid://bsy3t00omi5r0" path="res://room art/IMG_2887.PNG" id="13_v568s"]
+[ext_resource type="Texture2D" uid="uid://bgpsrw5g0d62q" path="res://room art/IMG_2883.PNG" id="14_vyo54"]
+[ext_resource type="Texture2D" uid="uid://b53bg2lus4gyy" path="res://art/IMG_2865.PNG" id="15_1f6tb"]
+[ext_resource type="Texture2D" uid="uid://v636sor56xk4" path="res://room art/IMG_2882.PNG" id="16_r4i17"]
+[ext_resource type="Texture2D" uid="uid://cx0josiqod7f8" path="res://art/IMG_2864.PNG" id="17_ht7nw"]
+[ext_resource type="Texture2D" uid="uid://bpxq4eq2ofdtj" path="res://art/IMG_2857.PNG" id="18_ifv7v"]
+[ext_resource type="Script" path="res://Scripts/item.gd" id="19_uqdtp"]
+[ext_resource type="Texture2D" uid="uid://cjj0w5nq385m1" path="res://art/IMG_2860.PNG" id="20_82alr"]
+[ext_resource type="Texture2D" uid="uid://dklo3a56i6ypn" path="res://art/IMG_2859.PNG" id="21_3c5px"]
+[ext_resource type="Texture2D" uid="uid://qgndunpgl4lh" path="res://art/Forget me not.png" id="22_ssp0m"]
+[ext_resource type="Texture2D" uid="uid://dxwpnls8cv6ed" path="res://art/IMG_2862.PNG" id="23_x8hqc"]
+[ext_resource type="Texture2D" uid="uid://ce4f4wrwh13xj" path="res://art/IMG_2861.PNG" id="24_c7bnn"]
+[ext_resource type="Texture2D" uid="uid://b7eimlxrbmt72" path="res://art/Hollyhock.png" id="25_0r2pd"]
+[ext_resource type="Texture2D" uid="uid://dth0ppj03on7q" path="res://art/IMG_0218.PNG" id="26_v66a4"]
+[ext_resource type="Texture2D" uid="uid://ds552hk8olw1w" path="res://art/ph-closed case.PNG" id="27_n3m8c"]
+[ext_resource type="Texture2D" uid="uid://bwsn7jxnip1o3" path="res://art/ph-opened case.PNG" id="28_4f84c"]
+[ext_resource type="Texture2D" uid="uid://ks7jr0qw0w5j" path="res://art/IMG_2858.PNG" id="29_4nyvc"]
+[ext_resource type="Texture2D" uid="uid://lfk6lm2ogsnb" path="res://art/IMG_2856.PNG" id="30_q5rg6"]
+[ext_resource type="Texture2D" uid="uid://b08qdw4sxt8o" path="res://art/Rose.png" id="31_vtdw2"]
+[ext_resource type="PackedScene" uid="uid://dju1hvapdgqbs" path="res://Scenes/pause_screen.tscn" id="32_1rbud"]
+[ext_resource type="Texture2D" uid="uid://cyamkeioip6ar" path="res://art/icon.svg" id="33_s78q4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ms4q"]
 size = Vector2(83, 83)
@@ -123,44 +125,44 @@ size = Vector2(51.1799, 30.5172)
 radius = 55.5606
 
 [node name="Room" type="Node2D"]
-script = ExtResource("1_px8ol")
+script = ExtResource("1_kyjej")
 
 [node name="Main Background" type="TextureRect" parent="."]
 offset_top = 1.0
 offset_right = 1148.0
 offset_bottom = 651.0
-texture = ExtResource("2_jm4r0")
+texture = ExtResource("2_crx0i")
 expand_mode = 1
 
 [node name="Inventory Slot1" type="Sprite2D" parent="."]
 z_index = 9
 position = Vector2(263.953, 561.25)
 scale = Vector2(1.94068, 1.94068)
-texture = ExtResource("3_aue2j")
+texture = ExtResource("3_bimkd")
 
 [node name="Inventory Slot2" type="Sprite2D" parent="."]
 z_index = 9
 position = Vector2(412.953, 561.25)
 scale = Vector2(1.94068, 1.94068)
-texture = ExtResource("3_aue2j")
+texture = ExtResource("3_bimkd")
 
 [node name="Inventory Slot3" type="Sprite2D" parent="."]
 z_index = 9
 position = Vector2(564.953, 561.25)
 scale = Vector2(1.94068, 1.94068)
-texture = ExtResource("3_aue2j")
+texture = ExtResource("3_bimkd")
 
 [node name="Inventory Slot4" type="Sprite2D" parent="."]
 z_index = 9
 position = Vector2(718.953, 561.25)
 scale = Vector2(1.94068, 1.94068)
-texture = ExtResource("3_aue2j")
+texture = ExtResource("3_bimkd")
 
 [node name="Inventory Slot5" type="Sprite2D" parent="."]
 z_index = 9
 position = Vector2(865.953, 561.25)
 scale = Vector2(1.94068, 1.94068)
-texture = ExtResource("3_aue2j")
+texture = ExtResource("3_bimkd")
 
 [node name="Slot1" type="Node2D" parent="."]
 position = Vector2(263, 560)
@@ -209,7 +211,7 @@ shape = SubResource("RectangleShape2D_5ms4q")
 
 [node name="Left Arrow" type="Sprite2D" parent="."]
 position = Vector2(71, 323)
-texture = ExtResource("3_bma02")
+texture = ExtResource("4_mvkcb")
 
 [node name="Left Arrow Area" type="Area2D" parent="Left Arrow"]
 
@@ -219,7 +221,7 @@ shape = SubResource("CircleShape2D_ddivy")
 
 [node name="Right Arrow" type="Sprite2D" parent="."]
 position = Vector2(1076, 323)
-texture = ExtResource("3_bma02")
+texture = ExtResource("4_mvkcb")
 flip_h = true
 
 [node name="Right Arrow Area" type="Area2D" parent="Right Arrow"]
@@ -230,7 +232,7 @@ shape = SubResource("CircleShape2D_s6bbm")
 [node name="Front Arrow" type="Sprite2D" parent="."]
 position = Vector2(550, 62)
 rotation = 1.55992
-texture = ExtResource("3_bma02")
+texture = ExtResource("4_mvkcb")
 
 [node name="Front Arrow Area" type="Area2D" parent="Front Arrow"]
 
@@ -240,12 +242,12 @@ shape = SubResource("CircleShape2D_5fiil")
 [node name="Flower Room" type="Sprite2D" parent="."]
 visible = false
 z_index = 2
-texture = ExtResource("5_5870f")
+texture = ExtResource("5_fi5kq")
 centered = false
 
 [node name="Flower Room Return" type="Sprite2D" parent="Flower Room"]
 position = Vector2(1079, 41)
-texture = ExtResource("5_xourl")
+texture = ExtResource("6_wgjgj")
 
 [node name="Flower Return Area" type="Area2D" parent="Flower Room/Flower Room Return"]
 
@@ -255,7 +257,7 @@ shape = SubResource("CircleShape2D_5isxk")
 [node name="Rose" type="Sprite2D" parent="Flower Room"]
 position = Vector2(363.609, 452.924)
 scale = Vector2(1.25609, 1.25609)
-texture = ExtResource("7_3apwh")
+texture = ExtResource("7_kpyn2")
 
 [node name="Rose Area" type="Area2D" parent="Flower Room/Rose"]
 
@@ -266,7 +268,7 @@ shape = SubResource("CircleShape2D_g4sna")
 [node name="Magnolia" type="Sprite2D" parent="Flower Room"]
 position = Vector2(554.244, 452.924)
 scale = Vector2(1.25609, 1.25609)
-texture = ExtResource("7_3apwh")
+texture = ExtResource("7_kpyn2")
 
 [node name="Magnolia Area" type="Area2D" parent="Flower Room/Magnolia"]
 
@@ -277,7 +279,7 @@ shape = SubResource("CircleShape2D_yv2la")
 [node name="Forget" type="Sprite2D" parent="Flower Room"]
 position = Vector2(761.806, 452.924)
 scale = Vector2(1.25609, 1.25609)
-texture = ExtResource("7_3apwh")
+texture = ExtResource("7_kpyn2")
 
 [node name="Forget Area" type="Area2D" parent="Flower Room/Forget"]
 
@@ -288,28 +290,28 @@ shape = SubResource("CircleShape2D_7s8mr")
 [node name="Rose Vase" type="Sprite2D" parent="Flower Room"]
 position = Vector2(365.39, 277.022)
 scale = Vector2(0.566812, 0.566812)
-texture = ExtResource("8_eqhil")
+texture = ExtResource("8_wec8v")
 
 [node name="Mag Vase" type="Sprite2D" parent="Flower Room"]
 position = Vector2(556.917, 277.022)
 scale = Vector2(0.566812, 0.566812)
-texture = ExtResource("9_urks6")
+texture = ExtResource("9_7uqkh")
 
 [node name="Forget Vase" type="Sprite2D" parent="Flower Room"]
 position = Vector2(762.697, 277.022)
 scale = Vector2(0.566812, 0.566812)
-texture = ExtResource("10_5hx6m")
+texture = ExtResource("10_m0qhe")
 
 [node name="Left Wall" type="Sprite2D" parent="."]
 visible = false
 z_index = 1
-texture = ExtResource("11_kfci7")
+texture = ExtResource("11_aucpo")
 centered = false
 
 [node name="Left Wall Return" type="Sprite2D" parent="Left Wall"]
 position = Vector2(983.076, 42.4615)
 scale = Vector2(0.889661, 0.923077)
-texture = ExtResource("5_xourl")
+texture = ExtResource("6_wgjgj")
 
 [node name="Left Return Area" type="Area2D" parent="Left Wall/Left Wall Return"]
 
@@ -319,7 +321,7 @@ shape = SubResource("CircleShape2D_lu6b0")
 [node name="Left Painting" type="Sprite2D" parent="Left Wall"]
 position = Vector2(353.562, 238.346)
 scale = Vector2(0.335082, 0.422179)
-texture = ExtResource("6_x17j6")
+texture = ExtResource("12_wxyb4")
 
 [node name="Left Painting Area" type="Area2D" parent="Left Wall/Left Painting"]
 
@@ -329,7 +331,7 @@ shape = SubResource("RectangleShape2D_kii1n")
 
 [node name="Entrance" type="Sprite2D" parent="Left Wall"]
 position = Vector2(827, 347)
-texture = ExtResource("13_minuk")
+texture = ExtResource("13_v568s")
 
 [node name="Entrance Area" type="Area2D" parent="Left Wall/Entrance"]
 
@@ -340,12 +342,12 @@ shape = SubResource("RectangleShape2D_jn2m4")
 [node name="Right Wall" type="Sprite2D" parent="."]
 visible = false
 z_index = 1
-texture = ExtResource("14_sgx0v")
+texture = ExtResource("14_vyo54")
 centered = false
 
 [node name="Right Wall Return" type="Sprite2D" parent="Right Wall"]
 position = Vector2(975.791, 41.4747)
-texture = ExtResource("5_xourl")
+texture = ExtResource("6_wgjgj")
 
 [node name="Right Return Area" type="Area2D" parent="Right Wall/Right Wall Return"]
 
@@ -355,7 +357,7 @@ shape = SubResource("CircleShape2D_uxcqm")
 [node name="Right Painting" type="Sprite2D" parent="Right Wall"]
 position = Vector2(218.727, 96.7742)
 scale = Vector2(0.552746, 0.623656)
-texture = ExtResource("9_q6k2w")
+texture = ExtResource("15_1f6tb")
 centered = false
 
 [node name="Right Painting Area" type="Area2D" parent="Right Wall/Right Painting"]
@@ -367,12 +369,12 @@ shape = SubResource("RectangleShape2D_rvwke")
 [node name="Front Wall" type="Sprite2D" parent="."]
 visible = false
 z_index = 1
-texture = ExtResource("16_3b2s1")
+texture = ExtResource("16_r4i17")
 centered = false
 
 [node name="Front Wall Return" type="Sprite2D" parent="Front Wall"]
 position = Vector2(977.495, 39.6313)
-texture = ExtResource("5_xourl")
+texture = ExtResource("6_wgjgj")
 
 [node name="Front Return Area" type="Area2D" parent="Front Wall/Front Wall Return"]
 
@@ -382,7 +384,7 @@ shape = SubResource("CircleShape2D_w43hp")
 [node name="Front Painting" type="Sprite2D" parent="Front Wall"]
 position = Vector2(383, 199)
 scale = Vector2(0.375, 0.413333)
-texture = ExtResource("11_1avih")
+texture = ExtResource("17_ht7nw")
 centered = false
 
 [node name="Front Painting Area" type="Area2D" parent="Front Wall/Front Painting"]
@@ -395,15 +397,15 @@ shape = SubResource("RectangleShape2D_ka71n")
 visible = false
 z_index = 1
 scale = Vector2(1.13086, 1.085)
-texture = ExtResource("6_x17j6")
+texture = ExtResource("12_wxyb4")
 centered = false
 
 [node name="Filled Bucket" type="Sprite2D" parent="In Left Painting"]
 visible = false
 position = Vector2(326.3, 300.461)
 scale = Vector2(1.13352, 1.37258)
-texture = ExtResource("13_kk5r4")
-script = ExtResource("12_6j7kt")
+texture = ExtResource("18_ifv7v")
+script = ExtResource("19_uqdtp")
 item_id = 2
 
 [node name="Filled Bucket Area" type="Area2D" parent="In Left Painting/Filled Bucket" groups=["item"]]
@@ -417,7 +419,7 @@ one_shot = true
 
 [node name="Left Painting Return" type="Sprite2D" parent="In Left Painting"]
 position = Vector2(961.216, 43.318)
-texture = ExtResource("5_xourl")
+texture = ExtResource("6_wgjgj")
 
 [node name="Left Painting Return Area" type="Area2D" parent="In Left Painting/Left Painting Return"]
 
@@ -434,7 +436,7 @@ shape = SubResource("RectangleShape2D_4ap62")
 [node name="Closed Trap" type="Sprite2D" parent="In Left Painting"]
 position = Vector2(807.35, 358.525)
 scale = Vector2(1.31556, 1.45737)
-texture = ExtResource("15_bv533")
+texture = ExtResource("20_82alr")
 
 [node name="Closed Trap Area" type="Area2D" parent="In Left Painting/Closed Trap"]
 
@@ -445,15 +447,15 @@ shape = SubResource("CircleShape2D_l222c")
 visible = false
 position = Vector2(807.35, 358.525)
 scale = Vector2(1.31556, 1.45737)
-texture = ExtResource("16_fw5fg")
+texture = ExtResource("21_3c5px")
 
 [node name="River Key" type="Sprite2D" parent="In Left Painting"]
 visible = false
 position = Vector2(804.697, 354.839)
 rotation = 0.68382
 scale = Vector2(0.482841, 0.482841)
-texture = ExtResource("17_txuyg")
-script = ExtResource("12_6j7kt")
+texture = ExtResource("22_ssp0m")
+script = ExtResource("19_uqdtp")
 item_id = 4
 
 [node name="River Key Area" type="Area2D" parent="In Left Painting/River Key" groups=["item"]]
@@ -470,13 +472,13 @@ one_shot = true
 visible = false
 z_index = 1
 scale = Vector2(1.125, 1.08833)
-texture = ExtResource("9_q6k2w")
+texture = ExtResource("15_1f6tb")
 centered = false
 
 [node name="Closed Flower" type="Sprite2D" parent="In Right Painting"]
 position = Vector2(141.333, 376.724)
 scale = Vector2(1.29778, 1.52527)
-texture = ExtResource("15_kdw0l")
+texture = ExtResource("23_x8hqc")
 
 [node name="Closed Flower Area" type="Area2D" parent="In Right Painting/Closed Flower"]
 
@@ -488,11 +490,11 @@ shape = SubResource("CapsuleShape2D_c4gaq")
 visible = false
 position = Vector2(141.333, 376.724)
 scale = Vector2(1.29778, 1.52527)
-texture = ExtResource("16_22rhc")
+texture = ExtResource("24_c7bnn")
 
 [node name="Right Painting Return" type="Sprite2D" parent="In Right Painting"]
 position = Vector2(968, 41.3476)
-texture = ExtResource("5_xourl")
+texture = ExtResource("6_wgjgj")
 
 [node name="Right Painting Return Area" type="Area2D" parent="In Right Painting/Right Painting Return"]
 
@@ -504,8 +506,8 @@ visible = false
 position = Vector2(152.889, 337.214)
 rotation = 0.68382
 scale = Vector2(0.482841, 0.482841)
-texture = ExtResource("17_k5f7d")
-script = ExtResource("12_6j7kt")
+texture = ExtResource("25_0r2pd")
+script = ExtResource("19_uqdtp")
 item_id = 3
 
 [node name="Weapon Key Area" type="Area2D" parent="In Right Painting/Weapon Key" groups=["item"]]
@@ -523,8 +525,8 @@ visible = false
 z_index = 1
 position = Vector2(832.889, 420.828)
 scale = Vector2(0.203674, 0.203674)
-texture = ExtResource("25_dfims")
-script = ExtResource("12_6j7kt")
+texture = ExtResource("26_v66a4")
+script = ExtResource("19_uqdtp")
 item_id = 5
 
 [node name="Chisel Area" type="Area2D" parent="In Right Painting/Chisel" groups=["item"]]
@@ -539,7 +541,7 @@ one_shot = true
 [node name="Closed Toolbox" type="Sprite2D" parent="In Right Painting"]
 position = Vector2(877.333, 438.286)
 scale = Vector2(0.937393, 0.997705)
-texture = ExtResource("22_grjj2")
+texture = ExtResource("27_n3m8c")
 
 [node name="Closed Toolbox Area" type="Area2D" parent="In Right Painting/Closed Toolbox"]
 position = Vector2(-43.6199, -22.1029)
@@ -552,20 +554,20 @@ shape = SubResource("RectangleShape2D_k04cf")
 visible = false
 position = Vector2(877.333, 380.399)
 scale = Vector2(0.947778, 0.991962)
-texture = ExtResource("23_58ajg")
+texture = ExtResource("28_4f84c")
 
 [node name="In Front Painting" type="Sprite2D" parent="."]
 visible = false
 z_index = 1
 scale = Vector2(1.12402, 1.08833)
-texture = ExtResource("11_1avih")
+texture = ExtResource("17_ht7nw")
 centered = false
 
 [node name="Empty Bucket" type="Sprite2D" parent="In Front Painting"]
 position = Vector2(105.87, 113.936)
 scale = Vector2(1.77933, 1.89281)
-texture = ExtResource("13_nqj54")
-script = ExtResource("12_6j7kt")
+texture = ExtResource("29_4nyvc")
+script = ExtResource("19_uqdtp")
 
 [node name="Empty Bucket Area" type="Area2D" parent="In Front Painting/Empty Bucket" groups=["item"]]
 
@@ -579,7 +581,7 @@ one_shot = true
 
 [node name="Front Painting Return" type="Sprite2D" parent="In Front Painting"]
 position = Vector2(965.282, 45.9418)
-texture = ExtResource("5_xourl")
+texture = ExtResource("6_wgjgj")
 
 [node name="Front Painting Return Area" type="Area2D" parent="In Front Painting/Front Painting Return"]
 
@@ -590,7 +592,7 @@ shape = SubResource("CircleShape2D_18k77")
 position = Vector2(314.832, 254.05)
 rotation = -0.239559
 scale = Vector2(1.55236, 1.33774)
-texture = ExtResource("25_xljdd")
+texture = ExtResource("30_q5rg6")
 
 [node name="Brick area" type="Area2D" parent="In Front Painting/Brick"]
 
@@ -603,8 +605,8 @@ visible = false
 position = Vector2(319.389, 253.6)
 rotation = 0.68382
 scale = Vector2(0.482841, 0.482841)
-texture = ExtResource("26_ur4sx")
-script = ExtResource("12_6j7kt")
+texture = ExtResource("31_vtdw2")
+script = ExtResource("19_uqdtp")
 item_id = 6
 
 [node name="Well Key Area" type="Area2D" parent="In Front Painting/Well Key" groups=["item"]]
@@ -615,6 +617,27 @@ shape = SubResource("CircleShape2D_eedyf")
 [node name="Timer" type="Timer" parent="In Front Painting/Well Key"]
 wait_time = 0.2
 one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("32_1rbud")]
+
+[node name="PauseIcon" type="Button" parent="."]
+offset_left = 69.0
+offset_top = 63.0
+offset_right = 205.0
+offset_bottom = 199.0
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="PauseIcon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.993
+anchor_bottom = 1.007
+offset_right = -0.0480042
+offset_bottom = 0.0479889
+texture = ExtResource("33_s78q4")
+expand_mode = 1
 
 [connection signal="area_entered" from="Slot1/Slot1 Area" to="." method="_on_slot_1_area_area_entered"]
 [connection signal="area_entered" from="Slot2/Slot2 Area" to="." method="_on_slot_2_area_area_entered"]
@@ -679,3 +702,4 @@ one_shot = true
 [connection signal="area_entered" from="In Front Painting/Brick/Brick area" to="." method="_on_brick_area_area_entered"]
 [connection signal="input_event" from="In Front Painting/Well Key/Well Key Area" to="In Front Painting/Well Key" method="_on_empty_bucket_area_input_event"]
 [connection signal="timeout" from="In Front Painting/Well Key/Timer" to="In Front Painting/Well Key" method="_on_timer_timeout"]
+[connection signal="pressed" from="PauseIcon" to="CanvasLayer/PauseScreen" method="_on_pause_icon_pressed"]

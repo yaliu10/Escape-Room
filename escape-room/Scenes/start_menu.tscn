@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://dqlwo8sd16ov6"]
 
 [ext_resource type="Script" path="res://Scripts/start_menu.gd" id="1_7bojk"]
-[ext_resource type="Texture2D" uid="uid://dtgphwhgvi6iy" path="res://art/IMG_2640.PNG" id="1_luv6b"]
+[ext_resource type="Texture2D" uid="uid://cedv7qv502mae" path="res://room art/IMG_2881.PNG" id="2_bxiim"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmvnx"]
-texture = ExtResource("1_luv6b")
-modulate_color = Color(0.519162, 0.519162, 0.519162, 1)
+texture = ExtResource("2_bxiim")
+modulate_color = Color(0.43134, 0.43134, 0.43134, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ej1xt"]
 
@@ -56,29 +56,46 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -321.0
-offset_top = 29.0
-offset_right = 321.0
-offset_bottom = 171.0
+offset_left = -314.0
+offset_top = 49.0
+offset_right = 328.0
+offset_bottom = 191.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 10
-theme_override_font_sizes/font_size = 100
-text = "Escape Game"
+theme_override_font_sizes/font_size = 75
+text = "Volition Corridor"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -323.0
+offset_top = 156.0
+offset_right = 319.0
+offset_bottom = 255.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 10
+theme_override_font_sizes/font_size = 60
+text = "意愿长廊"
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.584
-anchor_right = 0.5
-anchor_bottom = 0.584
-offset_left = -150.0
-offset_top = -156.432
-offset_right = 151.0
-offset_bottom = 156.568
+anchor_left = 0.51
+anchor_top = 0.652
+anchor_right = 0.51
+anchor_bottom = 0.652
+offset_left = -188.52
+offset_top = -156.496
+offset_right = 187.48
+offset_bottom = 156.504
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 25
@@ -92,7 +109,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ej1xt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3pdx3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_asxt4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_dk7kc")
-text = "Start"
+text = "Enter"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -103,7 +120,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ej1xt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3pdx3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_asxt4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_dk7kc")
-text = "Quit"
+text = "Leave"
 
 [node name="CreditButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -114,7 +131,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ej1xt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3pdx3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_asxt4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_dk7kc")
-text = "Credits"
+text = "Memory Pieces"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

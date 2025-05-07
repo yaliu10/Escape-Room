@@ -166,7 +166,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="PauseIcon" type="Button" parent="."]
+[node name="PauseIcon" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.448
@@ -175,7 +175,7 @@ anchor_right = 0.566
 anchor_bottom = 0.679
 offset_left = -0.0960083
 offset_top = 0.0879822
-offset_right = -0.0320435
+offset_right = -0.0319824
 offset_bottom = 0.00799561
 grow_horizontal = 2
 grow_vertical = 2
@@ -185,4 +185,4 @@ icon = ExtResource("5_jynig")
 [connection signal="pressed" from="Control/Right Button" to="." method="_on_right_button_pressed"]
 [connection signal="pressed" from="Control/Up Button" to="." method="_on_up_button_pressed"]
 [connection signal="pressed" from="Control/text object" to="." method="_on_text_object_pressed"]
-[connection signal="pressed" from="PauseIcon" to="CanvasLayer/PauseScreen" method="_on_pause_icon_pressed"]
+[connection signal="pressed" from="Control/PauseIcon" to="CanvasLayer/PauseScreen" method="_on_pause_icon_pressed"]

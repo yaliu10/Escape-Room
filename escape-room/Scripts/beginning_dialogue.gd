@@ -4,11 +4,10 @@ extends Control
 @onready var next_button: Button = %NextButton
 
 @export var dialogue_items: Array[String] = [
-	"Hey",
-	"LALA.",
-	"Haha",
-	"Hehe",
-	"Bye bye~!",
+	"Where am I?",
+	"This place looks like a museum...but why...do I feel like I've been here before?",
+	"Who am I? Why can’t I remember anything...?",
+	"This painting...",
 ]
 
 var current_item_index := 0
@@ -30,6 +29,6 @@ func show_text() -> void:
 func advance() -> void:
 	current_item_index += 1
 	if current_item_index == dialogue_items.size():
-		get_tree().change_scene_to_file("res://Scenes/main.tscn")
+		get_tree().change_scene_to_file("res://Scenes/room.tscn")
 	else:
 		show_text()
