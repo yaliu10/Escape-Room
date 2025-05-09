@@ -59,10 +59,10 @@ texture = ExtResource("2_tmg22")
 centered = false
 
 [node name="1stButton" type="Button" parent="1stScene"]
-offset_left = -51.021
-offset_top = -277.465
-offset_right = 36.979
-offset_bottom = -201.465
+offset_left = 535.0
+offset_top = 84.0
+offset_right = 623.0
+offset_bottom = 160.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ey4ia")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_gnavg")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_81ter")
