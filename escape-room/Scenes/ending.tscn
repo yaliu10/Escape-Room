@@ -29,7 +29,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fhty3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xetp3"]
-size = Vector2(1023.11, 604.651)
+size = Vector2(1019.55, 600.466)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j3qdm"]
 
@@ -96,15 +96,14 @@ flip_h = true
 
 [node name="2ndScene" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(574.5, 324.5)
-scale = Vector2(1.12402, 1.075)
+position = Vector2(574.5, 323)
+scale = Vector2(1.12402, 1.08)
 texture = ExtResource("4_hc5ry")
 
 [node name="2ndArea2D" type="Area2D" parent="2ndScene"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="2ndScene/2ndArea2D"]
-position = Vector2(-2.23401, -0.465118)
-scale = Vector2(1, 1)
+position = Vector2(-2.23401, 0.232758)
 shape = SubResource("RectangleShape2D_xetp3")
 
 [node name="2ndButton" type="Button" parent="2ndScene"]
@@ -138,14 +137,14 @@ flip_h = true
 
 [node name="3rdScene" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(576, 325.5)
-scale = Vector2(1.12695, 1.07833)
+position = Vector2(576, 323.999)
+scale = Vector2(1.12695, 1.08333)
 texture = ExtResource("5_iliqu")
 
 [node name="3rdArea2D" type="Area2D" parent="3rdScene"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="3rdScene/3rdArea2D"]
-position = Vector2(-2.23401, -0.465118)
+position = Vector2(-0.45282, 0.929718)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xetp3")
 
