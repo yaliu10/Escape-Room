@@ -1,10 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://dbnr8kaimrxi4"]
+[gd_scene load_steps=27 format=3 uid="uid://dbnr8kaimrxi4"]
 
 [ext_resource type="Script" path="res://Scripts/ending.gd" id="1_rny7r"]
 [ext_resource type="Texture2D" uid="uid://is5n476fgekw" path="res://art/arrow.PNG" id="2_8htpb"]
-[ext_resource type="Texture2D" uid="uid://cx0josiqod7f8" path="res://art/IMG_2864.PNG" id="4_hc5ry"]
-[ext_resource type="Texture2D" uid="uid://b53bg2lus4gyy" path="res://art/IMG_2865.PNG" id="5_iliqu"]
-[ext_resource type="Texture2D" uid="uid://cncut3a30jwir" path="res://art/front wall.PNG" id="7_ej7gi"]
+[ext_resource type="Texture2D" uid="uid://cclhtin2s61mh" path="res://art/end room.png" id="2_tmg22"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ey4ia"]
 
@@ -57,9 +55,8 @@ size = Vector2(1019.55, 600.466)
 script = ExtResource("1_rny7r")
 
 [node name="1stScene" type="Sprite2D" parent="."]
-position = Vector2(576, 324)
-scale = Vector2(1.12305, 1.07333)
-texture = ExtResource("7_ej7gi")
+texture = ExtResource("2_tmg22")
+centered = false
 
 [node name="1stButton" type="Button" parent="1stScene"]
 offset_left = -51.021
@@ -98,7 +95,8 @@ flip_h = true
 visible = false
 position = Vector2(574.5, 323)
 scale = Vector2(1.12402, 1.08)
-texture = ExtResource("4_hc5ry")
+texture = ExtResource("2_tmg22")
+centered = false
 
 [node name="2ndArea2D" type="Area2D" parent="2ndScene"]
 
@@ -139,7 +137,8 @@ flip_h = true
 visible = false
 position = Vector2(576, 323.999)
 scale = Vector2(1.12695, 1.08333)
-texture = ExtResource("5_iliqu")
+texture = ExtResource("2_tmg22")
+centered = false
 
 [node name="3rdArea2D" type="Area2D" parent="3rdScene"]
 
