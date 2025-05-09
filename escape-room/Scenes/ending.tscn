@@ -1,35 +1,12 @@
-[gd_scene load_steps=41 format=3 uid="uid://dbnr8kaimrxi4"]
+[gd_scene load_steps=32 format=3 uid="uid://dbnr8kaimrxi4"]
 
 [ext_resource type="Script" path="res://Scripts/ending.gd" id="1_rny7r"]
 [ext_resource type="Texture2D" uid="uid://dtgphwhgvi6iy" path="res://art/IMG_2640.PNG" id="1_wn7ke"]
-[ext_resource type="Texture2D" uid="uid://cqmgsufbhylge" path="res://art/arrow.PNG" id="2_8htpb"]
+[ext_resource type="Texture2D" uid="uid://is5n476fgekw" path="res://art/arrow.PNG" id="2_8htpb"]
 [ext_resource type="Texture2D" uid="uid://dodxkgqtjqnux" path="res://art/placeholder left wall.PNG" id="4_lku07"]
 [ext_resource type="Texture2D" uid="uid://dm7fqcwymr2lp" path="res://art/placeholder right wall.PNG" id="5_8br66"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2us7j"]
-size = Vector2(1148, 647)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8k5t7"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yvkar"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1aj43"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lma8j"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dc0q5"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1vcqi"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nx2ph"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k3q2v"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_exwca"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xubls"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pvtvr"]
+[ext_resource type="Texture2D" uid="uid://b6h25a8ai2hog" path="res://art/right Wall.PNG" id="6_1t02l"]
+[ext_resource type="Texture2D" uid="uid://cncut3a30jwir" path="res://art/front wall.PNG" id="7_ej7gi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kcyoi"]
 size = Vector2(1154, 644)
@@ -56,39 +33,37 @@ size = Vector2(1154, 644)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yarex"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5wfnv"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2us7j"]
+size = Vector2(1148, 647)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bw3jp"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8k5t7"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vsdan"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yvkar"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1hbmr"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1aj43"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0om7"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lma8j"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pp8h4"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dc0q5"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dh8io"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1vcqi"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ls4q3"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nx2ph"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q45mf"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k3q2v"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qx0lm"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_exwca"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0u81"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xubls"]
 
-[node name="Ending" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pvtvr"]
+
+[node name="Ending" type="Node2D"]
 script = ExtResource("1_rny7r")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
+visible = false
+z_index = 20
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -97,51 +72,8 @@ grow_vertical = 2
 texture = ExtResource("1_wn7ke")
 expand_mode = 1
 
-[node name="Area2D" type="Area2D" parent="TextureRect"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area2D"]
-visible = false
-position = Vector2(576, 323.5)
-shape = SubResource("RectangleShape2D_2us7j")
-
-[node name="ForwardButton" type="Button" parent="TextureRect"]
-layout_mode = 0
-offset_left = 523.0
-offset_top = 31.0
-offset_right = 618.0
-offset_bottom = 129.0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_8k5t7")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_yvkar")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_1aj43")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_lma8j")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_dc0q5")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_1vcqi")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_nx2ph")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_k3q2v")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_exwca")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xubls")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_pvtvr")
-flat = true
-
-[node name="TextureRect" type="TextureRect" parent="TextureRect/ForwardButton"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.221
-anchor_bottom = 1.082
-offset_left = -2.0
-offset_top = 106.0
-offset_right = -9.99501
-offset_bottom = 117.964
-grow_horizontal = 2
-grow_vertical = 2
-rotation = -1.5708
-texture = ExtResource("2_8htpb")
-expand_mode = 1
-flip_h = true
-
 [node name="Placeholder" type="TextureRect" parent="."]
 visible = false
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -194,7 +126,6 @@ flip_h = true
 
 [node name="Placeholder2" type="TextureRect" parent="."]
 visible = false
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -203,41 +134,52 @@ grow_vertical = 2
 texture = ExtResource("5_8br66")
 expand_mode = 1
 
-[node name="3rdArea2D" type="Area2D" parent="Placeholder2"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(575.5, 323.25)
+scale = Vector2(1.11816, 1.0625)
+texture = ExtResource("6_1t02l")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Placeholder2/3rdArea2D"]
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+position = Vector2(-514.683, -304.235)
+scale = Vector2(0.894323, 0.941177)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
 visible = false
-position = Vector2(577, 324)
-shape = SubResource("RectangleShape2D_kcyoi")
+position = Vector2(576, 323.5)
+shape = SubResource("RectangleShape2D_2us7j")
 
-[node name="3rdButton" type="Button" parent="Placeholder2"]
-layout_mode = 0
-offset_left = 523.0
-offset_top = 31.0
-offset_right = 618.0
-offset_bottom = 129.0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_5wfnv")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_bw3jp")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_vsdan")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_1hbmr")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_t0om7")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_pp8h4")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_dh8io")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ls4q3")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_q45mf")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_qx0lm")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_m0u81")
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(579.125, 338.75)
+scale = Vector2(0.382583, 0.310255)
+texture = ExtResource("4_lku07")
+
+[node name="ForwardButton" type="Button" parent="Sprite2D2"]
+offset_left = -161.818
+offset_top = -939.169
+offset_right = 297.182
+offset_bottom = -479.169
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8k5t7")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_yvkar")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1aj43")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_lma8j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_dc0q5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_1vcqi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nx2ph")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_k3q2v")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_exwca")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xubls")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pvtvr")
 flat = true
 
-[node name="TextureRect3" type="TextureRect" parent="Placeholder2/3rdButton"]
+[node name="TextureRect" type="TextureRect" parent="Sprite2D2/ForwardButton"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 1.221
-anchor_bottom = 1.082
-offset_left = 1.0
-offset_top = 107.0
-offset_right = -6.99501
-offset_bottom = 118.964
+anchor_right = 1.017
+anchor_bottom = 1.226
+offset_left = -11.0
+offset_top = 564.0
+offset_right = 99.812
+offset_bottom = 478.04
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -1.5708
@@ -245,9 +187,21 @@ texture = ExtResource("2_8htpb")
 expand_mode = 1
 flip_h = true
 
-[connection signal="input_event" from="TextureRect/Area2D" to="." method="_on_area_2d_input_event"]
-[connection signal="pressed" from="TextureRect/ForwardButton" to="." method="_on_forward_button_pressed"]
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(577, 317)
+scale = Vector2(1.11719, 1.03667)
+texture = ExtResource("7_ej7gi")
+
+[node name="3rdArea2D" type="Area2D" parent="Sprite2D3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D3/3rdArea2D"]
+visible = false
+position = Vector2(577, 324)
+shape = SubResource("RectangleShape2D_kcyoi")
+
 [connection signal="input_event" from="Placeholder/2ndArea2D" to="." method="_on_nd_area_2d_input_event"]
 [connection signal="pressed" from="Placeholder/2ndButton" to="." method="_on_nd_button_pressed"]
-[connection signal="input_event" from="Placeholder2/3rdArea2D" to="." method="_on_rd_area_2d_input_event"]
-[connection signal="pressed" from="Placeholder2/3rdButton" to="." method="_on_rd_button_pressed"]
+[connection signal="input_event" from="Sprite2D/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="pressed" from="Sprite2D2/ForwardButton" to="." method="_on_forward_button_pressed"]
+[connection signal="input_event" from="Sprite2D3/3rdArea2D" to="." method="_on_rd_area_2d_input_event"]

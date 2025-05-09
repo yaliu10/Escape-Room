@@ -19,6 +19,11 @@ var wall_selected = false
 var painting_selected = false
 var flower_room_selected = false
 
+var magnolia_inserted = false
+var forget_inserted = false
+var rose_inserted = false
+
+
 #connect to areas of any interactable objects
 func change_cursor():
 	if !wall_selected:
@@ -271,6 +276,7 @@ func _on_entrance_area_input_event(viewport: Node, event: InputEvent, shape_idx:
 func _on_rose_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
 			if area.get_parent().item_id == 6:
+				rose_inserted = true
 				
 				empty_slot(area.get_parent().drop_location_id)
 				area.get_parent().queue_free()
@@ -279,6 +285,7 @@ func _on_rose_area_area_entered(area: Area2D) -> void:
 func _on_magnolia_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
 			if area.get_parent().item_id == 3:
+				magnolia_inserted = true
 				
 				empty_slot(area.get_parent().drop_location_id)
 				area.get_parent().queue_free()
@@ -287,7 +294,19 @@ func _on_magnolia_area_area_entered(area: Area2D) -> void:
 func _on_forget_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
 			if area.get_parent().item_id == 4:
+				forget_inserted = true
 				
 				empty_slot(area.get_parent().drop_location_id)
 				area.get_parent().queue_free()
 				Input.set_custom_mouse_cursor(cursor)
+				
+func ending_screen():
+	var end = preload("res://Scenes/ending.tscn")
+	var instance = end.instantiate()
+	if magnolia_inserted == true && rose_inserted == true && forget_inserted == true:
+		add_child(instance)
+		#$".".queue_free()
+	
+
+func _on_button_pressed() -> void:
+	ending_screen()
