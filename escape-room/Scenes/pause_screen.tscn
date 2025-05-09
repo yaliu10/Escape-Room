@@ -45,12 +45,12 @@ text = "Paused"
 [node name="ResumeButton" type="Button" parent="GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-text = "Resume"
+text = "Continue"
 
 [node name="QuitButton" type="Button" parent="GridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-text = "Quit"
+text = "Leave"
 
 [connection signal="pressed" from="GridContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="GridContainer/QuitButton" to="." method="_on_quit_button_pressed"]
