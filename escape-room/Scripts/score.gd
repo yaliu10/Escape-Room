@@ -1,16 +1,23 @@
 extends Label
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	self.text = str(Global.score)
 	
 
-func _on_button_pressed() -> void:
+func _on_button_pressed() -> void: #example placeholder
 	Global.score += 1
 	$"../Button".queue_free()
+
+
+func _on_mem_1_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		Global.score += 1
+		$"../Mem1".queue_free()
+		$"../Mem1 Note".visible = true
+
+
+func _on_mem_2_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		Global.score += 1
+		$"../Front Wall/Mem2".queue_free()
+		$"../Front Wall/Mem2 Note".visible = true

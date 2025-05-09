@@ -306,7 +306,17 @@ func ending_screen():
 	if magnolia_inserted == true && rose_inserted == true && forget_inserted == true:
 		add_child(instance)
 		#$".".queue_free()
-	
-
+		
+		
 func _on_button_pressed() -> void:
 	ending_screen()
+
+
+func _on_mem_1_note_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		$"Mem1 Note".visible = false
+		 
+
+func _on_mem_2_note_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		$"Front Wall/Mem2 Note".visible = false
