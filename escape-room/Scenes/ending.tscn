@@ -27,7 +27,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fhty3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xetp3"]
-size = Vector2(1019.55, 600.466)
+size = Vector2(1150.99, 648.535)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j3qdm"]
 
@@ -93,22 +93,21 @@ flip_h = true
 
 [node name="2ndScene" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(574.5, 323)
-scale = Vector2(1.12402, 1.08)
 texture = ExtResource("2_tmg22")
 centered = false
 
 [node name="2ndArea2D" type="Area2D" parent="2ndScene"]
+position = Vector2(515.021, 299.465)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="2ndScene/2ndArea2D"]
-position = Vector2(-2.23401, 0.232758)
+position = Vector2(61.985, 24.2674)
 shape = SubResource("RectangleShape2D_xetp3")
 
 [node name="2ndButton" type="Button" parent="2ndScene"]
-offset_left = -51.021
-offset_top = -277.465
-offset_right = 36.979
-offset_bottom = -201.465
+offset_left = 535.0
+offset_top = 84.0
+offset_right = 623.0
+offset_bottom = 160.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_j3qdm")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_au6lt")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_4thbs")
@@ -127,7 +126,7 @@ layout_mode = 0
 offset_left = 8.056
 offset_top = 76.587
 offset_right = 83.056
-offset_bottom = 152.587
+offset_bottom = 142.587
 rotation = -1.5708
 texture = ExtResource("2_8htpb")
 expand_mode = 1
@@ -135,16 +134,13 @@ flip_h = true
 
 [node name="3rdScene" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(576, 323.999)
-scale = Vector2(1.12695, 1.08333)
 texture = ExtResource("2_tmg22")
 centered = false
 
 [node name="3rdArea2D" type="Area2D" parent="3rdScene"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="3rdScene/3rdArea2D"]
-position = Vector2(-0.45282, 0.929718)
-scale = Vector2(1, 1)
+position = Vector2(576.503, 323)
 shape = SubResource("RectangleShape2D_xetp3")
 
 [connection signal="pressed" from="1stScene/1stButton" to="." method="_on_st_button_pressed"]
