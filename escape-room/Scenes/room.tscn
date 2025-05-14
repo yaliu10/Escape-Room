@@ -82,11 +82,11 @@ radius = 35.1381
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rvwke"]
 size = Vector2(993.39, 560.751)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ku43l"]
-size = Vector2(71.3636, 68.6363)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyq6b"]
+size = Vector2(72.7272, 80)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hiq6v"]
-size = Vector2(437, 270.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c8aag"]
+size = Vector2(449, 283)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w43hp"]
 radius = 36.7886
@@ -149,6 +149,7 @@ size = Vector2(451.5, 280.5)
 script = ExtResource("1_kyjej")
 
 [node name="Main Background" type="TextureRect" parent="."]
+visible = false
 offset_top = 1.0
 offset_right = 1148.0
 offset_bottom = 651.0
@@ -413,33 +414,31 @@ position = Vector2(505.539, 298.522)
 shape = SubResource("RectangleShape2D_rvwke")
 
 [node name="Front Wall" type="Sprite2D" parent="."]
-visible = false
 z_index = 1
 texture = ExtResource("16_r4i17")
 centered = false
 
-[node name="Mem2" type="Sprite2D" parent="Front Wall"]
-position = Vector2(886, 214)
-scale = Vector2(0.55, 0.55)
+[node name="Mem 2" type="Sprite2D" parent="Front Wall"]
+position = Vector2(929, 166)
+scale = Vector2(0.55, 0.5)
 texture = ExtResource("35_0roha")
 
-[node name="Mem2 Area" type="Area2D" parent="Front Wall/Mem2"]
+[node name="Meme 2 Area2D" type="Area2D" parent="Front Wall/Mem 2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Front Wall/Mem2/Mem2 Area"]
-position = Vector2(0, -5.48363e-06)
-shape = SubResource("RectangleShape2D_ku43l")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Front Wall/Mem 2/Meme 2 Area2D"]
+shape = SubResource("RectangleShape2D_gyq6b")
 
-[node name="Mem2 Note" type="Sprite2D" parent="Front Wall"]
+[node name="Mem 2 Note" type="Sprite2D" parent="Front Wall"]
 visible = false
-z_index = 3
-position = Vector2(554, 314)
+z_index = 1
+position = Vector2(576, 332)
 texture = ExtResource("36_6dqmk")
 
-[node name="Mem2 Note Area" type="Area2D" parent="Front Wall/Mem2 Note"]
+[node name="Mem 2 Note Area2D" type="Area2D" parent="Front Wall/Mem 2 Note"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Front Wall/Mem2 Note/Mem2 Note Area"]
-position = Vector2(-10, 6)
-shape = SubResource("RectangleShape2D_hiq6v")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Front Wall/Mem 2 Note/Mem 2 Note Area2D"]
+position = Vector2(-13.5, 4.5)
+shape = SubResource("RectangleShape2D_c8aag")
 
 [node name="Front Wall Return" type="Sprite2D" parent="Front Wall"]
 position = Vector2(977.495, 39.6313)
@@ -801,8 +800,8 @@ shape = SubResource("RectangleShape2D_apaah")
 [connection signal="input_event" from="Right Wall/Right Painting/Right Painting Area" to="." method="_on_right_painting_area_input_event"]
 [connection signal="mouse_entered" from="Right Wall/Right Painting/Right Painting Area" to="." method="change_cursor_in_selection"]
 [connection signal="mouse_exited" from="Right Wall/Right Painting/Right Painting Area" to="." method="change_cursor_back_in_selection"]
-[connection signal="input_event" from="Front Wall/Mem2/Mem2 Area" to="MemCount" method="_on_mem_2_area_input_event"]
-[connection signal="input_event" from="Front Wall/Mem2 Note/Mem2 Note Area" to="." method="_on_mem_2_note_area_input_event"]
+[connection signal="input_event" from="Front Wall/Mem 2/Meme 2 Area2D" to="MemCount" method="_on_meme_2_area_2d_input_event"]
+[connection signal="input_event" from="Front Wall/Mem 2 Note/Mem 2 Note Area2D" to="." method="_on_mem_2_note_area_2d_input_event"]
 [connection signal="input_event" from="Front Wall/Front Wall Return/Front Return Area" to="." method="_on_front_return_area_input_event"]
 [connection signal="mouse_entered" from="Front Wall/Front Wall Return/Front Return Area" to="." method="change_cursor_in_selection"]
 [connection signal="mouse_exited" from="Front Wall/Front Wall Return/Front Return Area" to="." method="change_cursor_back_in_selection"]
