@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://cfy243i0kd1cb"]
+[gd_scene load_steps=83 format=3 uid="uid://cfy243i0kd1cb"]
 
 [ext_resource type="Script" path="res://Scripts/room.gd" id="1_kyjej"]
 [ext_resource type="Texture2D" uid="uid://cedv7qv502mae" path="res://room art/IMG_2881.PNG" id="2_crx0i"]
@@ -14,10 +14,11 @@
 [ext_resource type="Texture2D" uid="uid://drofonil8t46s" path="res://art/painting 1.PNG" id="12_wxyb4"]
 [ext_resource type="Texture2D" uid="uid://bsy3t00omi5r0" path="res://room art/IMG_2887.PNG" id="13_v568s"]
 [ext_resource type="Texture2D" uid="uid://bgpsrw5g0d62q" path="res://room art/IMG_2883.PNG" id="14_vyo54"]
-[ext_resource type="Texture2D" uid="uid://b53bg2lus4gyy" path="res://art/IMG_2865.PNG" id="15_1f6tb"]
 [ext_resource type="Texture2D" uid="uid://v636sor56xk4" path="res://room art/IMG_2882.PNG" id="16_r4i17"]
+[ext_resource type="Texture2D" uid="uid://crv1cj4qv0yvk" path="res://art/IMG_9896.PNG" id="17_h0vog"]
 [ext_resource type="Texture2D" uid="uid://cx0josiqod7f8" path="res://art/IMG_2864.PNG" id="17_ht7nw"]
 [ext_resource type="Texture2D" uid="uid://bpxq4eq2ofdtj" path="res://art/IMG_2857.PNG" id="18_ifv7v"]
+[ext_resource type="Texture2D" uid="uid://dgbi5wt1exe6n" path="res://art/frame.png" id="18_wrena"]
 [ext_resource type="Script" path="res://Scripts/item.gd" id="19_uqdtp"]
 [ext_resource type="Texture2D" uid="uid://cjj0w5nq385m1" path="res://art/IMG_2860.PNG" id="20_82alr"]
 [ext_resource type="Texture2D" uid="uid://dklo3a56i6ypn" path="res://art/IMG_2859.PNG" id="21_3c5px"]
@@ -49,6 +50,12 @@ radius = 27.4591
 [sub_resource type="CircleShape2D" id="CircleShape2D_5fiil"]
 radius = 27.1662
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2u6kq"]
+size = Vector2(67.9245, 69.3877)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_28wxe"]
+size = Vector2(420, 241.5)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_5isxk"]
 radius = 29.3972
 
@@ -76,11 +83,17 @@ size = Vector2(82.0513, 82)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwxsj"]
 size = Vector2(425.909, 275.877)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hd75f"]
+size = Vector2(63.7931, 66.0715)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kphaf"]
+size = Vector2(430, 237)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_uxcqm"]
 radius = 35.1381
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvwke"]
-size = Vector2(993.39, 560.751)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hspsj"]
+size = Vector2(486.364, 383.673)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyq6b"]
 size = Vector2(72.7272, 80)
@@ -93,6 +106,12 @@ radius = 36.7886
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ka71n"]
 size = Vector2(1008.99, 601.408)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qxg7"]
+size = Vector2(70.9677, 79.0323)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3jda"]
+size = Vector2(436, 295)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i2xs8"]
 radius = 32.8373
@@ -110,6 +129,12 @@ radius = 33.1447
 [sub_resource type="CircleShape2D" id="CircleShape2D_h6m2b"]
 radius = 54.1905
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d65qk"]
+size = Vector2(70.4664, 72.4349)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nesdj"]
+size = Vector2(416, 278.408)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c4gaq"]
 radius = 27.3974
 height = 61.6441
@@ -125,6 +150,12 @@ radius = 152.816
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k04cf"]
 size = Vector2(110.256, 59.3362)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evaar"]
+size = Vector2(66.6667, 70.3704)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvw80"]
+size = Vector2(421.5, 269)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mgyjd"]
 radius = 34.6233
@@ -149,7 +180,6 @@ size = Vector2(451.5, 280.5)
 script = ExtResource("1_kyjej")
 
 [node name="Main Background" type="TextureRect" parent="."]
-visible = false
 offset_top = 1.0
 offset_right = 1148.0
 offset_bottom = 651.0
@@ -266,6 +296,29 @@ visible = false
 z_index = 2
 texture = ExtResource("5_fi5kq")
 centered = false
+
+[node name="Mem 5" type="Sprite2D" parent="Flower Room"]
+position = Vector2(426.5, 115.5)
+scale = Vector2(0.53, 0.49)
+texture = ExtResource("35_0roha")
+
+[node name="Mem 5 Area2D" type="Area2D" parent="Flower Room/Mem 5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flower Room/Mem 5/Mem 5 Area2D"]
+position = Vector2(0.943404, 1.0204)
+shape = SubResource("RectangleShape2D_2u6kq")
+
+[node name="Mem 5 Note" type="Sprite2D" parent="Flower Room"]
+visible = false
+z_index = 1
+position = Vector2(567, 293)
+texture = ExtResource("36_6dqmk")
+
+[node name="Mem 5 Note Area2D" type="Area2D" parent="Flower Room/Mem 5 Note"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flower Room/Mem 5 Note/Mem 5 Note Area2D"]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_28wxe")
 
 [node name="Flower Room Return" type="Sprite2D" parent="Flower Room"]
 position = Vector2(1079, 41)
@@ -392,6 +445,29 @@ z_index = 1
 texture = ExtResource("14_vyo54")
 centered = false
 
+[node name="Mem 7" type="Sprite2D" parent="Right Wall"]
+position = Vector2(927, 330)
+scale = Vector2(0.58, 0.56)
+texture = ExtResource("35_0roha")
+
+[node name="Mem 7 Area2D" type="Area2D" parent="Right Wall/Mem 7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Wall/Mem 7/Mem 7 Area2D"]
+position = Vector2(0.861938, 0.892883)
+shape = SubResource("RectangleShape2D_hd75f")
+
+[node name="Mem 7 Note" type="Sprite2D" parent="Right Wall"]
+visible = false
+z_index = 1
+position = Vector2(592, 323)
+texture = ExtResource("36_6dqmk")
+
+[node name="Mem 7 Note Area2D" type="Area2D" parent="Right Wall/Mem 7 Note"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Wall/Mem 7 Note/Mem 7 Note Area2D"]
+position = Vector2(-2, -1.5)
+shape = SubResource("RectangleShape2D_kphaf")
+
 [node name="Right Wall Return" type="Sprite2D" parent="Right Wall"]
 position = Vector2(975.791, 41.4747)
 texture = ExtResource("6_wgjgj")
@@ -402,18 +478,26 @@ texture = ExtResource("6_wgjgj")
 shape = SubResource("CircleShape2D_uxcqm")
 
 [node name="Right Painting" type="Sprite2D" parent="Right Wall"]
-position = Vector2(218.727, 96.7742)
-scale = Vector2(0.552746, 0.623656)
-texture = ExtResource("15_1f6tb")
+position = Vector2(307, 134)
+scale = Vector2(0.88, 0.6125)
+texture = ExtResource("17_h0vog")
 centered = false
 
 [node name="Right Painting Area" type="Area2D" parent="Right Wall/Right Painting"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right Wall/Right Painting/Right Painting Area"]
-position = Vector2(505.539, 298.522)
-shape = SubResource("RectangleShape2D_rvwke")
+position = Vector2(242.046, 200)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_hspsj")
+
+[node name="Frame" type="Sprite2D" parent="Right Wall"]
+position = Vector2(523, 258)
+rotation = -1.5708
+scale = Vector2(1.98912, 2.24941)
+texture = ExtResource("18_wrena")
 
 [node name="Front Wall" type="Sprite2D" parent="."]
+visible = false
 z_index = 1
 texture = ExtResource("16_r4i17")
 centered = false
@@ -467,6 +551,30 @@ z_index = 1
 scale = Vector2(1.13086, 1.085)
 texture = ExtResource("12_wxyb4")
 centered = false
+
+[node name="Mem 4" type="Sprite2D" parent="In Left Painting"]
+position = Vector2(96.3868, 209.217)
+scale = Vector2(0.548255, 0.571429)
+texture = ExtResource("35_0roha")
+
+[node name="Mem 4 Area2D" type="Area2D" parent="In Left Painting/Mem 4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="In Left Painting/Mem 4/Mem 4 Area2D"]
+position = Vector2(1.18017e-05, 1.19209e-05)
+shape = SubResource("RectangleShape2D_1qxg7")
+
+[node name="Mem 4 Note" type="Sprite2D" parent="In Left Painting"]
+visible = false
+z_index = 1
+position = Vector2(481.934, 296.774)
+scale = Vector2(0.884283, 0.921659)
+texture = ExtResource("36_6dqmk")
+
+[node name="Mem 4 Note Area2D" type="Area2D" parent="In Left Painting/Mem 4 Note"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="In Left Painting/Mem 4 Note/Mem 4 Note Area2D"]
+position = Vector2(-11, -1)
+shape = SubResource("RectangleShape2D_q3jda")
 
 [node name="Filled Bucket" type="Sprite2D" parent="In Left Painting"]
 visible = false
@@ -540,8 +648,31 @@ one_shot = true
 visible = false
 z_index = 1
 scale = Vector2(1.125, 1.08833)
-texture = ExtResource("15_1f6tb")
 centered = false
+
+[node name="Mem 8" type="Sprite2D" parent="In Right Painting"]
+position = Vector2(233.778, 162.635)
+scale = Vector2(0.428889, 0.380551)
+texture = ExtResource("35_0roha")
+
+[node name="Mem 8 Area2D" type="Area2D" parent="In Right Painting/Mem 8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="In Right Painting/Mem 8/Mem 8 Area2D"]
+position = Vector2(6.10352e-05, -9.15527e-05)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_d65qk")
+
+[node name="Mem 8 Note" type="Sprite2D" parent="In Right Painting"]
+visible = false
+z_index = 1
+position = Vector2(526.222, 289.434)
+texture = ExtResource("36_6dqmk")
+
+[node name="Mem 8 Note Area2D" type="Area2D" parent="In Right Painting/Mem 8 Note"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="In Right Painting/Mem 8 Note/Mem 8 Note Area2D"]
+position = Vector2(-0.888889, -8.58307e-06)
+shape = SubResource("RectangleShape2D_nesdj")
 
 [node name="Closed Flower" type="Sprite2D" parent="In Right Painting"]
 position = Vector2(141.333, 376.724)
@@ -630,6 +761,29 @@ z_index = 1
 scale = Vector2(1.12402, 1.08833)
 texture = ExtResource("17_ht7nw")
 centered = false
+
+[node name="Mem 6" type="Sprite2D" parent="In Front Painting"]
+position = Vector2(808.705, 202.145)
+scale = Vector2(0.507108, 0.496173)
+texture = ExtResource("35_0roha")
+
+[node name="Mem 6 Area2D" type="Area2D" parent="In Front Painting/Mem 6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="In Front Painting/Mem 6/Mem 6 Area2D"]
+position = Vector2(-0.00012207, 6.10352e-05)
+shape = SubResource("RectangleShape2D_evaar")
+
+[node name="Mem 6 Note" type="Sprite2D" parent="In Front Painting"]
+visible = false
+z_index = 1
+position = Vector2(483.087, 272.895)
+scale = Vector2(0.889664, 0.918839)
+texture = ExtResource("36_6dqmk")
+
+[node name="Mem 6 Note Area2D" type="Area2D" parent="In Front Painting/Mem 6 Note"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="In Front Painting/Mem 6 Note/Mem 6 Note Area2D"]
+shape = SubResource("RectangleShape2D_kvw80")
 
 [node name="Empty Bucket" type="Sprite2D" parent="In Front Painting"]
 position = Vector2(105.87, 113.936)
@@ -730,7 +884,7 @@ offset_top = 547.0
 offset_right = 1115.0
 offset_bottom = 616.0
 theme_override_font_sizes/font_size = 50
-text = "/8
+text = "/ 8
 "
 
 [node name="Mem1" type="Sprite2D" parent="."]
@@ -755,18 +909,6 @@ texture = ExtResource("36_6dqmk")
 position = Vector2(-12.75, 0.75)
 shape = SubResource("RectangleShape2D_apaah")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-
-[node name="Area2D" type="Area2D" parent="Sprite2D2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/Area2D"]
-
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-
-[node name="Area2D" type="Area2D" parent="Sprite2D3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D3/Area2D"]
-
 [connection signal="area_entered" from="Slot1/Slot1 Area" to="." method="_on_slot_1_area_area_entered"]
 [connection signal="area_entered" from="Slot2/Slot2 Area" to="." method="_on_slot_2_area_area_entered"]
 [connection signal="area_entered" from="Slot3/Slot3 Area" to="." method="_on_slot_3_area_area_entered"]
@@ -781,6 +923,8 @@ shape = SubResource("RectangleShape2D_apaah")
 [connection signal="input_event" from="Front Arrow/Front Arrow Area" to="." method="_on_front_arrow_area_input_event"]
 [connection signal="mouse_entered" from="Front Arrow/Front Arrow Area" to="." method="change_cursor"]
 [connection signal="mouse_exited" from="Front Arrow/Front Arrow Area" to="." method="change_cursor_back"]
+[connection signal="input_event" from="Flower Room/Mem 5/Mem 5 Area2D" to="MemCount" method="_on_mem_5_area_2d_input_event"]
+[connection signal="input_event" from="Flower Room/Mem 5 Note/Mem 5 Note Area2D" to="." method="_on_mem_5_note_area_2d_input_event"]
 [connection signal="input_event" from="Flower Room/Flower Room Return/Flower Return Area" to="." method="_on_left_return_area_input_event"]
 [connection signal="area_entered" from="Flower Room/Rose/Rose Area" to="." method="_on_rose_area_area_entered"]
 [connection signal="area_entered" from="Flower Room/Magnolia/Magnolia Area" to="." method="_on_magnolia_area_area_entered"]
@@ -794,6 +938,8 @@ shape = SubResource("RectangleShape2D_apaah")
 [connection signal="input_event" from="Left Wall/Entrance/Entrance Area" to="." method="_on_entrance_area_input_event"]
 [connection signal="input_event" from="Left Wall/Mem 3/Mem3 Area2D" to="MemCount" method="_on_mem_3_area_2d_input_event"]
 [connection signal="input_event" from="Left Wall/Mem 3 Note/Mem 3 Note Area2D" to="." method="_on_mem_3_note_area_2d_input_event"]
+[connection signal="input_event" from="Right Wall/Mem 7/Mem 7 Area2D" to="MemCount" method="_on_mem_7_area_2d_input_event"]
+[connection signal="input_event" from="Right Wall/Mem 7 Note/Mem 7 Note Area2D" to="." method="_on_mem_7_note_area_2d_input_event"]
 [connection signal="input_event" from="Right Wall/Right Wall Return/Right Return Area" to="." method="_on_right_return_area_input_event"]
 [connection signal="mouse_entered" from="Right Wall/Right Wall Return/Right Return Area" to="." method="change_cursor_in_selection"]
 [connection signal="mouse_exited" from="Right Wall/Right Wall Return/Right Return Area" to="." method="change_cursor_back_in_selection"]
@@ -808,6 +954,8 @@ shape = SubResource("RectangleShape2D_apaah")
 [connection signal="input_event" from="Front Wall/Front Painting/Front Painting Area" to="." method="_on_front_painting_area_input_event"]
 [connection signal="mouse_entered" from="Front Wall/Front Painting/Front Painting Area" to="." method="change_cursor_in_selection"]
 [connection signal="mouse_exited" from="Front Wall/Front Painting/Front Painting Area" to="." method="change_cursor_back_in_selection"]
+[connection signal="input_event" from="In Left Painting/Mem 4/Mem 4 Area2D" to="MemCount" method="_on_mem_4_area_2d_input_event"]
+[connection signal="input_event" from="In Left Painting/Mem 4 Note/Mem 4 Note Area2D" to="." method="_on_mem_4_note_area_2d_input_event"]
 [connection signal="input_event" from="In Left Painting/Filled Bucket/Filled Bucket Area" to="In Left Painting/Filled Bucket" method="_on_empty_bucket_area_input_event"]
 [connection signal="timeout" from="In Left Painting/Filled Bucket/Timer" to="In Left Painting/Filled Bucket" method="_on_timer_timeout"]
 [connection signal="input_event" from="In Left Painting/Left Painting Return/Left Painting Return Area" to="." method="_on_left_painting_return_area_input_event"]
@@ -817,6 +965,8 @@ shape = SubResource("RectangleShape2D_apaah")
 [connection signal="input_event" from="In Left Painting/Closed Trap/Closed Trap Area" to="." method="_on_closed_trap_area_input_event"]
 [connection signal="input_event" from="In Left Painting/River Key/River Key Area" to="In Left Painting/River Key" method="_on_empty_bucket_area_input_event"]
 [connection signal="timeout" from="In Left Painting/River Key/Timer" to="In Left Painting/River Key" method="_on_timer_timeout"]
+[connection signal="input_event" from="In Right Painting/Mem 8/Mem 8 Area2D" to="MemCount" method="_on_mem_8_area_2d_input_event"]
+[connection signal="input_event" from="In Right Painting/Mem 8 Note/Mem 8 Note Area2D" to="." method="_on_mem_8_note_area_2d_input_event"]
 [connection signal="area_entered" from="In Right Painting/Closed Flower/Closed Flower Area" to="." method="_on_closed_flower_area_area_entered"]
 [connection signal="input_event" from="In Right Painting/Right Painting Return/Right Painting Return Area" to="." method="_on_right_painting_return_area_input_event"]
 [connection signal="mouse_entered" from="In Right Painting/Right Painting Return/Right Painting Return Area" to="." method="change_cursor_in_painting"]
@@ -826,6 +976,8 @@ shape = SubResource("RectangleShape2D_apaah")
 [connection signal="input_event" from="In Right Painting/Chisel/Chisel Area" to="In Right Painting/Chisel" method="_on_empty_bucket_area_input_event"]
 [connection signal="timeout" from="In Right Painting/Chisel/Timer" to="In Right Painting/Chisel" method="_on_timer_timeout"]
 [connection signal="input_event" from="In Right Painting/Closed Toolbox/Closed Toolbox Area" to="." method="_on_closed_toolbox_area_input_event"]
+[connection signal="input_event" from="In Front Painting/Mem 6/Mem 6 Area2D" to="MemCount" method="_on_mem_6_area_2d_input_event"]
+[connection signal="input_event" from="In Front Painting/Mem 6 Note/Mem 6 Note Area2D" to="." method="_on_mem_6_note_area_2d_input_event"]
 [connection signal="input_event" from="In Front Painting/Empty Bucket/Empty Bucket Area" to="In Front Painting/Empty Bucket" method="_on_empty_bucket_area_input_event"]
 [connection signal="timeout" from="In Front Painting/Empty Bucket/Timer" to="In Front Painting/Empty Bucket" method="_on_timer_timeout"]
 [connection signal="input_event" from="In Front Painting/Front Painting Return/Front Painting Return Area" to="." method="_on_front_painting_return_area_input_event"]

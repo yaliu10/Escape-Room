@@ -18,6 +18,7 @@ var slot_5_filled = false
 var wall_selected = false
 var painting_selected = false
 var flower_room_selected = false
+var mem_piece_selected = false
 
 var magnolia_inserted = false
 var forget_inserted = false
@@ -114,6 +115,7 @@ func _on_left_return_area_input_event(viewport: Node, event: InputEvent, shape_i
 		$"Left Wall".visible = false
 		$"Flower Room".visible = false # flower room's return button is connected to here
 		wall_selected = false
+
 func _on_left_arrow_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !wall_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -127,18 +129,23 @@ func _on_right_return_area_input_event(viewport: Node, event: InputEvent, shape_
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		$"Right Wall".visible = false
 		wall_selected = false
+	
 func _on_right_arrow_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !wall_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"Right Wall".visible = true
 			wall_selected = true
-			
-			
+		#if statement for mem_piece
+		#if mem_piece_selected == false:
+			#wall_selected = true
+
+
 #front wall selection
 func _on_front_return_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		$"Front Wall".visible = false
 		wall_selected = false
+
 func _on_front_arrow_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !wall_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -152,13 +159,16 @@ func _on_left_painting_return_area_input_event(viewport: Node, event: InputEvent
 			$"In Left Painting".visible = false
 			painting_selected = false
 			flower_room_selected = false
+
 func _on_left_painting_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !painting_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Left Painting".visible = true
 			painting_selected = true
-	if painting_selected == true:
-		flower_room_selected = true
+	
+	#If statement for the mem_piece
+	#if painting_selected == true:
+		#flower_room_selected = true
 
 
 
@@ -167,6 +177,7 @@ func _on_right_painting_return_area_input_event(viewport: Node, event: InputEven
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Right Painting".visible = false
 			painting_selected = false
+
 func _on_right_painting_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !painting_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -179,6 +190,7 @@ func _on_front_painting_return_area_input_event(viewport: Node, event: InputEven
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Front Painting".visible = false
 			painting_selected = false
+
 func _on_front_painting_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !painting_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -322,8 +334,15 @@ func _on_button_pressed() -> void:
 	ending_screen()
 
 func _on_mem_1_note_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		$"Mem1 Note".visible = false
+	if !mem_piece_selected:
+		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+			$"Mem1 Note".visible = false
+			mem_piece_selected = true
+		#work for the second part, which it can't move after selecting
+		#the mem peice and able to move afterward
+		#if mem_piece_selected == true:
+			#wall_selected = false
+		
 
 func _on_mem_2_note_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -332,3 +351,23 @@ func _on_mem_2_note_area_2d_input_event(viewport: Node, event: InputEvent, shape
 func _on_mem_3_note_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		$"Left Wall/Mem 3 Note".visible = false
+
+func _on_mem_4_note_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		$"In Left Painting/Mem 4 Note".visible = false
+
+func _on_mem_5_note_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		$"Flower Room/Mem 5 Note".visible = false
+
+func _on_mem_6_note_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		$"In Front Painting/Mem 6 Note".visible = false
+
+func _on_mem_7_note_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		$"Right Wall/Mem 7 Note".visible = false
+
+func _on_mem_8_note_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		$"In Right Painting/Mem 8 Note".visible = false
