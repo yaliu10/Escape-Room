@@ -167,8 +167,8 @@ func _on_left_painting_area_input_event(viewport: Node, event: InputEvent, shape
 			painting_selected = true
 	
 	#If statement for the mem_piece
-	#if painting_selected == true:
-		#flower_room_selected = true
+	if painting_selected == true:
+		flower_room_selected = true
 
 
 
