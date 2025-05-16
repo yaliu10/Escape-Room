@@ -179,18 +179,18 @@ size = Vector2(451.5, 280.5)
 [node name="Room" type="Node2D"]
 script = ExtResource("1_kyjej")
 
-[node name="FrontPainting" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(574.5, 237.75)
-scale = Vector2(0.217882, 0.244599)
-texture = ExtResource("21_owp3f")
-
 [node name="Main Background" type="TextureRect" parent="."]
 offset_top = 1.0
 offset_right = 1148.0
 offset_bottom = 651.0
 texture = ExtResource("2_crx0i")
 expand_mode = 1
+
+[node name="FrontPainting" type="Sprite2D" parent="Main Background"]
+z_index = 1
+position = Vector2(574.5, 236.75)
+scale = Vector2(0.217882, 0.244599)
+texture = ExtResource("21_owp3f")
 
 [node name="Inventory Slot1" type="Sprite2D" parent="."]
 z_index = 9

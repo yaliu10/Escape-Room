@@ -317,6 +317,7 @@ func ending_screen():
 	var instance = end.instantiate()
 	if magnolia_inserted == true && rose_inserted == true && forget_inserted == true:
 		add_child(instance)
+		$"Main Background/FrontPainting".queue_free()
 		$MemCount.queue_free()
 		$MemTotal.queue_free()
 		$"Inventory Slot1".queue_free()
