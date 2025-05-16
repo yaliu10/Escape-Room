@@ -371,3 +371,6 @@ func _on_mem_7_note_area_2d_input_event(viewport: Node, event: InputEvent, shape
 func _on_mem_8_note_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		$"In Right Painting/Mem 8 Note".visible = false
+
+func _ready() -> void:
+	$BackgroundMusic.play()
