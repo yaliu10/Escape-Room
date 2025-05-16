@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=3 uid="uid://cfy243i0kd1cb"]
+[gd_scene load_steps=95 format=3 uid="uid://cfy243i0kd1cb"]
 
 [ext_resource type="Script" path="res://Scripts/room.gd" id="1_kyjej"]
 [ext_resource type="Texture2D" uid="uid://cedv7qv502mae" path="res://room art/IMG_2881.PNG" id="2_crx0i"]
@@ -170,6 +170,28 @@ size = Vector2(51.1799, 30.5172)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eedyf"]
 radius = 55.5606
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hgv5o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cn634"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bxf8c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i0fbk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_avvhr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vrr4j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wqqf8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a71ln"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_805jy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_naffh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e2w50"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0ujk"]
 size = Vector2(74.5652, 74.5122)
@@ -851,13 +873,26 @@ one_shot = true
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("32_1rbud")]
 
 [node name="PauseIcon" type="Button" parent="."]
+z_index = 1
 offset_left = 16.0
 offset_top = 7.0
 offset_right = 97.0
 offset_bottom = 88.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hgv5o")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_cn634")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bxf8c")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_i0fbk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_avvhr")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_vrr4j")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wqqf8")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_a71ln")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_805jy")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_naffh")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_e2w50")
 flat = true
 
 [node name="TextureRect" type="TextureRect" parent="PauseIcon"]
+z_index = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.993

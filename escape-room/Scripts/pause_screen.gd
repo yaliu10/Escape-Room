@@ -1,5 +1,10 @@
 extends Control
 
+@export_file var restart_scene : String :
+	set(value):
+		if value == null:
+			return
+		restart_scene = value
 
 var _is_paused: bool = false:
 	set(value):
@@ -26,4 +31,7 @@ func _on_pause_icon_pressed() -> void:
 
 
 func _on_restart_button_pressed() -> void:
-	get_tree().reload_current_scene()
+	if not restart_scene:
+		push_error("No restart scene set on loading [RestartButton]")
+	
+	get_tree().change_scene_to_file(restart_scene)
