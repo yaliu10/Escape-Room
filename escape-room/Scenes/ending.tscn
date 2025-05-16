@@ -1,8 +1,11 @@
-[gd_scene load_steps=27 format=3 uid="uid://dbnr8kaimrxi4"]
+[gd_scene load_steps=30 format=3 uid="uid://dbnr8kaimrxi4"]
 
 [ext_resource type="Script" path="res://Scripts/ending.gd" id="1_rny7r"]
 [ext_resource type="Texture2D" uid="uid://is5n476fgekw" path="res://art/arrow.PNG" id="2_8htpb"]
 [ext_resource type="Texture2D" uid="uid://cclhtin2s61mh" path="res://art/end room.png" id="2_tmg22"]
+[ext_resource type="Texture2D" uid="uid://dgbi5wt1exe6n" path="res://art/frame.png" id="4_qo6xe"]
+[ext_resource type="Texture2D" uid="uid://bjxiuvklx5gmm" path="res://art/landscapepaintingwithoutmaincharacter.jpeg" id="5_j44l2"]
+[ext_resource type="Texture2D" uid="uid://ddbvje1njl1w3" path="res://art/landscapepaintingwithmaincharacter.jpeg" id="6_200cv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ey4ia"]
 
@@ -91,6 +94,16 @@ texture = ExtResource("2_8htpb")
 expand_mode = 1
 flip_h = true
 
+[node name="Frame 1" type="Sprite2D" parent="1stScene"]
+position = Vector2(584.289, 333.903)
+scale = Vector2(1.25711, 1.19398)
+texture = ExtResource("4_qo6xe")
+
+[node name="Painting 1" type="Sprite2D" parent="1stScene/Frame 1"]
+position = Vector2(-0.120124, -0.463272)
+scale = Vector2(0.603463, 0.632896)
+texture = ExtResource("5_j44l2")
+
 [node name="2ndScene" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("2_tmg22")
@@ -100,6 +113,7 @@ centered = false
 position = Vector2(515.021, 299.465)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="2ndScene/2ndArea2D"]
+visible = false
 position = Vector2(61.985, 24.2674)
 shape = SubResource("RectangleShape2D_xetp3")
 
@@ -131,6 +145,16 @@ rotation = -1.5708
 texture = ExtResource("2_8htpb")
 expand_mode = 1
 flip_h = true
+
+[node name="Frame 2" type="Sprite2D" parent="2ndScene"]
+position = Vector2(584.289, 333.903)
+scale = Vector2(1.25711, 1.19398)
+texture = ExtResource("4_qo6xe")
+
+[node name="Painting 2" type="Sprite2D" parent="2ndScene/Frame 2"]
+position = Vector2(0.16769, -0.756222)
+scale = Vector2(0.600585, 0.633509)
+texture = ExtResource("6_200cv")
 
 [node name="3rdScene" type="Sprite2D" parent="."]
 visible = false

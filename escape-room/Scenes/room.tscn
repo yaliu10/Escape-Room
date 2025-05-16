@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=3 uid="uid://cfy243i0kd1cb"]
+[gd_scene load_steps=84 format=3 uid="uid://cfy243i0kd1cb"]
 
 [ext_resource type="Script" path="res://Scripts/room.gd" id="1_kyjej"]
 [ext_resource type="Texture2D" uid="uid://cedv7qv502mae" path="res://room art/IMG_2881.PNG" id="2_crx0i"]
@@ -37,6 +37,7 @@
 [ext_resource type="Script" path="res://Scripts/score.gd" id="34_3gwws"]
 [ext_resource type="Texture2D" uid="uid://cxtt5dmntiwsu" path="res://art/IMG_2900.PNG" id="35_0roha"]
 [ext_resource type="Texture2D" uid="uid://8rjlqgfrn4b3" path="res://art/IMG_2901.PNG" id="36_6dqmk"]
+[ext_resource type="Texture2D" uid="uid://crvhg5o1s5oj" path="res://art/pauseIcon Background Removed.png" id="36_cnl6j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ms4q"]
 size = Vector2(83, 83)
@@ -187,7 +188,6 @@ texture = ExtResource("2_crx0i")
 expand_mode = 1
 
 [node name="FrontPainting" type="Sprite2D" parent="Main Background"]
-z_index = 1
 position = Vector2(574.5, 236.75)
 scale = Vector2(0.217882, 0.244599)
 texture = ExtResource("21_owp3f")
@@ -851,10 +851,10 @@ one_shot = true
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("32_1rbud")]
 
 [node name="PauseIcon" type="Button" parent="."]
-offset_left = 14.0
-offset_top = 9.0
-offset_right = 95.0
-offset_bottom = 90.0
+offset_left = 16.0
+offset_top = 7.0
+offset_right = 97.0
+offset_bottom = 88.0
 flat = true
 
 [node name="TextureRect" type="TextureRect" parent="PauseIcon"]
@@ -864,7 +864,7 @@ anchor_right = 0.993
 anchor_bottom = 1.007
 offset_right = -0.0480042
 offset_bottom = 0.0479889
-texture = ExtResource("33_s78q4")
+texture = ExtResource("36_cnl6j")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="."]

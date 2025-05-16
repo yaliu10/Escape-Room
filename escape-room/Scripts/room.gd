@@ -165,8 +165,7 @@ func _on_left_painting_area_input_event(viewport: Node, event: InputEvent, shape
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Left Painting".visible = true
 			painting_selected = true
-	
-	#If statement for the mem_piece
+
 	if painting_selected == true:
 		flower_room_selected = true
 
