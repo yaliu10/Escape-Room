@@ -446,6 +446,7 @@ position = Vector2(-0.000116348, 1.25397)
 shape = SubResource("RectangleShape2D_fwxsj")
 
 [node name="Right Wall" type="Sprite2D" parent="."]
+visible = false
 z_index = 1
 texture = ExtResource("14_vyo54")
 centered = false
