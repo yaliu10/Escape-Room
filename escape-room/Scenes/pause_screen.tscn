@@ -52,11 +52,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Leave"
 
-[node name="RestartButton" type="Button" parent="GridContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Restart"
-
 [connection signal="pressed" from="GridContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="GridContainer/QuitButton" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="GridContainer/RestartButton" to="." method="_on_restart_button_pressed"]

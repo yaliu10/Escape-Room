@@ -200,12 +200,14 @@ size = Vector2(74.5652, 74.5122)
 size = Vector2(451.5, 280.5)
 
 [node name="Room" type="Node2D"]
+position = Vector2(4, -5)
 script = ExtResource("1_kyjej")
 
 [node name="Main Background" type="TextureRect" parent="."]
-offset_top = 1.0
+offset_left = -4.0
+offset_top = 5.0
 offset_right = 1148.0
-offset_bottom = 651.0
+offset_bottom = 655.0
 texture = ExtResource("2_crx0i")
 expand_mode = 1
 
@@ -672,6 +674,7 @@ wait_time = 0.2
 one_shot = true
 
 [node name="In Right Painting" type="Sprite2D" parent="."]
+visible = false
 z_index = 1
 scale = Vector2(2.302, 1.6175)
 texture = ExtResource("17_h0vog")
