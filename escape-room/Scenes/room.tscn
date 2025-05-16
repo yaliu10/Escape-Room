@@ -446,7 +446,6 @@ position = Vector2(-0.000116348, 1.25397)
 shape = SubResource("RectangleShape2D_fwxsj")
 
 [node name="Right Wall" type="Sprite2D" parent="."]
-visible = false
 z_index = 1
 texture = ExtResource("14_vyo54")
 centered = false
@@ -475,7 +474,7 @@ position = Vector2(-2, -1.5)
 shape = SubResource("RectangleShape2D_kphaf")
 
 [node name="Right Wall Return" type="Sprite2D" parent="Right Wall"]
-position = Vector2(975.791, 41.4747)
+position = Vector2(1098, 58)
 texture = ExtResource("6_wgjgj")
 
 [node name="Right Return Area" type="Area2D" parent="Right Wall/Right Wall Return"]
@@ -652,8 +651,7 @@ one_shot = true
 [node name="In Right Painting" type="Sprite2D" parent="."]
 visible = false
 z_index = 1
-position = Vector2(0, 3)
-scale = Vector2(2.302, 1.61)
+scale = Vector2(2.302, 1.6175)
 texture = ExtResource("17_h0vog")
 centered = false
 
@@ -709,9 +707,9 @@ shape = SubResource("CircleShape2D_irf1b")
 
 [node name="Weapon Key" type="Sprite2D" parent="In Right Painting"]
 visible = false
-position = Vector2(152.889, 337.214)
+position = Vector2(54.735, 260.896)
 rotation = 0.68382
-scale = Vector2(0.482841, 0.482841)
+scale = Vector2(0.203521, 0.271295)
 texture = ExtResource("25_0r2pd")
 script = ExtResource("19_uqdtp")
 item_id = 3
