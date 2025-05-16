@@ -672,7 +672,6 @@ wait_time = 0.2
 one_shot = true
 
 [node name="In Right Painting" type="Sprite2D" parent="."]
-visible = false
 z_index = 1
 scale = Vector2(2.302, 1.6175)
 texture = ExtResource("17_h0vog")
@@ -692,7 +691,8 @@ shape = SubResource("RectangleShape2D_d65qk")
 [node name="Mem 8 Note" type="Sprite2D" parent="In Right Painting"]
 visible = false
 z_index = 1
-position = Vector2(526.222, 289.434)
+position = Vector2(248.914, 177.434)
+scale = Vector2(0.507502, 0.678961)
 texture = ExtResource("36_6dqmk")
 
 [node name="Mem 8 Note Area2D" type="Area2D" parent="In Right Painting/Mem 8 Note"]
