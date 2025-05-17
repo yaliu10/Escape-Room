@@ -271,17 +271,19 @@ func _on_brick_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
 		if area.get_parent().item_id == 5:
 			$"In Front Painting/Brick".queue_free()
-			#$"In Front Painting/Well Key".visible = true
+			$"In Front Painting/Well Key".visible = true
+
 			
-			var front_painting = $"In Front Painting"
+			"""var front_painting = $"In Front Painting"
 			if front_painting and front_painting.visible:
 				var well_key = front_painting.get_node("Well Key")
+
 				if well_key:
 					well_key.visible = true
 				else:
 					print("'Well Key' not found under 'In Front Painting'")
 			else:
-				print("'In Front Painting' not visible or missing at runtime'")
+				print("'In Front Painting' not visible or missing at runtime'")"""
 			
 			empty_slot(area.get_parent().drop_location_id)
 			area.get_parent().queue_free()
