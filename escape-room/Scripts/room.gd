@@ -24,7 +24,6 @@ var magnolia_inserted = false
 var forget_inserted = false
 var rose_inserted = false
 
-
 #connect to areas of any interactable objects
 func change_cursor():
 	if !wall_selected:
@@ -170,7 +169,6 @@ func _on_left_painting_area_input_event(viewport: Node, event: InputEvent, shape
 		flower_room_selected = true
 
 
-
 #right painting slection
 func _on_right_painting_return_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -228,9 +226,6 @@ func _on_slot_5_area_area_entered(area: Area2D) -> void:
 		fill_slot(area.get_parent().drop_location_id)
 
 
-#need to hide visibility of objects when switching rooms
-
-
 func _on_river_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
 			if area.get_parent().item_id == 1:
@@ -273,9 +268,8 @@ func _on_brick_area_area_entered(area: Area2D) -> void:
 			$"In Front Painting/Brick".queue_free()
 			$"In Front Painting/Well Key".visible = true
 
-			
-			"""var front_painting = $"In Front Painting"
-			if front_painting and front_painting.visible:
+			var front_painting = $"In Front Painting"
+			"""if front_painting and front_painting.visible:
 				var well_key = front_painting.get_node("Well Key")
 
 				if well_key:
@@ -386,3 +380,9 @@ func _on_mem_8_note_area_2d_input_event(viewport: Node, event: InputEvent, shape
 
 func _ready() -> void:
 	$BackgroundMusic.play()
+	#delete later
+	"""well_key.reparent($"In Front Painting")
+	if well_key == null: #checking if the node is there at the beginning
+		print("well key doesn't exist")
+	else:
+		print("well key exists")"""
