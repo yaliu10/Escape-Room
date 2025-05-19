@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqlwo8sd16ov6"]
+[gd_scene load_steps=9 format=3 uid="uid://dqlwo8sd16ov6"]
 
 [ext_resource type="Script" path="res://Scripts/start_menu.gd" id="1_7bojk"]
 [ext_resource type="Texture2D" uid="uid://cedv7qv502mae" path="res://room art/IMG_2881.PNG" id="2_bxiim"]
+[ext_resource type="AudioStream" uid="uid://c83j5i1jas6k2" path="res://Music/StartMenuMusic.mp3" id="3_lac1c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmvnx"]
 texture = ExtResource("2_bxiim")
@@ -132,6 +133,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_3pdx3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_asxt4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_dk7kc")
 text = "Memory Pieces"
+
+[node name="StartMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_lac1c")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
