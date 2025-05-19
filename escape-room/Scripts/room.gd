@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var background_music: AudioStream
+
 var cursor = preload("res://art/IMG_2835.PNG")
 var grab = preload("res://art/IMG_2834.PNG")
 
@@ -158,11 +160,15 @@ func _on_left_painting_return_area_input_event(viewport: Node, event: InputEvent
 			$"In Left Painting".visible = false
 			painting_selected = false
 			flower_room_selected = false
+			$RiverSound.stop()
+			$BackgroundMusic.play()
 
 func _on_left_painting_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !painting_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Left Painting".visible = true
+			$BackgroundMusic.stop()
+			$RiverSound.play()
 			painting_selected = true
 
 	if painting_selected == true:
@@ -234,7 +240,7 @@ func _on_river_area_area_entered(area: Area2D) -> void:
 				empty_slot(area.get_parent().drop_location_id)
 				area.get_parent().queue_free()
 				Input.set_custom_mouse_cursor(cursor)
-
+				
 
 func _on_closed_flower_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
@@ -242,6 +248,7 @@ func _on_closed_flower_area_area_entered(area: Area2D) -> void:
 			$"In Right Painting/Open Flower".visible = true
 			$"In Right Painting/Closed Flower".queue_free()
 			$"In Right Painting/Weapon Key".visible = true
+			$KeyPickUp.play()
 			
 			empty_slot(area.get_parent().drop_location_id)
 			area.get_parent().queue_free()
@@ -253,6 +260,7 @@ func _on_closed_trap_area_input_event(viewport: Node, event: InputEvent, shape_i
 		$"In Left Painting/Open Trap".visible = true
 		$"In Left Painting/Closed Trap".queue_free()
 		$"In Left Painting/River Key". visible = true
+		$KeyPickUp.play()
 
 
 func _on_closed_toolbox_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
@@ -267,6 +275,7 @@ func _on_brick_area_area_entered(area: Area2D) -> void:
 		if area.get_parent().item_id == 5:
 			$"In Front Painting/Brick".queue_free()
 			$"In Front Painting/Well Key".visible = true
+			$KeyPickUp.play()
 
 			var front_painting = $"In Front Painting"
 			"""if front_painting and front_painting.visible:
@@ -294,6 +303,7 @@ func _on_rose_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
 			if area.get_parent().item_id == 6:
 				rose_inserted = true
+				$KeySound.play()
 				
 				empty_slot(area.get_parent().drop_location_id)
 				area.get_parent().queue_free()
@@ -303,7 +313,8 @@ func _on_magnolia_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
 			if area.get_parent().item_id == 3:
 				magnolia_inserted = true
-				
+				$KeySound.play()
+
 				empty_slot(area.get_parent().drop_location_id)
 				area.get_parent().queue_free()
 				Input.set_custom_mouse_cursor(cursor)
@@ -312,6 +323,7 @@ func _on_forget_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("item"):
 			if area.get_parent().item_id == 4:
 				forget_inserted = true
+				$KeySound.play()
 				
 				empty_slot(area.get_parent().drop_location_id)
 				area.get_parent().queue_free()
@@ -380,6 +392,7 @@ func _on_mem_8_note_area_2d_input_event(viewport: Node, event: InputEvent, shape
 
 func _ready() -> void:
 	$BackgroundMusic.play()
+	#MusicPlayer.play(background_music)
 	#delete later
 	"""well_key.reparent($"In Front Painting")
 	if well_key == null: #checking if the node is there at the beginning

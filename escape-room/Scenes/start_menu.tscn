@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/start_menu.gd" id="1_7bojk"]
 [ext_resource type="Texture2D" uid="uid://cedv7qv502mae" path="res://room art/IMG_2881.PNG" id="2_bxiim"]
-[ext_resource type="AudioStream" uid="uid://c83j5i1jas6k2" path="res://Music/StartMenuMusic.mp3" id="3_lac1c"]
+[ext_resource type="AudioStream" uid="uid://c83j5i1jas6k2" path="res://Audio/StartMenuMusic.mp3" id="3_lac1c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmvnx"]
 texture = ExtResource("2_bxiim")

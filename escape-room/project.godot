@@ -19,6 +19,8 @@ config/icon="res://art/icon.svg"
 
 ItemInfo="*res://Scenes/item_info.tscn"
 Global="*res://Scripts/Global.gd"
+MusicPlayer="*res://Audio/music_player.tscn"
+SFXPlayer="*res://Audio/sfx.tscn"
 
 [display]
 

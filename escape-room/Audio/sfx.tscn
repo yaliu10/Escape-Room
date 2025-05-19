@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8l4aoome7lak"]
+
+[ext_resource type="Script" path="res://Audio/audio_player.gd" id="1_q7m5o"]
+
+[node name="SFXPlayer" type="Node"]
+script = ExtResource("1_q7m5o")
+
+[node name="River" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="River2" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="River3" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="River4" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="River5" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="River6" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="River7" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="River8" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"

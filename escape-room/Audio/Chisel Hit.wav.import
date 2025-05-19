@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://jtyc1qpngt0m"
+path="res://.godot/imported/Chisel Hit.wav-d7fd73743f3920b72b35158ec84ae47e.sample"
+
+[deps]
+
+source_file="res://Audio/Chisel Hit.wav"
+dest_files=["res://.godot/imported/Chisel Hit.wav-d7fd73743f3920b72b35158ec84ae47e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
