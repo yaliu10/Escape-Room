@@ -143,6 +143,7 @@ centered = false
 [node name="3rdArea2D" type="Area2D" parent="3rdScene"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="3rdScene/3rdArea2D"]
+visible = false
 position = Vector2(576.503, 323)
 shape = SubResource("RectangleShape2D_xetp3")
 

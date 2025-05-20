@@ -146,12 +146,14 @@ func _on_front_return_area_input_event(viewport: Node, event: InputEvent, shape_
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		$"Front Wall".visible = false
 		wall_selected = false
+		
 
 func _on_front_arrow_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !wall_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"Front Wall".visible = true
 			wall_selected = true
+			
 
 
 #left painting slection
@@ -180,6 +182,7 @@ func _on_right_painting_return_area_input_event(viewport: Node, event: InputEven
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Right Painting".visible = false
 			painting_selected = false
+			$BackgroundMusic.play()
 
 func _on_right_painting_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !painting_selected:
@@ -188,17 +191,21 @@ func _on_right_painting_area_input_event(viewport: Node, event: InputEvent, shap
 			painting_selected = true
 
 
+
 #front painting slection
 func _on_front_painting_return_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Front Painting".visible = false
 			painting_selected = false
+			$BackgroundMusic.play()
+
 
 func _on_front_painting_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !painting_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Front Painting".visible = true
 			painting_selected = true
+			$BackgroundMusic.stop()
 
 
 func _on_slot_1_area_area_entered(area: Area2D) -> void:
@@ -275,6 +282,7 @@ func _on_brick_area_area_entered(area: Area2D) -> void:
 		if area.get_parent().item_id == 5:
 			$"In Front Painting/Brick".queue_free()
 			$"In Front Painting/Well Key".visible = true
+			$"Chisel Hit".play()
 			$KeyPickUp.play()
 
 			var front_painting = $"In Front Painting"
