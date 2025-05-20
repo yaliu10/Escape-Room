@@ -1,7 +1,74 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2s2as4a4dcra"]
+[gd_scene load_steps=9 format=3 uid="uid://d2s2as4a4dcra"]
 
 [ext_resource type="Theme" uid="uid://bcx3gapifxrc1" path="res://Resources/main_theme.tres" id="1_uuaaa"]
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="2_y2llw"]
+[ext_resource type="StyleBox" uid="uid://ch5ics382e3e6" path="res://Resources/button_black.tres" id="3_248jk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_na5k6"]
+content_margin_left = 22.0
+content_margin_top = 15.0
+content_margin_right = 22.0
+content_margin_bottom = 18.0
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6u0x5"]
+content_margin_left = 22.0
+content_margin_top = 15.0
+content_margin_right = 22.0
+content_margin_bottom = 18.0
+bg_color = Color(0.808116, 0.773621, 0.686135, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1o8vi"]
+content_margin_left = 22.0
+content_margin_top = 15.0
+content_margin_right = 22.0
+content_margin_bottom = 18.0
+bg_color = Color(0.691278, 0.423761, 0.157339, 1)
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tvxwt"]
+content_margin_left = 48.0
+content_margin_top = 32.0
+content_margin_right = 48.0
+content_margin_bottom = 32.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="Theme" id="Theme_d1o6s"]
+default_font_size = 32
+Button/colors/font_color = Color(0.545098, 0.270588, 0.0745098, 1)
+Button/colors/font_focus_color = Color(0.545098, 0.270588, 0.0745098, 1)
+Button/colors/font_hover_color = Color(0.545098, 0.270588, 0.0745098, 1)
+Button/colors/font_hover_pressed_color = Color(0.545098, 0.270588, 0.0745098, 1)
+Button/colors/font_pressed_color = Color(0.545098, 0.270588, 0.0745098, 1)
+Button/styles/disabled = ExtResource("3_248jk")
+Button/styles/focus = SubResource("StyleBoxFlat_na5k6")
+Button/styles/hover = SubResource("StyleBoxFlat_6u0x5")
+Button/styles/normal = ExtResource("3_248jk")
+Button/styles/pressed = SubResource("StyleBoxFlat_1o8vi")
+RichTextLabel/colors/default_color = Color(0.878431, 0.733333, 0.54902, 1)
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_tvxwt")
 
 [node name="Dialogue" type="Control"]
 layout_mode = 3
@@ -17,16 +84,16 @@ script = ExtResource("2_y2llw")
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.718
+anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 316.0
-offset_top = 22.7359
-offset_right = -259.0
-offset_bottom = -51.0
+offset_left = 122.0
+offset_top = 77.0
+offset_right = -141.0
+offset_bottom = -93.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_uuaaa")
+theme = SubResource("Theme_d1o6s")
 text = "Lalala"
 fit_content = true
 
@@ -38,10 +105,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -255.0
-offset_top = -89.0
-offset_right = -137.0
-offset_bottom = -11.0
+offset_left = -178.0
+offset_top = -105.0
+offset_right = -60.0
+offset_bottom = -27.0
 grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("1_uuaaa")
