@@ -182,14 +182,14 @@ func _on_right_painting_return_area_input_event(viewport: Node, event: InputEven
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Right Painting".visible = false
 			painting_selected = false
-			$BackgroundMusic.play()
+
 
 func _on_right_painting_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !painting_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Right Painting".visible = true
 			painting_selected = true
-			$BackgroundMusic.stop()
+
 
 
 
@@ -198,7 +198,7 @@ func _on_front_painting_return_area_input_event(viewport: Node, event: InputEven
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Front Painting".visible = false
 			painting_selected = false
-			$BackgroundMusic.play()
+	
 
 
 func _on_front_painting_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
@@ -206,8 +206,7 @@ func _on_front_painting_area_input_event(viewport: Node, event: InputEvent, shap
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Front Painting".visible = true
 			painting_selected = true
-			#$BucketPickUp.play()
-			$BackgroundMusic.stop()
+		
 
 
 func _on_slot_1_area_area_entered(area: Area2D) -> void:

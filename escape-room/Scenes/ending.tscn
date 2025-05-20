@@ -57,6 +57,8 @@ size = Vector2(1150.99, 648.535)
 script = ExtResource("1_rny7r")
 
 [node name="1stScene" type="Sprite2D" parent="."]
+position = Vector2(-13, 0)
+scale = Vector2(1.01128, 1.02315)
 texture = ExtResource("2_tmg22")
 centered = false
 
@@ -95,6 +97,8 @@ flip_h = true
 
 [node name="2ndScene" type="Sprite2D" parent="."]
 visible = false
+position = Vector2(-13, 0)
+scale = Vector2(1.01128, 1.02315)
 texture = ExtResource("2_tmg22")
 centered = false
 
@@ -137,6 +141,8 @@ flip_h = true
 
 [node name="3rdScene" type="Sprite2D" parent="."]
 visible = false
+position = Vector2(-13, 0)
+scale = Vector2(1.01128, 1.02315)
 texture = ExtResource("2_tmg22")
 centered = false
 
