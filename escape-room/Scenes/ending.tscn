@@ -155,7 +155,7 @@ position = Vector2(576.503, 323)
 shape = SubResource("RectangleShape2D_xetp3")
 
 [node name="Frame 1" type="Sprite2D" parent="3rdScene"]
-position = Vector2(584.289, 333.903)
+position = Vector2(573.531, 282.461)
 scale = Vector2(1.25711, 1.19398)
 texture = ExtResource("4_qo6xe")
 
@@ -168,10 +168,10 @@ texture = ExtResource("5_j44l2")
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 4.0
-offset_top = 305.0
-offset_right = 1116.0
-offset_bottom = 549.0
+offset_left = 80.0
+offset_top = 312.0
+offset_right = 1039.0
+offset_bottom = 556.0
 grow_horizontal = 1
 grow_vertical = 1
 

@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dju1hvapdgqbs"]
+[gd_scene load_steps=6 format=3 uid="uid://dju1hvapdgqbs"]
 
 [ext_resource type="Script" path="res://Scripts/pause_screen.gd" id="1_imha3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eow5v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_24401"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eaica"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7jqsm"]
 
 [node name="PauseScreen" type="Control"]
 process_mode = 3
@@ -44,12 +52,22 @@ text = "Paused"
 
 [node name="ResumeButton" type="Button" parent="GridContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eow5v")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_24401")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_eaica")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7jqsm")
 text = "Continue"
 
 [node name="QuitButton" type="Button" parent="GridContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eow5v")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_24401")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_eaica")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7jqsm")
 text = "Leave"
 
 [connection signal="pressed" from="GridContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
