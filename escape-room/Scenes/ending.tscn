@@ -1,10 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://dbnr8kaimrxi4"]
+[gd_scene load_steps=30 format=3 uid="uid://dbnr8kaimrxi4"]
 
 [ext_resource type="Script" path="res://Scripts/ending.gd" id="1_rny7r"]
 [ext_resource type="Texture2D" uid="uid://is5n476fgekw" path="res://art/arrow.PNG" id="2_8htpb"]
 [ext_resource type="Texture2D" uid="uid://cclhtin2s61mh" path="res://art/end room.png" id="2_tmg22"]
 [ext_resource type="Texture2D" uid="uid://dgbi5wt1exe6n" path="res://art/frame.png" id="4_qo6xe"]
 [ext_resource type="Texture2D" uid="uid://bjxiuvklx5gmm" path="res://art/landscapepaintingwithoutmaincharacter.jpeg" id="5_j44l2"]
+[ext_resource type="PackedScene" uid="uid://d2s2as4a4dcra" path="res://Scenes/dialogue.tscn" id="6_agqs8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ey4ia"]
 
@@ -162,6 +163,17 @@ texture = ExtResource("4_qo6xe")
 position = Vector2(-0.120124, -0.463272)
 scale = Vector2(0.603463, 0.632896)
 texture = ExtResource("5_j44l2")
+
+[node name="Dialogue" parent="." instance=ExtResource("6_agqs8")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 4.0
+offset_top = 86.0
+offset_right = 1116.0
+offset_bottom = 640.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [connection signal="pressed" from="1stScene/1stButton" to="." method="_on_st_button_pressed"]
 [connection signal="input_event" from="2ndScene/2ndArea2D" to="." method="_on_nd_area_2d_input_event"]
