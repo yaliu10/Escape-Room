@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://dj1di1lwfavlt"]
+
+[ext_resource type="Texture2D" uid="uid://d4jp4eibiwlxs" path="res://art/River.jpeg" id="1_5mr0d"]
+[ext_resource type="Script" path="res://Scripts/memory_pieces.gd" id="1_eguqt"]
+[ext_resource type="Texture2D" uid="uid://o3xsmuyt5k5g" path="res://art/return.PNG" id="2_q7bxp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e1fvp"]
+texture = ExtResource("1_5mr0d")
+modulate_color = Color(0.548963, 0.548963, 0.548963, 1)
+
+[sub_resource type="Theme" id="Theme_4g1vt"]
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+
+[node name="Memory Pieces" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eguqt")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_e1fvp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.213542
+anchor_top = 0.216049
+anchor_right = 0.758681
+anchor_bottom = 0.584877
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_4g1vt")
+theme_override_font_sizes/normal_font_size = 40
+text = "Thank you to Coral, Amber, Xinyi and everyone in the team!"
+metadata/_edit_use_anchors_ = true
+
+[node name="ReturnButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 986.0
+offset_top = 486.0
+offset_right = 1126.0
+offset_bottom = 609.0
+
+[node name="TextureRect" type="TextureRect" parent="ReturnButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.024065
+anchor_right = 0.9999
+anchor_bottom = 0.992203
+offset_top = 0.039999
+offset_right = 0.0139923
+offset_bottom = -0.0410004
+texture = ExtResource("2_q7bxp")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]
