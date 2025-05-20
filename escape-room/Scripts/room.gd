@@ -189,6 +189,7 @@ func _on_right_painting_area_input_event(viewport: Node, event: InputEvent, shap
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Right Painting".visible = true
 			painting_selected = true
+			$BackgroundMusic.stop()
 
 
 
@@ -205,6 +206,7 @@ func _on_front_painting_area_input_event(viewport: Node, event: InputEvent, shap
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			$"In Front Painting".visible = true
 			painting_selected = true
+			#$BucketPickUp.play()
 			$BackgroundMusic.stop()
 
 
@@ -255,12 +257,18 @@ func _on_closed_flower_area_area_entered(area: Area2D) -> void:
 			$"In Right Painting/Open Flower".visible = true
 			$"In Right Painting/Closed Flower".queue_free()
 			$"In Right Painting/Weapon Key".visible = true
-			$KeyPickUp.play()
+			_on_flower_water_sound_timer_timeout()
+			_on_key_pick_up_timer_timeout()
 			
 			empty_slot(area.get_parent().drop_location_id)
 			area.get_parent().queue_free()
 			Input.set_custom_mouse_cursor(cursor)
 
+func _on_key_pick_up_timer_timeout() -> void:
+	$KeyPickUp.play()
+
+func _on_flower_water_sound_timer_timeout() -> void:
+	$FlowerWaterSound.play()
 
 func _on_closed_trap_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -269,12 +277,12 @@ func _on_closed_trap_area_input_event(viewport: Node, event: InputEvent, shape_i
 		$"In Left Painting/River Key". visible = true
 		$KeyPickUp.play()
 
-
 func _on_closed_toolbox_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		$"In Right Painting/Open Toolbox".visible = true
 		$"In Right Painting/Closed Toolbox".queue_free()
 		$"In Right Painting/Chisel".visible = true
+		$"Chisel Pick Up".play()
 
 
 func _on_brick_area_area_entered(area: Area2D) -> void:
@@ -336,7 +344,7 @@ func _on_forget_area_area_entered(area: Area2D) -> void:
 				empty_slot(area.get_parent().drop_location_id)
 				area.get_parent().queue_free()
 				Input.set_custom_mouse_cursor(cursor)
-				
+
 func ending_screen():
 	var end = preload("res://Scenes/ending.tscn")
 	var instance = end.instantiate()
@@ -355,8 +363,7 @@ func ending_screen():
 		$Slot3.queue_free()
 		$Slot4.queue_free()
 		$Slot5.queue_free()
-	
-	
+
 func _on_button_pressed() -> void:
 	ending_screen()
 
@@ -369,7 +376,6 @@ func _on_mem_1_note_area_input_event(viewport: Node, event: InputEvent, shape_id
 		#the mem peice and able to move afterward
 		#if mem_piece_selected == true:
 			#wall_selected = false
-		
 
 func _on_mem_2_note_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
