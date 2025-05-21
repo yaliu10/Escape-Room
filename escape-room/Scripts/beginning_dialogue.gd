@@ -7,7 +7,7 @@ extends Control
 	"Where am I?",
 	"This place looks like a museum...but why...do I feel like I've been here before?",
 	"Who am I? Why can’t I remember anything...?",
-	"This painting...",
+	"These paintings...",
 ]
 
 var current_item_index := 0
