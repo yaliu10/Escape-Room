@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dbnr8kaimrxi4"]
+[gd_scene load_steps=19 format=3 uid="uid://dbnr8kaimrxi4"]
 
 [ext_resource type="Script" path="res://Scripts/ending.gd" id="1_rny7r"]
 [ext_resource type="Texture2D" uid="uid://is5n476fgekw" path="res://art/arrow.PNG" id="2_8htpb"]
@@ -31,28 +31,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xetp3"]
 size = Vector2(1150.99, 648.535)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j3qdm"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_au6lt"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4thbs"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_an2yw"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hglhg"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dwg7j"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mokmr"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2lb5j"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_25koa"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jijbb"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n3i1y"]
 
 [node name="Ending" type="Node2D"]
 script = ExtResource("1_rny7r")
@@ -96,50 +74,6 @@ texture = ExtResource("2_8htpb")
 expand_mode = 1
 flip_h = true
 
-[node name="2ndScene" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-13, 0)
-scale = Vector2(1.01128, 1.02315)
-texture = ExtResource("2_tmg22")
-centered = false
-
-[node name="2ndArea2D" type="Area2D" parent="2ndScene"]
-position = Vector2(515.021, 299.465)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="2ndScene/2ndArea2D"]
-visible = false
-position = Vector2(61.985, 24.2674)
-shape = SubResource("RectangleShape2D_xetp3")
-
-[node name="2ndButton" type="Button" parent="2ndScene"]
-offset_left = 535.0
-offset_top = 84.0
-offset_right = 623.0
-offset_bottom = 160.0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_j3qdm")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_au6lt")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_4thbs")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_an2yw")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_hglhg")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_dwg7j")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_mokmr")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_2lb5j")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_25koa")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_jijbb")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_n3i1y")
-flat = true
-
-[node name="TextureRect" type="TextureRect" parent="2ndScene/2ndButton"]
-layout_mode = 0
-offset_left = 8.056
-offset_top = 76.587
-offset_right = 83.056
-offset_bottom = 142.587
-rotation = -1.5708
-texture = ExtResource("2_8htpb")
-expand_mode = 1
-flip_h = true
-
 [node name="3rdScene" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(-13, 0)
@@ -174,6 +108,4 @@ offset_bottom = 662.0
 grow_vertical = 0
 
 [connection signal="pressed" from="1stScene/1stButton" to="." method="_on_st_button_pressed"]
-[connection signal="input_event" from="2ndScene/2ndArea2D" to="." method="_on_nd_area_2d_input_event"]
-[connection signal="pressed" from="2ndScene/2ndButton" to="." method="_on_nd_button_pressed"]
 [connection signal="input_event" from="3rdScene/3rdArea2D" to="." method="_on_rd_area_2d_input_event"]

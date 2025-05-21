@@ -4,10 +4,10 @@ extends Control
 @onready var next_button: Button = %NextButton
 
 @export var dialogue_items: Array[String] = [
-	"Where am I?",
-	"This place looks like a museum...but why...do I feel like I've been here before?",
-	"Who am I? Why can’t I remember anything...?",
-	"These paintings...",
+	"[shake]Where am I?[/shake]",
+	"[shake]This place looks like a museum...but why...do I feel like I've been here before?[/shake]",
+	"[shake]Who am I? Why can’t I remember anything...?[/shake]",
+	"[shake]These paintings...[/shake]",
 ]
 
 var current_item_index := 0

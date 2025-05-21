@@ -32,3 +32,4 @@ func advance() -> void:
 
 func _on_next_button_pressed() -> void:
 	advance()
+	$ButtonSound.play()

@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://dqlwo8sd16ov6"]
+[gd_scene load_steps=13 format=4 uid="uid://dqlwo8sd16ov6"]
 
 [ext_resource type="Script" path="res://Scripts/start_menu.gd" id="1_7bojk"]
 [ext_resource type="Texture2D" uid="uid://ch6x0huvjsjdb" path="res://art/Main Background.png" id="2_ecp6f"]
 [ext_resource type="FontFile" uid="uid://do4nc21ggwv8f" path="res://cour.ttf" id="3_rf658"]
 [ext_resource type="Texture2D" uid="uid://bolg5hbxg651d" path="res://Resources/chinese title.PNG" id="4_vhjce"]
 [ext_resource type="Theme" uid="uid://bcx3gapifxrc1" path="res://Resources/main_theme.tres" id="5_q6jbu"]
+[ext_resource type="AudioStream" uid="uid://br16wp0k3ikuw" path="res://Audio/Button.wav" id="6_u0tdx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tmvnx"]
 texture = ExtResource("2_ecp6f")
@@ -131,12 +132,16 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_ej1xt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3pdx3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_asxt4")
 theme_override_styles/normal = SubResource("StyleBoxFlat_dk7kc")
-text = "Memory Pieces"
+text = "Credits"
 
 [node name="StartMusic" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamMP3_ybhm8")
 autoplay = true
 bus = &"Music"
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_u0tdx")
+bus = &"ButtBus"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

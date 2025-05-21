@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dj1di1lwfavlt"]
+[gd_scene load_steps=19 format=3 uid="uid://dj1di1lwfavlt"]
 
 [ext_resource type="Texture2D" uid="uid://d4jp4eibiwlxs" path="res://art/River.jpeg" id="1_5mr0d"]
 [ext_resource type="Script" path="res://Scripts/memory_pieces.gd" id="1_eguqt"]
 [ext_resource type="Texture2D" uid="uid://o3xsmuyt5k5g" path="res://art/return.PNG" id="2_q7bxp"]
+[ext_resource type="FontFile" uid="uid://do4nc21ggwv8f" path="res://cour.ttf" id="3_w1223"]
+[ext_resource type="AudioStream" uid="uid://br16wp0k3ikuw" path="res://Audio/Button.wav" id="4_2gy8u"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e1fvp"]
 texture = ExtResource("1_5mr0d")
@@ -10,6 +12,28 @@ modulate_color = Color(0.548963, 0.548963, 0.548963, 1)
 
 [sub_resource type="Theme" id="Theme_4g1vt"]
 RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ygmob"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2f0vv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_08hgp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2nu7g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fv5jt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6sd8p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rxgmk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f5bk5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wc85w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uj3o5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3sd5w"]
 
 [node name="Memory Pieces" type="Control"]
 layout_mode = 3
@@ -34,13 +58,17 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.213542
 anchor_top = 0.216049
-anchor_right = 0.758681
-anchor_bottom = 0.584877
+anchor_right = 0.753473
+anchor_bottom = 0.717592
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_4g1vt")
+theme_override_fonts/normal_font = ExtResource("3_w1223")
 theme_override_font_sizes/normal_font_size = 40
-text = "Thank you to Coral, Amber, Xinyi and everyone in the team!"
+bbcode_enabled = true
+text = "Thank you to[tornado]Coral, Amber, Xinyi, [/tornado]and everyone in the team! 
+
+Also those 2 YouTube videos."
 metadata/_edit_use_anchors_ = true
 
 [node name="ReturnButton" type="Button" parent="."]
@@ -49,6 +77,18 @@ offset_left = 986.0
 offset_top = 486.0
 offset_right = 1126.0
 offset_bottom = 609.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ygmob")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_2f0vv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_08hgp")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_2nu7g")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_fv5jt")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6sd8p")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rxgmk")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_f5bk5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wc85w")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uj3o5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3sd5w")
+flat = true
 
 [node name="TextureRect" type="TextureRect" parent="ReturnButton"]
 layout_mode = 1
@@ -62,5 +102,9 @@ offset_bottom = -0.0410004
 texture = ExtResource("2_q7bxp")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_2gy8u")
+bus = &"ButtBus"
 
 [connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]

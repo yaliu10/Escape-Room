@@ -113,6 +113,7 @@ func set_drop_location(item):
 #left wall selection
 func _on_left_return_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		$ButtonSound.play()
 		$"Left Wall".visible = false
 		$"Flower Room".visible = false # flower room's return button is connected to here
 		wall_selected = false
@@ -120,6 +121,7 @@ func _on_left_return_area_input_event(viewport: Node, event: InputEvent, shape_i
 func _on_left_arrow_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !wall_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+			$ButtonSound.play()
 			$"Left Wall".visible = true
 			wall_selected = true
 			flower_room_selected = false
@@ -128,12 +130,14 @@ func _on_left_arrow_area_input_event(viewport: Node, event: InputEvent, shape_id
 #right wall selection
 func _on_right_return_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		$ButtonSound.play()
 		$"Right Wall".visible = false
 		wall_selected = false
 	
 func _on_right_arrow_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !wall_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+			$ButtonSound.play()
 			$"Right Wall".visible = true
 			wall_selected = true
 		#if statement for mem_piece
@@ -144,6 +148,7 @@ func _on_right_arrow_area_input_event(viewport: Node, event: InputEvent, shape_i
 #front wall selection
 func _on_front_return_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		$ButtonSound.play()
 		$"Front Wall".visible = false
 		wall_selected = false
 		
@@ -151,6 +156,7 @@ func _on_front_return_area_input_event(viewport: Node, event: InputEvent, shape_
 func _on_front_arrow_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !wall_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+			$ButtonSound.play()
 			$"Front Wall".visible = true
 			wall_selected = true
 			
@@ -159,6 +165,7 @@ func _on_front_arrow_area_input_event(viewport: Node, event: InputEvent, shape_i
 #left painting slection
 func _on_left_painting_return_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+			$ButtonSound.play()
 			$"In Left Painting".visible = false
 			painting_selected = false
 			flower_room_selected = false
@@ -168,6 +175,7 @@ func _on_left_painting_return_area_input_event(viewport: Node, event: InputEvent
 func _on_left_painting_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !painting_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+			$ButtonSound.play()
 			$"In Left Painting".visible = true
 			$BackgroundMusic.stop()
 			$RiverSound.play()
@@ -180,6 +188,7 @@ func _on_left_painting_area_input_event(viewport: Node, event: InputEvent, shape
 #right painting slection
 func _on_right_painting_return_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+			$ButtonSound.play()
 			$"In Right Painting".visible = false
 			painting_selected = false
 
@@ -187,6 +196,7 @@ func _on_right_painting_return_area_input_event(viewport: Node, event: InputEven
 func _on_right_painting_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !painting_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+			$ButtonSound.play()
 			$"In Right Painting".visible = true
 			painting_selected = true
 
@@ -196,6 +206,7 @@ func _on_right_painting_area_input_event(viewport: Node, event: InputEvent, shap
 #front painting slection
 func _on_front_painting_return_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+			$ButtonSound.play()
 			$"In Front Painting".visible = false
 			painting_selected = false
 	
@@ -204,6 +215,7 @@ func _on_front_painting_return_area_input_event(viewport: Node, event: InputEven
 func _on_front_painting_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !painting_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+			$ButtonSound.play()
 			$"In Front Painting".visible = true
 			painting_selected = true
 		
@@ -311,6 +323,7 @@ func _on_brick_area_area_entered(area: Area2D) -> void:
 func _on_entrance_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if !flower_room_selected:
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+			$ButtonSound.play()
 			$"Flower Room".visible = true
 			flower_room_selected = true
 
@@ -365,6 +378,7 @@ func ending_screen():
 		$Slot5.visible = false
 
 func _on_button_pressed() -> void:
+	$ButtonSound.play()
 	ending_screen()
 
 func _on_mem_1_note_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
