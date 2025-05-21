@@ -165,14 +165,13 @@ scale = Vector2(0.603463, 0.632896)
 texture = ExtResource("5_j44l2")
 
 [node name="Dialogue" parent="." instance=ExtResource("6_agqs8")]
-visible = false
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 80.0
-offset_top = 312.0
-offset_right = 1039.0
-offset_bottom = 556.0
+offset_left = -10.0
+offset_top = 418.0
+offset_right = 1157.0
+offset_bottom = 663.0
 grow_horizontal = 1
 grow_vertical = 1
 

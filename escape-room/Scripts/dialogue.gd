@@ -4,11 +4,8 @@ extends Control
 @onready var next_button: Button = %NextButton
 
 @export var dialogue_items: Array[String] = [
-	"Hey",
-	"LALA.",
-	"Haha",
-	"Hehe",
-	"Bye bye~!",
+	"I've been here before.",
+	"I remember now.",
 ]
 
 var current_item_index := 0

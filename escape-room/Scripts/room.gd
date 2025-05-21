@@ -345,6 +345,7 @@ func _on_forget_area_area_entered(area: Area2D) -> void:
 				Input.set_custom_mouse_cursor(cursor)
 
 func ending_screen():
+	$BackgroundMusic.stop()
 	var end = preload("res://Scenes/ending.tscn")
 	var instance = end.instantiate()
 	if magnolia_inserted == true && rose_inserted == true && forget_inserted == true:
