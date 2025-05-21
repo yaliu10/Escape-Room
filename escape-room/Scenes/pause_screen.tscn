@@ -1,14 +1,95 @@
-[gd_scene load_steps=6 format=3 uid="uid://dju1hvapdgqbs"]
+[gd_scene load_steps=16 format=3 uid="uid://dju1hvapdgqbs"]
 
 [ext_resource type="Script" path="res://Scripts/pause_screen.gd" id="1_imha3"]
+[ext_resource type="FontFile" uid="uid://do4nc21ggwv8f" path="res://cour.ttf" id="2_yli1i"]
+[ext_resource type="Theme" uid="uid://bcx3gapifxrc1" path="res://Resources/main_theme.tres" id="3_gdrjc"]
+[ext_resource type="StyleBox" uid="uid://ch5ics382e3e6" path="res://Resources/button_black.tres" id="3_l1h5i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_na5k6"]
+content_margin_left = 22.0
+content_margin_top = 15.0
+content_margin_right = 22.0
+content_margin_bottom = 18.0
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0)
+border_blend = true
+corner_radius_top_left = 48
+corner_radius_top_right = 48
+corner_radius_bottom_right = 48
+corner_radius_bottom_left = 48
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6u0x5"]
+content_margin_left = 22.0
+content_margin_top = 15.0
+content_margin_right = 22.0
+content_margin_bottom = 18.0
+bg_color = Color(0.808116, 0.773621, 0.686135, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1o8vi"]
+content_margin_left = 22.0
+content_margin_top = 15.0
+content_margin_right = 22.0
+content_margin_bottom = 18.0
+bg_color = Color(0.2484, 0.2484, 0.2484, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tvxwt"]
+content_margin_left = 48.0
+content_margin_top = 32.0
+content_margin_right = 48.0
+content_margin_bottom = 32.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="Theme" id="Theme_4svit"]
+default_font_size = 32
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 0)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/fonts/font = ExtResource("2_yli1i")
+Button/styles/disabled = ExtResource("3_l1h5i")
+Button/styles/focus = SubResource("StyleBoxFlat_na5k6")
+Button/styles/hover = SubResource("StyleBoxFlat_6u0x5")
+Button/styles/normal = ExtResource("3_l1h5i")
+Button/styles/pressed = SubResource("StyleBoxFlat_1o8vi")
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/fonts/normal_font = ExtResource("2_yli1i")
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_tvxwt")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eow5v"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_24401"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mjpta"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eaica"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hldi5"]
+bg_color = Color(0.807843, 0.772549, 0.686275, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7jqsm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_24401"]
 
 [node name="PauseScreen" type="Control"]
 process_mode = 3
@@ -28,7 +109,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.297706, 0.297706, 0.297706, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
@@ -47,26 +128,31 @@ theme_override_constants/v_separation = 10
 
 [node name="Label" type="Label" parent="GridContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yli1i")
 theme_override_font_sizes/font_size = 50
 text = "Paused"
 
 [node name="ResumeButton" type="Button" parent="GridContainer"]
 layout_mode = 2
+theme = SubResource("Theme_4svit")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/focus = SubResource("StyleBoxEmpty_eow5v")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_24401")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_mjpta")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_eaica")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hldi5")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_7jqsm")
 text = "Continue"
 
 [node name="QuitButton" type="Button" parent="GridContainer"]
 layout_mode = 2
+theme = ExtResource("3_gdrjc")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/focus = SubResource("StyleBoxEmpty_eow5v")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_24401")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_eaica")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hldi5")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_7jqsm")
 text = "Leave"
 

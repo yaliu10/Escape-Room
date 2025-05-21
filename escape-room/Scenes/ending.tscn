@@ -54,15 +54,7 @@ size = Vector2(1150.99, 648.535)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n3i1y"]
 
-[node name="Ending" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1152.0
-offset_bottom = -648.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Ending" type="Node2D"]
 script = ExtResource("1_rny7r")
 
 [node name="1stScene" type="Sprite2D" parent="."]
@@ -173,12 +165,12 @@ scale = Vector2(0.603463, 0.632896)
 texture = ExtResource("5_j44l2")
 
 [node name="Dialogue" parent="." instance=ExtResource("6_agqs8")]
-layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
+offset_left = -20.0
 offset_top = 6.0
-offset_right = 1153.0
-offset_bottom = 653.0
+offset_right = 1167.0
+offset_bottom = 662.0
 grow_vertical = 0
 
 [connection signal="pressed" from="1stScene/1stButton" to="." method="_on_st_button_pressed"]
