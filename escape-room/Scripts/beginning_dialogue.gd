@@ -14,7 +14,6 @@ var current_item_index := 0
 
 func _ready() -> void:
 	show_text()
-	next_button.pressed.connect(advance)
 
 func show_text() -> void:
 	var current_item := dialogue_items[current_item_index]
@@ -32,3 +31,7 @@ func advance() -> void:
 		get_tree().change_scene_to_file("res://Scenes/room.tscn")
 	else:
 		show_text()
+
+
+func _on_next_button_pressed() -> void:
+	advance()

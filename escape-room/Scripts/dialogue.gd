@@ -1,7 +1,6 @@
 extends Control
 
 @onready var rich_text_label: RichTextLabel = %RichTextLabel
-@onready var next_button: Button = %NextButton
 
 @export var dialogue_items: Array[String] = [
 	"I've been here before.",
@@ -12,7 +11,6 @@ var current_item_index := 0
 
 func _ready() -> void:
 	show_text()
-	next_button.pressed.connect(advance)
 
 func show_text() -> void:
 	var current_item := dialogue_items[current_item_index]
@@ -29,3 +27,8 @@ func advance() -> void:
 		hide()
 	else:
 		show_text()
+
+
+
+func _on_next_button_pressed() -> void:
+	advance()

@@ -51,8 +51,7 @@ theme = ExtResource("1_llw0e")
 text = "Lalala"
 fit_content = true
 
-[node name="NextButton" type="Button" parent="."]
-unique_name_in_owner = true
+[node name="Next" type="Button" parent="."]
 layout_mode = 2
 offset_left = 1037.0
 offset_top = 538.0
@@ -65,3 +64,5 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_lisy3")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_b3rdx")
 icon = ExtResource("3_h72yq")
 flat = true
+
+[connection signal="pressed" from="Next" to="." method="_on_next_button_pressed"]

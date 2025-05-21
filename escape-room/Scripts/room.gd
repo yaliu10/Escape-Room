@@ -408,9 +408,5 @@ func _on_mem_8_note_area_2d_input_event(viewport: Node, event: InputEvent, shape
 func _ready() -> void:
 	$BackgroundMusic.play()
 	#MusicPlayer.play(background_music)
-	#delete later
-	"""well_key.reparent($"In Front Painting")
-	if well_key == null: #checking if the node is there at the beginning
-		print("well key doesn't exist")
-	else:
-		print("well key exists")"""
+	
+	
