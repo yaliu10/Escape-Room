@@ -350,19 +350,19 @@ func ending_screen():
 	var instance = end.instantiate()
 	if magnolia_inserted == true && rose_inserted == true && forget_inserted == true:
 		add_child(instance)
-		$"Main Background".queue_free()
-		$MemCount.queue_free()
-		$MemTotal.queue_free()
-		$"Inventory Slot1".queue_free()
-		$"Inventory Slot2".queue_free()
-		$"Inventory Slot3".queue_free()
-		$"Inventory Slot4".queue_free()
-		$"Inventory Slot5".queue_free()
-		$Slot1.queue_free()
-		$Slot2.queue_free()
-		$Slot3.queue_free()
-		$Slot4.queue_free()
-		$Slot5.queue_free()
+		$"Main Background".visible = false
+		$MemCount.visible = false
+		$MemTotal.visible = false
+		$"Inventory Slot1".visible = false
+		$"Inventory Slot2".visible = false
+		$"Inventory Slot3".visible = false
+		$"Inventory Slot4".visible = false
+		$"Inventory Slot5".visible = false
+		$Slot1.visible = false
+		$Slot2.visible = false
+		$Slot3.visible = false
+		$Slot4.visible = false
+		$Slot5.visible = false
 
 func _on_button_pressed() -> void:
 	ending_screen()
